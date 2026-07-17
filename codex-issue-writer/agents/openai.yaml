@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Issue Writer"
+  short_description: "省トークンで的確なCodex向けIssueを作成"
+  default_prompt: "Use $codex-issue-writer to draft a token-efficient GitHub issue for Codex implementation."
