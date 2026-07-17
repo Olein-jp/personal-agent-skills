@@ -1,0 +1,4 @@
+interface:
+  display_name: "Olein Writing Style"
+  short_description: "オレインさんの文体で文章や記事を草案化する"
+  default_prompt: "Use $olein-writing-style to draft a Japanese blog article in Olein's writing style."
