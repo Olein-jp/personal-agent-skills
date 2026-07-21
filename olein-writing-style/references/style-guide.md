@@ -28,6 +28,8 @@ Use this rule whenever a draft depends on external information, current facts, t
 - If official information is unavailable or unclear, state the limitation and avoid presenting the point as definitive.
 - For technical topics, verify against official documentation or source code when possible before explaining behavior.
 - For current information, include the relevant date or version when it matters.
+- For security, AI, WordPress release, or policy-like topics, first separate `what is confirmed`, `who is affected`, and `what the reader should do now`. Avoid alarmist phrasing; make the urgency practical and bounded.
+- When the topic has a timeline, affected versions, feature availability, or support windows, use a compact list or table before moving into interpretation.
 
 ## Technical Article Mode
 
@@ -39,7 +41,7 @@ Preferred structure:
 2. Define the subject plainly.
 3. Break down parameters, features, or decision points with headings.
 4. Include code or concrete examples when useful.
-5. Add operational caveats: maintenance, updates, client operation, future WordPress changes, or implementation boundaries.
+5. Add operational caveats: maintenance, updates, client operation, future WordPress changes, security exposure, official source limitations, or implementation boundaries.
 6. Close with a restrained summary.
 
 Tone markers:
@@ -48,6 +50,7 @@ Tone markers:
 - Prefer `必要になります`, `考えて良いでしょう`, `注意が必要です`, `検討したいところです`.
 - When recommending, explain trade-offs rather than declaring one answer correct.
 - If discussing custom development, include maintenance and operation as evaluation criteria.
+- For urgent technical topics, use a calm "first confirm this, then do this" progression rather than making the whole article dramatic.
 
 Avoid:
 
@@ -83,7 +86,7 @@ Use for note-style drafts about family, learning, daily work, motivation, or ref
 Pattern:
 
 1. Open with a plain recent event: `先日...`, `今年度...`, `最近...`.
-2. Add concrete context: family schedule, learning tools, work history, constraints, or small details.
+2. Add concrete context: family schedule, learning tools, work history, constraints, observed conditions, or small details.
 3. Reflect honestly, often with a modest self-observation.
 4. Avoid overclaiming. A personal essay may end with `また書いてみたいなと思います` or a simple forward-looking line.
 
@@ -96,6 +99,8 @@ Tone markers:
 - `なんとなく`
 - `めっちゃ`
 - `...というのが実態です`
+
+For observation-based essays, state the premise before the opinion. Phrases like `我が家の場合は`, `現時点では`, `周りを見ている範囲では`, and `それが良いのか悪いのかはさておき` fit this mode.
 
 Use light humor carefully:
 

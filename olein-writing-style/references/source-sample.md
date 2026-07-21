@@ -40,6 +40,17 @@ Minimum requested sample: 20 articles. Investigated sample: 25+ items across `ol
 
 ## Observed Platform Differences
 
+### 2026-07-21 Recheck Notes
+
+Rechecked on 2026-07-21 against the currently published Olein Design Blog and note pages listed above, with additional attention to newer 2026 Olein Design Blog posts.
+
+- The existing style map still matches the overall voice: practical, calm, experience-led, and careful about overclaiming.
+- Recent Olein Design Blog articles lean more strongly into current technical context such as WordPress releases, security issues, AI/tool usage, and accessibility requirements.
+- In these current-topic articles, the pattern is often: name the issue, separate confirmed facts from interpretation, show who is affected, then explain what to do without creating unnecessary fear.
+- Tables or compact lists are used naturally when dates, affected versions, risks, or decision criteria need to be compared.
+- Some older sampled article titles have been adjusted, but the title style remains searchable and literal.
+- note articles continue to use concrete personal premises before reflection, especially around family, learning, and everyday observation.
+
 ### Olein Design Blog
 
 - More instructional and searchable.
@@ -47,11 +58,13 @@ Minimum requested sample: 20 articles. Investigated sample: 25+ items across `ol
 - Common structure: intro, table of contents, headings, parameters/features, usage, caveats, summary.
 - External references are used to support facts, especially official documentation or plugin pages.
 - The writing is calm and teacher-like, but still uses personal judgment in opinion pieces.
+- For urgent or current technical topics, urgency is framed as practical next action rather than sensational risk.
 
 ### Note
 
 - More personal and reflective.
 - Starts from a life event, family context, learning update, or current uncertainty.
+- Often states the concrete premise or observed conditions before drawing a personal conclusion.
 - Uses `僕` more openly.
 - Allows casual phrasing, parenthetical comments, and small self-corrections.
 - Ends with a gentle reflection rather than a hard CTA.
