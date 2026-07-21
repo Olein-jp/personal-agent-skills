@@ -1,0 +1,4 @@
+interface:
+  display_name: "WP Plugin Review"
+  short_description: "WPCSとセキュリティ重視のWordPressプラグインレビュー"
+  default_prompt: "Use $wp-plugin-review to review this WordPress plugin for WPCS compliance, security, and release readiness."
