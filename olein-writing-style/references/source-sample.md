@@ -8,37 +8,35 @@ Minimum requested sample: 20 articles. Investigated sample: 25+ items across `ol
 
 ### Olein Design Blog
 
-1. `wp_enqueue_block_style()で各ブロック用のスタイルを読み込む` - https://olein-design.com/blog/wp_enqueue_block_style
-2. `簡単にアイコンや任意のSVGを挿入できる The Icon Block` - listed at https://olein-design.com/blog
-3. `既成テーマを活用した制作の際に気をつけていること` - https://olein-design.com/blog/what-to-keep-in-mind-when-creating-productions-that-utilize-pre-existing-themes
-4. `wp_enqueue_script() – スクリプトを読み込む関数` - https://olein-design.com/blog/wp_enqueue_script
-5. `allowed_tags() – 許可されているHTMLのタグと属性を表示する関数` - listed at https://olein-design.com/blog
-6. `delete_get_calendar_cache() – カレンダーのキャッシュを削除する関数` - listed at https://olein-design.com/blog
-7. `WordPressを使う上で知っておきたいPHPバージョン互換性とサポート期限` - listed at https://olein-design.com/blog
-8. `get_calendar() – カレンダーを表示する関数` - listed at https://olein-design.com/blog
-9. `calendar_week_mod() – 週の始まりからの日数を取得する関数` - listed at https://olein-design.com/blog
-10. `wp_get_archives() – アーカイブリンクを表示する関数` - listed at https://olein-design.com/blog
-11. `UpdraftPlusを使ったWordPressの自動バックアップと復元方法` - https://olein-design.com/blog/all-about-updraftplus
-12. `get_archives_link() – アーカイブリンクを取得する関数` - listed at https://olein-design.com/blog
-13. `WordPress 関連メディア Gutenberg TImes に拙書が紹介されました` - listed at https://olein-design.com/blog/page/3
-14. `Udemyに「いちばんやさしいWordPress入門講座〖ゼロから学べる基礎〗」を公開しました` - listed at https://olein-design.com/blog/page/3
-15. `「これからはじめる WordPress」というタイトルでお話ししてきました` - listed at https://olein-design.com/blog/page/3
-16. `unitone ブロックの練習ができる WordPress Playground を作ってみた` - https://olein-design.com/blog/unitone-lessonn-demo-with-wordpress-playground
-17. `Snow Monkey のフック snow_monkey_recent_posts_widget_args が便利だった` - https://olein-design.com/blog/see-snow_monkey_recent_posts_widget_args
-18. `WordPressの専門家を選び抜くためのヒント` - https://olein-design.com/blog/tips-for-choosing-wordpress-expert
+1. `なぜ使いにくい WordPress で作られたウェブサイトが生まれるのか` -  https://olein-design.com/blog/wordpress-website-failure-reasons
+2. `流体タイポグラフィの基礎とアクセシビリティへの配慮について` - https://olein-design.com/blog/fluid-typography-basics-and-accessibility
+3. `インラインSVG画像で代替テキストを提供する方法` - https://olein-design.com/blog/inline-svg-alternative-text
+4. `ホームページ制作の失敗を防ぐために作る前に考えるべきこと` - https://olein-design.com/blog/homepage-seisaku-shippai-tsukuru-mae-kangaekata
+5. `WordPress 保守とは？管理内容と更新しないと起きるリスクを整理` -  https://olein-design.com/blog/wordpress-maintenance-basics
+6. `制作会社が直面する WordPress 実装の課題と外注判断の考え方` - https://olein-design.com/blog/wordpress-implementation-outsourcing-for-agencies
+7. `Snow Monkey Forms に Claudflare を導入する方法` - https://olein-design.com/blog/implementing-cloudflare-turnstile-with-snow-monkey-forms
+8. `生成AI時代におけるウェブコンテンツの作り方を考える` - https://olein-design.com/blog/considering-how-to-create-web-content-in-the-era-of-generative-ai
+9. `Google ビジネスプロフィールでローカルSEOを強化するためにやるべきこと` - https://olein-design.com/blog/what-to-do-to-enhance-local-seo-with-google-business-profile
+10. `WordPress のテーマをどうするか決める時に僕が考えること` - https://olein-design.com/blog/what-i-consider-when-deciding-on-a-wordpress-theme
+11. `オレインデザインがおすすめするWordPressサイトのセキュリティ対策` - https://olein-design.com/blog/my-recommended-security-measures-for-wordpress-websites
+12. `ホームページは必要ない？SNSとホームページのバランスを業種別に考えてみる` - https://olein-design.com/blog/consider-the-balance-between-sns-and-website-by-industry
+13. `WordPress ウェブサイトの運用費用をミニマムにする方法と考え方` - https://olein-design.com/blog/how-and-how-to-minimize-the-cost-of-operating-a-wordpress-website
+14. `WordPress REST API から情報を取得する方法メモ` - https://olein-design.com/blog/wordpress-rest-api-memo
+15. `WordPressが修正できない！原因と解決策を徹底解説 ＋ 制作会社に頼むべきケースも紹介` - https://olein-design.com/blog/explanation-of-why-wordpress-cannot-be-modified-and-how-to-fix-it
+16. `生成AI時代にホームページは必要なのだろうか` - https://olein-design.com/blog/is-a-website-necessary-in-the-age-of-generative-ai
+17. `ホームページの修正方法を徹底解説！リスク・手順・注意点・自分で簡単にやるには？` - https://olein-design.com/blog/how-to-edit-website
+
 
 ### Note
 
-19. `みなさん、はじめまして！オレインデザインの久野です！` - https://note.com/olein_jp/n/n93e75e37706a
-20. `さぁ、2026年をどうするか作戦会議` - https://note.com/olein_jp/n/nd524fa642081
-21. `スマホを持っている中学生は成績が悪くなる傾向があるのか？` - listed at https://note.com/olein_jp
-22. `希望する実際値を得るための目標値の設定` - listed at https://note.com/olein_jp
-23. `中学１年長男が初めての定期試験を終えて感じたこと` - https://note.com/olein_jp/n/nbf70e6d5b052
-24. `二酸化炭素を吐き出して` - listed at https://note.com/olein_jp
-25. `放送大学4年目を終えて` - https://note.com/olein_jp/n/nc62ff4ecddc9
-26. `次男の気持ち` - listed at https://note.com/olein_jp
-27. `Apple Pencil に起きた悲劇` - listed in https://note.com/olein_jp/m/m6b328b8dbc4a
-28. `筆が走らなくなってきている気がする` - listed in https://note.com/olein_jp/m/m6b328b8dbc4a
+1. `みなさん、はじめまして！オレインデザインの久野です！` - https://note.com/olein_jp/n/n93e75e37706a
+2. `基礎理解の大切さ` - https://note.com/olein_jp/n/n22b63c29143d
+3. `スマホを持っている中学生は成績が悪くなる傾向があるのか？` - https://note.com/olein_jp/n/n2ba754889d87
+4. `希望する実際値を得るための目標値の設定` - https://note.com/olein_jp/n/n8ab2af2bf384
+5. `中学１年長男が初めての定期試験を終えて感じたこと` - https://note.com/olein_jp/n/nbf70e6d5b052
+6. `二酸化炭素を吐き出して` - https://note.com/olein_jp/n/n9a60045cf988
+7. `放送大学4年目を終えて` - https://note.com/olein_jp/n/nc62ff4ecddc9
+8. `次男の気持ち` - https://note.com/olein_jp/n/ne81c9fe0e3e3
 
 ## Observed Platform Differences
 
