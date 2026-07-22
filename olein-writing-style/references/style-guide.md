@@ -28,6 +28,8 @@ Use this rule whenever a draft depends on external information, current facts, t
 - If official information is unavailable or unclear, state the limitation and avoid presenting the point as definitive.
 - For technical topics, verify against official documentation or source code when possible before explaining behavior.
 - For current information, include the relevant date or version when it matters.
+- Place reference links close to the content they support: either link the relevant word/phrase itself or add the link at the end of the section that discusses that information.
+- When external sources are used, keep a consolidated reference-link list at the bottom as well.
 - For security, AI, WordPress release, or policy-like topics, first separate `what is confirmed`, `who is affected`, and `what the reader should do now`. Avoid alarmist phrasing; make the urgency practical and bounded.
 - When the topic has a timeline, affected versions, feature availability, or support windows, use a compact list or table before moving into interpretation.
 

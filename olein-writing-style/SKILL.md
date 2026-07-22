@@ -16,8 +16,10 @@ description: Write Japanese blog posts, articles, drafts, outlines, announcement
    - **Practical opinion**: professional judgment from experience.
    - **Personal essay**: reflective note from daily life, learning, family, or work.
    - **Announcement**: warm, concise notice for books, courses, events, or services.
-6. Draft in Japanese unless the user explicitly requests another language.
-7. After drafting, perform the self-check in this file and revise once before answering.
+6. When using reference links, place each link where it helps the reader: either on the relevant word/phrase itself or at the end of the section that discusses that source.
+7. Continue to include a consolidated reference-link list at the bottom when external sources are used.
+8. Draft in Japanese unless the user explicitly requests another language.
+9. After drafting, perform the self-check in this file and revise once before answering.
 
 ## Writing Priorities
 
@@ -60,6 +62,7 @@ Before returning the draft, verify:
 - The authorial stance is humble but not evasive.
 - Important claims include context, conditions, or caveats.
 - External factual claims are grounded in primary or official sources whenever possible.
+- Reference links appear near the relevant section or phrase, and a consolidated reference list remains at the bottom when sources are used.
 - Unverified, secondary, or inferred information is not presented as confirmed fact.
 - Headings are plain and useful.
 - Parentheses, examples, and small asides are used naturally, not excessively.
