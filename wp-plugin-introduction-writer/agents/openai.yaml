@@ -1,0 +1,4 @@
+interface:
+  display_name: "WP Plugin Introduction Writer"
+  short_description: "WordPressプラグイン紹介記事の調査と構成支援"
+  default_prompt: "Use $wp-plugin-introduction-writer with $olein-writing-style to draft a Japanese article introducing this WordPress plugin."
