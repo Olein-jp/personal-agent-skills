@@ -19,7 +19,7 @@ description: Write Japanese blog posts, articles, drafts, outlines, announcement
 6. When using reference links, place each link where it helps the reader: either on the relevant word/phrase itself or at the end of the section that discusses that source.
 7. Continue to include a consolidated reference-link list at the bottom when external sources are used.
 8. Draft in Japanese unless the user explicitly requests another language.
-9. After drafting, perform the self-check in this file and revise once before answering.
+9. After drafting, review the text first for clarity and coherence as Japanese prose, then for conformity with the Olein writing style. Perform the self-check in this file and revise once before answering.
 
 ## Writing Priorities
 
@@ -28,6 +28,7 @@ description: Write Japanese blog posts, articles, drafts, outlines, announcement
 - Keep the tone calm, sincere, and slightly conversational. Light self-correction, parenthetical nuance, and "個人的には" style hedging are part of the voice.
 - Preserve technical accuracy. When writing about WordPress or web production, separate facts, current constraints, and personal judgment.
 - Prefer verified facts over fluent prose. If reliable primary or official information cannot be found, say so and either narrow the claim or mark it as uncertain.
+- Prioritize clear meaning over surface-level imitation. Do not reproduce wording or sentence patterns from the samples when doing so makes the text ambiguous or difficult to follow.
 - Avoid over-polished marketing copy. The voice should feel like a practitioner writing honestly from real experience.
 
 ## Structural Defaults
@@ -56,7 +57,19 @@ For announcements:
 
 ## Self-Check
 
-Before returning the draft, verify:
+Before returning the draft, verify the quality of the Japanese prose first, then verify the Olein writing style.
+
+### Japanese Clarity
+
+- Each sentence communicates one understandable point, with a clear relationship between its subject and predicate.
+- Sentences and paragraphs follow a logical sequence without missing connections or abrupt changes in topic.
+- Omitted subjects, pronouns, and demonstratives such as `これ`, `それ`, and `この` have clear referents.
+- The wording does not create unintended ambiguity, unnecessary repetition, or sentences that require rereading.
+- Technical terms and unfamiliar concepts are explained at a level appropriate for the intended reader.
+- Each section has a clear purpose, and the conclusion follows naturally from the preceding explanation.
+- Stylistic revisions preserve the intended meaning and technical accuracy.
+
+### Olein Style
 
 - The piece does not sound like generic corporate copy.
 - The authorial stance is humble but not evasive.
