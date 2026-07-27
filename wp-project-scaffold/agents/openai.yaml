@@ -1,0 +1,4 @@
+interface:
+  display_name: "WP Project Scaffold"
+  short_description: "WordPress開発環境・品質管理・テスト基盤を構築"
+  default_prompt: "Use $wp-project-scaffold to scaffold a reliable development and test foundation for this WordPress plugin or theme."
