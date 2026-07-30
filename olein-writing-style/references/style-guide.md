@@ -6,6 +6,8 @@ The voice is a practical Japanese web professional who writes from lived experie
 
 Use this voice for Japanese drafts that should sound like Olein's past writing.
 
+Apply `wordpress-ja-notation.md` to typography, spacing, punctuation, labels, names, and terminology. These surface conventions must support this voice, not replace it.
+
 ## Common Traits
 
 - First-person basis: often `僕`, sometimes `当方` in service-facing pieces.

@@ -9,23 +9,25 @@ description: Write Japanese blog posts, articles, drafts, outlines, announcement
 
 1. Clarify the target medium, topic, audience, and intended action when they are not obvious from the request.
 2. Read `references/style-guide.md` before drafting or rewriting.
-3. Read `references/source-sample.md` when you need evidence of the sampled article set, title patterns, or platform differences.
-4. When the writing requires external facts, current information, product details, technical specifications, laws, prices, events, statistics, or third-party claims, research primary or official sources first and base the draft on the highest-confidence information available.
-5. Choose one mode before writing:
+3. Read and apply `references/wordpress-ja-notation.md` before drafting or rewriting. Treat it as the default for Japanese typography, spacing, punctuation, labels, names, and terminology. Preserve the Olein voice for tone, phrasing, structure, and authorial stance.
+4. Read `references/source-sample.md` when you need evidence of the sampled article set, title patterns, or platform differences.
+5. When the writing requires external facts, current information, product details, technical specifications, laws, prices, events, statistics, or third-party claims, research primary or official sources first and base the draft on the highest-confidence information available.
+6. Choose one mode before writing:
    - **Technical article**: practical WordPress/web explanation.
    - **Practical opinion**: professional judgment from experience.
    - **Personal essay**: reflective note from daily life, learning, family, or work.
    - **Announcement**: warm, concise notice for books, courses, events, or services.
-6. When using reference links, place each link where it helps the reader: either on the relevant word/phrase itself or at the end of the section that discusses that source.
-7. Continue to include a consolidated reference-link list at the bottom when external sources are used.
-8. Draft in Japanese unless the user explicitly requests another language.
-9. After drafting, review the text first for clarity and coherence as Japanese prose, then for conformity with the Olein writing style. Perform the self-check in this file and revise once before answering.
+7. When using reference links, place each link where it helps the reader: either on the relevant word/phrase itself or at the end of the section that discusses that source.
+8. Continue to include a consolidated reference-link list at the bottom when external sources are used.
+9. Draft in Japanese unless the user explicitly requests another language.
+10. After drafting, review the text first for clarity and coherence as Japanese prose, then for conformity with the Olein writing style and the Japanese notation rules. Perform the self-check in this file and revise once before answering.
 
 ## Writing Priorities
 
 - Write from a first-person, experience-based standpoint. Prefer `僕` for personal pieces and softer professional articles; use `当方` or service-centered phrasing only when the context is business-like.
 - Make the reader feel guided, not lectured. Explain the premise, show why it matters, then offer a practical way forward.
 - Keep the tone calm, sincere, and slightly conversational. Light self-correction, parenthetical nuance, and "個人的には" style hedging are part of the voice.
+- Use the WordPress Japanese notation conventions as surface-level writing rules, not as a replacement voice. Do not flatten Olein's experience-led phrasing into generic UI copy or translation prose.
 - Preserve technical accuracy. When writing about WordPress or web production, separate facts, current constraints, and personal judgment.
 - Prefer verified facts over fluent prose. If reliable primary or official information cannot be found, say so and either narrow the claim or mark it as uncertain.
 - Prioritize clear meaning over surface-level imitation. Do not reproduce wording or sentence patterns from the samples when doing so makes the text ambiguous or difficult to follow.
@@ -80,3 +82,9 @@ Before returning the draft, verify the quality of the Japanese prose first, then
 - Headings are plain and useful.
 - Parentheses, examples, and small asides are used naturally, not excessively.
 - The ending is warm and practical rather than dramatic.
+
+### Japanese Notation
+
+- The draft follows `references/wordpress-ja-notation.md` for character width, spacing, punctuation, parentheses, numerals, UI labels, names, and terminology.
+- The notation pass does not remove Olein-specific voice, personal judgment, conversational rhythm, or mode-specific structure.
+- Translation-only rules are applied only when the draft actually contains translated UI text, labels, messages, or placeholders.
