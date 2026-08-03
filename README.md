@@ -13,6 +13,9 @@
 
 ## 管理中のスキル
 
+- `book-drafting`: 書籍の構成、資料、読者像に沿って Markdown 形式の章初稿を作成する
+- `book-editing`: 既存の書籍原稿を構成、読者レベル、文体、前後章との整合性から編集する
+- `book-fact-check`: 書籍原稿の技術的主張、時点依存情報、URL を一次情報で検証する
 - `codex-issue-writer`: Codex が実装しやすい GitHub Issue / PR 作業指示を作成する
 - `olein-writing-style`: Olein らしい日本語文体で記事、告知、説明文を作成する
 - `wp-plugin-review`: WordPress プラグインを WPCS とセキュリティ中心にレビューし、修正方針と PR 準備情報まで整理する

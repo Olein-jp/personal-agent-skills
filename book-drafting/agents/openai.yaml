@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Drafting"
+  short_description: "書籍の構成・資料・読者像に沿ってMarkdown形式の章初稿を作成"
+  default_prompt: "Use $book-drafting with $olein-writing-style to draft a chapter from its outline, notes, and sources."

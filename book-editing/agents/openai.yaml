@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Editing"
+  short_description: "既存の書籍原稿を構成・読者・文体・前後章との整合性から編集"
+  default_prompt: "Use $book-editing with $olein-writing-style to edit this chapter while preserving its intent and verified facts."

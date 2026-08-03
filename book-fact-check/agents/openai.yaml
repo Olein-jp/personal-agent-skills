@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Fact Check"
+  short_description: "書籍原稿の技術的主張・時点依存情報・URLを一次情報で検証"
+  default_prompt: "Use $book-fact-check to verify the technical claims and URLs in this chapter and produce an evidence-backed report."
