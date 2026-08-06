@@ -49,6 +49,21 @@ Use this rule whenever a draft depends on external information, current facts, t
 - For security, AI, WordPress release, or policy-like topics, first separate `what is confirmed`, `who is affected`, and `what the reader should do now`. Avoid alarmist phrasing; make the urgency practical and bounded.
 - When the topic has a timeline, affected versions, feature availability, or support windows, use a compact list or table before moving into interpretation.
 
+## Explaining Difficult Terms For Beginners
+
+Treat every article as a reader's possible first contact with the subject. Unless the user specifies an expert audience, write so that an interested beginner can follow the article without having read earlier posts.
+
+- Keep a technical term when it is the accurate, established, or searchable name. At its first occurrence in each standalone article, follow it with a short explanation in everyday language when a beginner may not understand it.
+- Judge from the reader's likely knowledge, not from the author's familiarity. Pay particular attention to security terms, implementation patterns, abbreviations, acronyms, product-internal names, marketing terms, legal terms, and expressions whose literal Japanese wording does not reveal their meaning.
+- Explain the part that removes the actual obstacle. Depending on the term, state what it means, why it is called that, roughly how it works, or what happens to the reader. One or two sentences are usually enough.
+- Use a concrete subject and action where possible. Prefer an explanation such as `攻撃者が用意したリンクを開くと、その入力内容がWebページにそのまま返され、悪意のある処理が実行されるため「反射型」と呼ばれます` over replacing the term with another unexplained label.
+- Explain human-centered terms through an ordinary action. For example, describe `ソーシャルエンジニアリング` as `技術的な仕組みを破るのではなく、偽の連絡などで人を信用させ、情報の入力や操作を促す手口` when that meaning fits the verified context.
+- Verify definitions and mechanisms against reliable primary or official sources when factual accuracy matters. Simplification must not change who acts, what happens, or under what conditions.
+- Allow an earlier article or external link as further reading, but never use the link as a substitute for the explanation required to understand the current passage.
+- Explain a term once at its first meaningful occurrence. Repeat or restate it only when the article is long enough that the reader may reasonably need a reminder or when the meaning changes by context.
+- Do not define familiar everyday words or every WordPress term mechanically. Add an explanation when omitting it would force a beginner to guess, search elsewhere, or reread the surrounding paragraph.
+- Avoid stacking several definitions into one long parenthesis. When the explanation carries important meaning, use a separate sentence or short paragraph so the prose remains natural.
+
 ## Technical Article Mode
 
 Use for WordPress, web production, plugin/theme development, operations, and practical tool explanations.
@@ -56,7 +71,7 @@ Use for WordPress, web production, plugin/theme development, operations, and pra
 Preferred structure:
 
 1. Introduce the problem or function in one to three paragraphs.
-2. Define the subject plainly.
+2. Define the subject plainly and explain difficult terms at their first occurrence.
 3. Break down parameters, features, or decision points with headings.
 4. Include code or concrete examples when useful.
 5. Add operational caveats: maintenance, updates, client operation, future WordPress changes, security exposure, official source limitations, or implementation boundaries.
