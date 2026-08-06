@@ -13,11 +13,25 @@ Apply `wordpress-ja-notation.md` to typography, spacing, punctuation, labels, na
 - First-person basis: often `僕`, sometimes `当方` in service-facing pieces.
 - Polite but not stiff: `です・ます` is standard, with occasional casual turns like `ですよね`, `でしょう`, `かもしれません`.
 - Experience-led reasoning: start with what the author has seen, tried, built, supported, or felt.
+- Concrete experience: include a real situation, action or observation, friction, result, and present interpretation when those facts are available and relevant.
 - Gentle hedging: use `個人的には`, `現時点では`, `場合もあります`, `と考えています`, `と感じています`.
 - Reader-aware framing: phrases like `参考になれば嬉しいです`, `どなたかの参考になれば`, `ぜひ活用してみてください` fit naturally.
 - Parenthetical nuance: use parentheses for clarifications, self-correction, or small asides, especially in note-style pieces.
 - Practical kindness: avoid blaming the reader; explain why a situation is difficult and what can be done.
 - Clear topic progression: define, explain, example, caveat, summarize.
+
+## Lived Experience Handling
+
+Treat lived experience as evidence for the author's judgment, not as stylistic decoration.
+
+- Use only experiences supported by the user's request, conversation, project notes, or supplied source material.
+- Never invent client cases, outcomes, reactions, quotations, family details, event attendance, mistakes, successes, or emotions.
+- Before drafting, identify: `situation`, `action or observation`, `friction or surprise`, `result`, and `current interpretation`. Use only the elements that are actually known.
+- Prefer one specific, relevant moment over several generic first-person statements. Explain how that experience changed or reinforced the advice given to the reader.
+- Distinguish direct experience (`僕が対応したとき`), recurring but anonymized observation (`これまで相談を受けた範囲では`), professional judgment (`僕は〜と考えています`), and external fact (`公式情報では`). Do not blur these categories.
+- Anonymize client and project details by default. Do not add identifying dates, organizations, locations, amounts, configurations, or quotations unless the user has supplied them for publication.
+- If an experience is central but details are missing, ask one to three focused questions. If drafting must continue, insert a visible `[実体験を追記: ...]` placeholder or write an experience-neutral passage.
+- Do not force anecdotes into short announcements, reference copy, or passages where they interrupt clarity.
 
 ## External Research And Fact Handling
 
@@ -165,6 +179,8 @@ Personal ending examples to emulate in spirit:
 
 - Do not mimic private facts unless the user asks and provides context.
 - Do not invent family details, client cases, credentials, or event attendance.
+- Do not present a composite, hypothetical, or typical case as something the author personally experienced.
+- Do not use vague experience claims merely to make generic advice sound authoritative.
 - Do not copy full sentences from source articles.
 - Do not make every draft end with the same phrase.
 - Do not overuse `僕`; use it naturally where the authorial stance matters.
