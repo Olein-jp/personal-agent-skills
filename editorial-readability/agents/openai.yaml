@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editorial Readability"
+  short_description: "筆者の意図と文体を守り、既存原稿の可読性を必要箇所だけ整える"
+  default_prompt: "$editorial-readability を使って、意味と筆者性を保ちながらこの原稿を読みやすく編集してください。"
