@@ -1,0 +1,36 @@
+{
+  "article": "公開前QAテスト記事",
+  "medium": "オレインデザイン事業サイト",
+  "precision_mode": "Standard",
+  "required_inputs_missing": [],
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "external": true,
+      "core": true,
+      "source_id": "S-001",
+      "ledger_exact_url": "https://example.com/docs"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "S-001",
+      "exact_url": "https://example.com/docs",
+      "checked_date": "2026-08-24"
+    }
+  ],
+  "required_coverage": [
+    {
+      "requirement_id": "R-001",
+      "covered": true,
+      "critical": true
+    }
+  ],
+  "author_provenance": [],
+  "final_output": {
+    "internal_qa_mixed": false
+  },
+  "pending_checks": [],
+  "optional_improvements": [],
+  "manual_blocking_issues": []
+}

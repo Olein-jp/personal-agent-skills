@@ -1,0 +1,4 @@
+interface:
+  display_name: "Olein Content Publication QA"
+  short_description: "記事成果物を照合し、公開前のBlocking問題と任意改善を判定"
+  default_prompt: "$olein-content-publication-qa を使い、指定された記事成果物を変更せずに公開前QAを行い、Publication QA Reportを返してください。"

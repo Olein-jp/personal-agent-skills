@@ -18,8 +18,39 @@
 - `book-fact-check`: 書籍原稿の技術的主張、時点依存情報、URL を一次情報で検証する
 - `codex-issue-writer`: Codex が実装しやすい GitHub Issue / PR 作業指示を作成する
 - `editorial-readability`: 筆者の意図と文体を保ちながら、既存原稿の可読性を必要箇所だけ整える
+- `olein-content-publication-qa`: オレインデザインの記事成果物を照合し、公開前のBlocking問題、確認待ち、任意改善を判定する
 - `olein-writing-style`: Olein らしい日本語文体で記事、告知、説明文を作成する
 - `wp-plugin-review`: WordPress プラグインを WPCS とセキュリティ中心にレビューし、修正方針と PR 準備情報まで整理する
+
+## `olein-content-publication-qa`の利用
+
+最小の呼び出し例:
+
+```text
+$olein-content-publication-qa を使い、Task Packetに指定された記事の公開前QAを行ってください。
+
+指定されたファイルだけから開始し、外部Core Claim、Source Registry、Exact URL、Required Coverage、Author Provenance、媒体固有要件を確認してください。本文は修正せず、QA Reportだけを返してください。
+```
+
+機械検査用manifestを用意した場合は、次のコマンドで整合性とStatus優先順位を確認できます。
+
+```bash
+python3 olein-content-publication-qa/scripts/validate_publication_qa.py <manifest.json>
+```
+
+受け入れテスト:
+
+```bash
+python3 -m unittest discover -s olein-content-publication-qa/tests -v
+```
+
+初期実装時（2026-08-24）は、T-01〜T-12の全ケースが期待Statusで通過しています。
+
+既知の制限:
+
+- 検証scriptは正規化済みmanifestを検査し、Markdown本文から意味的なRequired CoverageやAuthor Provenanceを自動抽出しない
+- URLの形式と成果物間の一致は確認するが、ネットワーク到達性は確認しない
+- 過剰探索の防止はスキル指示とScope記録で担保し、script単体ではCodexが読んだ全ファイルを監査できない
 
 ## 基本方針
 

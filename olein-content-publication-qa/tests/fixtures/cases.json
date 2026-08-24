@@ -1,0 +1,124 @@
+[
+  {
+    "id": "T-01",
+    "name": "Standard正常系",
+    "expected": "PASS",
+    "override": {}
+  },
+  {
+    "id": "T-02",
+    "name": "任意改善のみ",
+    "expected": "PASS WITH OPTIONALS",
+    "override": {
+      "optional_improvements": [
+        {"code": "INTERNAL_LINK", "note": "関連する内部リンクを追加できる。"}
+      ]
+    }
+  },
+  {
+    "id": "T-03",
+    "name": "Exact URL欠落",
+    "expected": "FAIL",
+    "override": {
+      "sources": [
+        {"source_id": "S-001", "exact_url": "公式ドキュメント", "checked_date": "2026-08-24"}
+      ]
+    }
+  },
+  {
+    "id": "T-04",
+    "name": "Source ID不一致",
+    "expected": "FAIL",
+    "override": {
+      "claims": [
+        {"claim_id": "C-001", "external": true, "core": true, "source_id": "S-999", "ledger_exact_url": "https://example.com/docs"}
+      ]
+    }
+  },
+  {
+    "id": "T-05",
+    "name": "Verified不正昇格",
+    "expected": "FAIL",
+    "override": {
+      "claims": [
+        {
+          "claim_id": "C-001",
+          "external": true,
+          "core": true,
+          "source_id": "S-001",
+          "ledger_exact_url": "https://example.com/docs",
+          "promoted_to_verified": true,
+          "verification_evidence_id": "E-001",
+          "verification_reason": "一次情報で確認"
+        }
+      ]
+    }
+  },
+  {
+    "id": "T-06",
+    "name": "Author Provenance欠落",
+    "expected": "FAIL",
+    "override": {
+      "author_provenance": [
+        {"expression_id": "A-001", "type": "Author-derived Inference", "confirmed": true}
+      ]
+    }
+  },
+  {
+    "id": "T-07",
+    "name": "Required Coverage欠落",
+    "expected": "FAIL",
+    "override": {
+      "required_coverage": [
+        {"requirement_id": "R-001", "covered": false, "critical": true}
+      ]
+    }
+  },
+  {
+    "id": "T-08",
+    "name": "Light正常系",
+    "expected": "PASS",
+    "override": {
+      "precision_mode": "Light",
+      "claims": [],
+      "sources": []
+    }
+  },
+  {
+    "id": "T-09",
+    "name": "Light外部Claimあり",
+    "expected": "PASS",
+    "override": {
+      "precision_mode": "Light",
+      "claims": [
+        {"claim_id": "C-001", "external": true, "core": true, "source_id": "S-001"}
+      ]
+    }
+  },
+  {
+    "id": "T-10",
+    "name": "ココナラ画像欠落",
+    "expected": "PENDING",
+    "override": {
+      "medium": "ココナラブログ"
+    }
+  },
+  {
+    "id": "T-11",
+    "name": "Final Output混入",
+    "expected": "FAIL",
+    "override": {
+      "final_output": {"internal_qa_mixed": true}
+    }
+  },
+  {
+    "id": "T-12",
+    "name": "過剰探索防止",
+    "expected": "PASS",
+    "override": {
+      "allowed_files": ["task-packet.md", "guidelines.md", "brief.md", "article.md"],
+      "files_checked": ["task-packet.md", "guidelines.md", "brief.md", "article.md"],
+      "additional_files_read": []
+    }
+  }
+]
