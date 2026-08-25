@@ -2,9 +2,18 @@
 
 ## Purpose and Scope
 
-Use this reference for one limited finishing pass before returning an Olein Design business-site blog article. It is not a full rewrite, an alternate draft, or a substitute for publication QA.
+Use this reference for one limited, approximately net-neutral finishing pass before returning an Olein Design business-site blog article. It is not a full rewrite, an alternate draft, detailed line-level readability editing, or a substitute for publication QA and its evidence or readiness decisions.
 
 Follow the user's explicit instructions, Article Brief, Task Packet, and medium- or project-specific guidance before this reference. Do not invent missing services, service scope, achievements, contact details, URLs, CTAs, or author and client experiences. Apply only the checks that matter to the article's actual purpose and supplied materials.
+
+## Select Applicable Checks
+
+Before revising, identify which checks below reveal a material problem in the current draft.
+
+- Apply only those checks.
+- Do not add content to demonstrate that every category was considered.
+- If a check is already satisfied explicitly or implicitly, leave the passage unchanged.
+- Prefer a small number of targeted replacements or integrations over adding a section for every check.
 
 ## A. Scope Boundary
 
@@ -74,8 +83,18 @@ approved inside the organization.
 - Consider a table when at least three items share meaningful comparison dimensions.
 - Consider numbered headings or a numbered list when readers will need to find steps, decision criteria, or stages again later.
 - Use short prose when it is clearer; do not make tables or numbering a goal in themselves.
-- Do not increase the amount of information during this pass. Compress duplicate explanations and preserve only what supports the reader's decision.
+- Treat this as an approximately net-neutral finishing pass. Do not create a new section merely to show that a check was performed.
+- When a missing explanation, example, internal link, consultation boundary, or CTA must be added, first merge, shorten, or replace overlapping content elsewhere.
+- Accept a substantial increase in length only when required coverage was genuinely missing. Otherwise, keep the revised draft approximately the same length or shorter.
+- Limit this pass to article-level structural compression. Do not expand it into detailed sentence-rhythm editing or a full redundancy audit.
+
+## I. Title and Opening Alignment
+
+- Confirm that the title states the reader's problem or desired decision in natural Japanese.
+- Do not let the title promise broader legal, security, product, or service judgments than the article provides.
+- Make the opening establish the reader's situation, central question, and article boundary without repeating the first main section.
+- Prefer one clear title proposition over combining loosely connected phrases with commas.
 
 ## One-Pass Revision Rule
 
-Revise only the passages where these checks reveal a material problem. Do not rewrite unaffected paragraphs, generate a second outline, or produce an alternate article. After the targeted revisions, confirm that the meaning, factual accuracy, Olein voice, beginner-friendly explanations, and Japanese notation remain intact, then continue to the final self-check in `SKILL.md`.
+Revise only the passages where the selected checks reveal a material problem. Do not rewrite unaffected paragraphs, generate a second outline, or produce an alternate article. After the targeted revisions, confirm that the article has not become generic institutional copy. When the supplied materials contain a relevant professional judgment, preserve at least one clear authorial viewpoint explaining why the stated criterion is used or recommended; do not invent an experience or force first-person phrasing when a neutral explanation is more appropriate. Finally, confirm that the meaning, factual accuracy, Olein voice, beginner-friendly explanations, and Japanese notation remain intact, then continue to the final self-check in `SKILL.md`.
