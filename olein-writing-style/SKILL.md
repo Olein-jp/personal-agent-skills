@@ -25,7 +25,8 @@ description: Write Japanese blog posts, articles, drafts, outlines, announcement
 12. Continue to include a consolidated reference-link list at the bottom when external sources are used.
 13. Draft in Japanese unless the user explicitly requests another language.
 14. After drafting, scan for technical terms, abbreviations, industry jargon, and unfamiliar concepts. At the first occurrence in that article, add a short plain-language explanation when an interested beginner may not understand the term or why it matters. Explain the name, mechanism, or consequence when that is what makes the concept understandable. Keep established terms when accuracy or discoverability benefits from them; explain rather than merely replace them. Follow the detailed guidance in `references/style-guide.md`.
-15. Review the text first for clarity and coherence as Japanese prose, then for conformity with the Olein writing style and the Japanese notation rules. Perform the self-check in this file and revise once before answering.
+15. When the target is an Olein Design business-site blog article, or the supplied publisher requirements explicitly call for self-service boundaries, consultation guidance, internal-link routing, and a service CTA, read and apply `references/business-article-finalization.md` after drafting and before the final self-check. Do not apply it automatically to personal essays, note articles, short announcements, X posts, Coconala blog posts, or general explanatory copy without a consultation path unless the user or medium-specific instructions explicitly require the same checks.
+16. Review the text first for clarity and coherence as Japanese prose, then for conformity with the Olein writing style and the Japanese notation rules. Perform the self-check in this file and revise once before answering.
 
 ## Writing Priorities
 
