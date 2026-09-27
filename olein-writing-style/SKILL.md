@@ -1,6 +1,6 @@
 ---
 name: olein-writing-style
-description: Write Japanese blog posts, articles, drafts, outlines, announcements, and explanatory copy in the user's Olein-style voice. Use when the user asks Codex to draft, rewrite, polish, structure, or ideate Japanese writing that should sound like the user's past posts on olein-design.com/blog or note.com/olein_jp, especially WordPress/web production articles, personal essays, learning reflections, family notes, service announcements, and practical how-to content.
+description: Write Japanese blog posts, articles, drafts, outlines, announcements, and explanatory copy in the user's Olein-style voice, including editorial prompts for comprehension-focused visuals when useful. Use when the user asks Codex to draft, rewrite, polish, structure, or ideate Japanese writing that should sound like the user's past posts on olein-design.com/blog or note.com/olein_jp, especially WordPress/web production articles, personal essays, learning reflections, family notes, service announcements, and practical how-to content.
 ---
 
 # Olein Writing Style
@@ -21,13 +21,14 @@ description: Write Japanese blog posts, articles, drafts, outlines, announcement
    - **Personal essay**: reflective note from daily life, learning, family, or work.
    - **Announcement**: warm, concise notice for books, courses, events, or services.
 10. Before outlining a substantial article, define the reader's central question, the decision or action the reader should be able to take, and one primary framework that organizes the answer. Use secondary lists, examples, and service-specific details to support that framework rather than introducing parallel frameworks for the same decision.
-11. Weave at least one concrete, relevant experience into an article when the format and available evidence support it. Use the experience to explain a decision, caution, change of view, or practical recommendation; do not add an anecdote only as decoration. Short notices, reference-only copy, and other formats where an anecdote would feel forced are exempt.
-12. When using reference links, place each link where it helps the reader: either on the relevant word/phrase itself or at the end of the section that discusses that source.
-13. Continue to include a consolidated reference-link list at the bottom when external sources are used.
-14. Draft in Japanese unless the user explicitly requests another language.
-15. After drafting, scan for technical terms, abbreviations, industry jargon, and unfamiliar concepts. At the first occurrence in that article, add a short plain-language explanation when an interested beginner may not understand the term or why it matters. Explain the name, mechanism, or consequence when that is what makes the concept understandable. Keep established terms when accuracy or discoverability benefits from them; explain rather than merely replace them. Follow the detailed guidance in `references/style-guide.md`.
-16. When the target is an Olein Design business-site blog article, or the supplied publisher requirements explicitly call for self-service boundaries, consultation guidance, internal-link routing, and a service CTA, read and apply `references/business-article-finalization.md` after drafting and before the final self-check. Do not apply it automatically to personal essays, note articles, short announcements, X posts, Coconala blog posts, or general explanatory copy without a consultation path unless the user or medium-specific instructions explicitly require the same checks.
-17. Review the text first for clarity and coherence as Japanese prose, then for conformity with the Olein writing style and the Japanese notation rules. Perform the self-check in this file and revise once before answering.
+11. For a substantial article, assess whether a diagram, process graphic, comparison visual, annotated screenshot, or purpose-driven illustrative image would materially improve understanding. When it would, read and apply `references/visual-prompt-guidance.md` and insert an editorial image-prompt block at the most useful point in the draft. Do not add visuals merely to break up text, and do not generate the image unless the user asks for generation.
+12. Weave at least one concrete, relevant experience into an article when the format and available evidence support it. Use the experience to explain a decision, caution, change of view, or practical recommendation; do not add an anecdote only as decoration. Short notices, reference-only copy, and other formats where an anecdote would feel forced are exempt.
+13. When using reference links, place each link where it helps the reader: either on the relevant word/phrase itself or at the end of the section that discusses that source.
+14. Continue to include a consolidated reference-link list at the bottom when external sources are used.
+15. Draft in Japanese unless the user explicitly requests another language.
+16. After drafting, scan for technical terms, abbreviations, industry jargon, and unfamiliar concepts. At the first occurrence in that article, add a short plain-language explanation when an interested beginner may not understand the term or why it matters. Explain the name, mechanism, or consequence when that is what makes the concept understandable. Keep established terms when accuracy or discoverability benefits from them; explain rather than merely replace them. Follow the detailed guidance in `references/style-guide.md`.
+17. When the target is an Olein Design business-site blog article, or the supplied publisher requirements explicitly call for self-service boundaries, consultation guidance, internal-link routing, and a service CTA, read and apply `references/business-article-finalization.md` after drafting and before the final self-check. Do not apply it automatically to personal essays, note articles, short announcements, X posts, Coconala blog posts, or general explanatory copy without a consultation path unless the user or medium-specific instructions explicitly require the same checks.
+18. Review the text first for clarity and coherence as Japanese prose, then for conformity with the Olein writing style and the Japanese notation rules. Perform the self-check in this file and revise once before answering.
 
 ## Writing Priorities
 
@@ -96,6 +97,7 @@ Before returning the draft, verify the quality of the Japanese prose first, then
 - External factual claims are grounded in primary or official sources whenever possible.
 - Reference links appear near the relevant section or phrase, and a consolidated reference list remains at the bottom when sources are used.
 - Unverified, secondary, or inferred information is not presented as confirmed fact.
+- Visual prompts appear only where a visual would reduce cognitive load or make a relationship, sequence, comparison, or structure easier to grasp. Each prompt states its purpose and placement, follows the minimal visual direction, and does not introduce unsupported facts.
 - Headings are plain and useful.
 - Parentheses, examples, and small asides are used naturally, not excessively.
 - The ending is warm and practical rather than dramatic.
