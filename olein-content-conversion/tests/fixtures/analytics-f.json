@@ -1,0 +1,45 @@
+{
+  "notice": "すべて合成データ。実測や実績として引用しない。",
+  "acquired_at": "2026-10-28T12:00:00+09:00",
+  "timezone": "Asia/Tokyo",
+  "scope": "同一の教材ページ、端末は全体、流入内訳は未提供。GSCはweb、GA4は記事閲覧セッション。",
+  "before": {
+    "start": "2026-09-02",
+    "end": "2026-09-29",
+    "gsc": {
+      "query": "WordPress 更新 判断",
+      "clicks": 200,
+      "impressions": 10000,
+      "ctr": 0.02,
+      "average_position": 8.4
+    },
+    "ga4": {
+      "sessions": 100,
+      "service_transition_sessions": 4,
+      "inquiry_complete": 0
+    }
+  },
+  "after": {
+    "start": "2026-09-30",
+    "end": "2026-10-27",
+    "gsc": {
+      "query": "WordPress 更新 判断",
+      "clicks": 240,
+      "impressions": 12000,
+      "ctr": 0.02,
+      "average_position": 8.0
+    },
+    "ga4": {
+      "sessions": 120,
+      "service_transition_sessions": 8,
+      "inquiry_complete": 1
+    }
+  },
+  "definitions": "service_transition_sessionsは記事閲覧後にサービスを見た重複なしセッション。inquiry_completeは合成送信完了イベントでキーイベント。受注ではない。",
+  "limitations": [
+    "CTA変更と同時に流入が変わった可能性",
+    "帰属モデル、同意、閾値、サンプリング状態が未提供",
+    "問い合わせ1件のみで標本が小さい",
+    "GSCクエリの欠落とcanonical集約に注意"
+  ]
+}

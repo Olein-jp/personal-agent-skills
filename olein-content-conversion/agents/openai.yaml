@@ -1,0 +1,4 @@
+interface:
+  display_name: "オレイン記事・相談導線監査"
+  short_description: "記事の有用性と相談導線を一次資料と実測データで監査し改善案を提案する"
+  default_prompt: "$olein-content-conversion でこの記事を AUDIT し、根拠・判断不可事項・検証計画を Markdown と JSON でまとめてください。"

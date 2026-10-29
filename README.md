@@ -18,6 +18,7 @@
 - `book-fact-check`: 書籍原稿の技術的主張、時点依存情報、URL を一次情報で検証する
 - `codex-issue-writer`: Codex が実装しやすい GitHub Issue / PR 作業指示を作成する
 - `editorial-readability`: 筆者の意図と文体を保ちながら、既存原稿の可読性を必要箇所だけ整える
+- `olein-content-conversion`: 記事の検索意図・情報品質・相談価値・サービスとの関連・導線を根拠付きで監査し、PLAN / AUDIT / REVISEで改善する。導入・使用例・検証方法は [専用README](olein-content-conversion/README.md) を参照
 - `olein-content-publication-qa`: オレインデザインの記事成果物を照合し、公開前のBlocking問題、確認待ち、任意改善を判定する
 - `olein-writing-style`: Olein らしい日本語文体で記事、告知、説明文を作成する
 - `wp-plugin-review`: WordPress プラグインを WPCS とセキュリティ中心にレビューし、修正方針と PR 準備情報まで整理する
