@@ -1,0 +1,16 @@
+{
+  "issue": 2,
+  "status": "approved",
+  "review_items": [
+    "P1",
+    "P2",
+    "P3",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "reviewer": "利用者",
+  "reviewed_at": "2026-10-30T09:28:56+09:00",
+  "response": "内容を確認し、PLANとREVISEを承認します",
+  "limitation": "この評価のP1〜P3とR1〜R3への承認。公開許可・SEO/CV効果・B-01の動作検証・一般的な性能保証ではない。"
+}
