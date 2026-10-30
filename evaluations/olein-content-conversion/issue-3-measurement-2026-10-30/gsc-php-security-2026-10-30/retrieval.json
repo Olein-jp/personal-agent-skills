@@ -1,0 +1,58 @@
+{
+  "ARTICLE": {
+    "source": "https://olein-design.com/blog/php-security-announcement-2026-10-20",
+    "status": 200,
+    "sha256": "7c99b3bc16e497d77df4dbcbbe1f951a2ddb22b44c224668470f568c3f1e908e",
+    "checked_at": "2026-10-30T11:59:32+09:00",
+    "local_snapshot": "/private/tmp/olein-issue3-gsc/ARTICLE.html"
+  },
+  "PHP": {
+    "source": "https://www.php.net/archive/2026.php",
+    "status": 200,
+    "sha256": "62135c971e6f5c72a1e21faaa0b3776300677df6056973fc913c66aa169625f5",
+    "checked_at": "2026-10-30T11:59:32+09:00",
+    "local_snapshot": "/private/tmp/olein-issue3-gsc/PHP.html"
+  },
+  "CERT": {
+    "source": "https://cert.europa.eu/publications/security-advisories/2026-018/",
+    "status": 200,
+    "sha256": "8cb4104044379a027d777742aa315bbf78862156aa000da13a8588a47d731fd2",
+    "checked_at": "2026-10-30T11:59:33+09:00",
+    "local_snapshot": "/private/tmp/olein-issue3-gsc/CERT.html"
+  },
+  "SERVICE": {
+    "source": "https://olein-design.com/service/maintenance",
+    "status": 200,
+    "sha256": "559e268792a99d4a072d5d24e84d5937448a1f92cb332248e0f284a7b778b9df",
+    "checked_at": "2026-10-30T11:59:32+09:00",
+    "local_snapshot": "/private/tmp/olein-issue3-gsc/SERVICE.html"
+  },
+  "CONTACT": {
+    "source": "https://olein-design.com/contact",
+    "status": 200,
+    "sha256": "49b0d88e926f51f72a63bbd5dd20f632c12b47f42f9a83dc4a0cd91ed734417d",
+    "checked_at": "2026-10-30T11:59:32+09:00",
+    "local_snapshot": "/private/tmp/olein-issue3-gsc/CONTACT.html"
+  },
+  "GSC-EXPORT": {
+    "source": "https://support.google.com/webmasters/answer/12919797?hl=ja",
+    "status": 200,
+    "sha256": "67867835b5ba5c7dc121a5f31dcca4929b226a84b83c82ab96274f0254dab9ce",
+    "checked_at": "2026-10-30T11:59:33+09:00",
+    "local_snapshot": "/private/tmp/olein-issue3-gsc/GSC-EXPORT.html"
+  },
+  "GSC-DATA": {
+    "source": "https://support.google.com/webmasters/answer/17011364?hl=ja",
+    "status": 200,
+    "sha256": "5f5962e88626bd34404921820a62ad52e4268d7a177ff6a18ed72aff8e2d480a",
+    "checked_at": "2026-10-30T11:59:33+09:00",
+    "local_snapshot": "/private/tmp/olein-issue3-gsc/GSC-DATA.html"
+  },
+  "GSC-MISMATCH": {
+    "source": "https://support.google.com/webmasters/answer/17010575?hl=ja",
+    "status": 200,
+    "sha256": "f82be38521626e0687c9ed2cddf7d24db089e83189815a156c2fd95c53592328",
+    "checked_at": "2026-10-30T11:59:33+09:00",
+    "local_snapshot": "/private/tmp/olein-issue3-gsc/GSC-MISMATCH.html"
+  }
+}

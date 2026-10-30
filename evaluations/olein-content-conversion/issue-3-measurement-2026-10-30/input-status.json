@@ -1,0 +1,124 @@
+{
+  "record_type": "measurement_input_availability",
+  "issue_url": "https://github.com/Olein-jp/personal-agent-skills/issues/3",
+  "recorded_at": "2026-10-30T09:32:03+09:00",
+  "skill_version": {
+    "schema_version": "1.1",
+    "rules_version": "1.1",
+    "base_commit": "f42dbe2951b155e7d4c3583db1dd647178989a94",
+    "files_sha256": {
+      "olein-content-conversion/SKILL.md": "539950cf77b85395bdc20167b435fe06073f06a7d673b0c1bc42c6e2f7eb9e45",
+      "olein-content-conversion/references/measurement.md": "17b8bf802c4338b0d63ae1fd94f48d2b4efd0027bdbb16a06dd14290bd35db24",
+      "olein-content-conversion/references/evidence-policy.md": "080bf7c3dfba0ca48b3d2f7825a1a9c81d5af29cb62fab0e2012f24049372294",
+      "olein-content-conversion/schemas/audit-result.schema.json": "160a488aaf7edef905870f88ff8edae630dbf056905bdef92b82226a2b241bda",
+      "olein-content-conversion/tests/fixtures/analytics-f.json": "9fa5b20f71a82d3f9293b5f38b5282aac062638f866d7abef891f24dab682f32"
+    }
+  },
+  "status": "awaiting_real_data",
+  "input_request": "data-request.md",
+  "provided_files": [],
+  "inspection_scope": [
+    "この会話で提供された記事URLと添付ファイルの一覧",
+    "evaluations配下の既存実記事評価記録のデータ取得状態とファイル名",
+    "Issue #3の本文・コメント"
+  ],
+  "excluded_inputs": [
+    {
+      "path": "olein-content-conversion/tests/fixtures/analytics-f.json",
+      "reason": "全て合成データと明示。実測・実績として使用しない。"
+    }
+  ],
+  "datasets": [
+    {
+      "kind": "search_console",
+      "status": "missing",
+      "acquired_at": null,
+      "period": null,
+      "timezone": null,
+      "source_file": null,
+      "reason": "匿名化した実測データの提供なし。0件や成果不良を意味しない。"
+    },
+    {
+      "kind": "ga4",
+      "status": "missing",
+      "acquired_at": null,
+      "period": null,
+      "timezone": null,
+      "source_file": null,
+      "reason": "匿名化した実測データの提供なし。0件や成果不良を意味しない。"
+    },
+    {
+      "kind": "inquiries",
+      "status": "missing",
+      "acquired_at": null,
+      "period": null,
+      "timezone": null,
+      "source_file": null,
+      "reason": "匿名化した実測データの提供なし。0件や成果不良を意味しない。"
+    }
+  ],
+  "acceptance_conditions": [
+    {
+      "id": 1,
+      "status": "not_executed",
+      "reason": "実データの版・期間・取得条件・来歴は未提供。"
+    },
+    {
+      "id": 2,
+      "status": "not_executed",
+      "reason": "集計・率の再計算は原データ未提供につき未実施。"
+    },
+    {
+      "id": 3,
+      "status": "not_executed",
+      "reason": "因果効果や成功は認定していないが、実データ解釈での検証は未実施。"
+    },
+    {
+      "id": 4,
+      "status": "not_executed",
+      "reason": "指標の定義方針は整理。実測と構造を分離する監査出力は未生成。"
+    },
+    {
+      "id": 5,
+      "status": "not_executed",
+      "reason": "監査JSON検証と人による原データ・解釈照合は未実施。"
+    }
+  ],
+  "verification": {
+    "record_json_syntax": "passed",
+    "audit_json_validation": "not_executed_no_audit_generated",
+    "recalculation": "not_executed",
+    "human_source_and_interpretation_review": "not_executed",
+    "common_implementation_changed": false
+  },
+  "issue_resolution": "completed_for_provided_gsc_scope",
+  "limits": [
+    "今回確認した範囲で未提供。利用者の他の保存先にデータが存在しないとは断定しない。",
+    "以前のAUDITの構造判定を実測・送信動作確認として流用しない。",
+    "新規の認証・計測変更・実験公開・送信・個人情報の外部送信は行わない。"
+  ],
+  "user_confirmation": {
+    "response": "実データはまだありません",
+    "recorded_at": "2026-10-30T09:33:57+09:00",
+    "meaning": "利用者が実データ未提供を明示。実測評価は未実施のまま。"
+  },
+  "current_assessment": {
+    "status": "evaluation_complete_with_documented_limitations",
+    "directory": "gsc-php-security-2026-10-30",
+    "source": "利用者提供GSC ZIPと指定記事",
+    "confirmation": "加工していません",
+    "completed": [
+      "GSCの来歴・版・期間・不明条件の記録",
+      "表別の合計・率・空欄の再計算",
+      "構造・実測・未確認動作を分離した監査",
+      "監査JSON形式・参照検証",
+      "利用者による元データ・計算・解釈の照合承認 (M1〜M5)"
+    ],
+    "remaining": [],
+    "limits": [
+      "過去のstatus/datasets/acceptance_conditionsは実データ未提供時の記録。現在の取得状態は実測評価のaudit-result.jsonとprovenance.jsonを正本とする。",
+      "表間差・出力日時・タイムゾーン不明は解消せず制限として残す。GA4・問い合わせは今回の提供対象外。"
+    ]
+  },
+  "history_note": "上記の当初status・acceptance_conditions・verificationは入力未提供時の履歴。現在の完了状態はcurrent_assessmentとissue_resolution、実測評価ファイルを参照。"
+}
