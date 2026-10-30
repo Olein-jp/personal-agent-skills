@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "オレイン記事監査結果 v1.0",
+  "title": "オレイン記事監査結果 v1.1",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -19,10 +19,10 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "1.0"
+      "const": "1.1"
     },
     "rules_version": {
-      "const": "1.0"
+      "const": "1.1"
     },
     "mode": {
       "enum": [
@@ -258,8 +258,9 @@
         "additionalProperties": false,
         "required": [
           "domain",
-          "status",
-          "reason",
+          "structure",
+          "outcomes",
+          "unverified_checks",
           "limitations"
         ],
         "properties": {
@@ -270,18 +271,92 @@
               "reader_trust"
             ]
           },
-          "status": {
-            "enum": [
-              "適切",
-              "改善推奨",
-              "要確認",
-              "判定不可",
-              "評価対象外"
-            ]
+          "structure": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "check_ids",
+              "reason",
+              "limitations"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "適切",
+                  "改善推奨",
+                  "要確認",
+                  "判定不可",
+                  "評価対象外"
+                ]
+              },
+              "check_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              }
+            }
           },
-          "reason": {
-            "type": "string",
-            "minLength": 1
+          "outcomes": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "check_ids",
+              "reason",
+              "limitations"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "適切",
+                  "改善推奨",
+                  "要確認",
+                  "判定不可",
+                  "評価対象外"
+                ]
+              },
+              "check_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              }
+            }
+          },
+          "unverified_checks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
           },
           "limitations": {
             "type": "array",
@@ -770,6 +845,13 @@
               "minItems": 1
             }
           }
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/check"
+          },
+          "minItems": 1
         }
       },
       "allOf": [
@@ -859,6 +941,177 @@
                   "P2",
                   "P3"
                 ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "enum": [
+                  "A-01",
+                  "E-03"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "checks"
+            ]
+          },
+          "else": {
+            "not": {
+              "required": [
+                "checks"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "classification",
+        "status",
+        "confidence",
+        "finding",
+        "rationale",
+        "evidence",
+        "limitations"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "classification": {
+          "enum": [
+            "FACT",
+            "EVALUATION",
+            "HYPOTHESIS",
+            "UNVERIFIED"
+          ]
+        },
+        "status": {
+          "enum": [
+            "適切",
+            "改善推奨",
+            "要確認",
+            "判定不可",
+            "評価対象外"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "finding": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "evidence_id",
+              "location",
+              "observation"
+            ],
+            "properties": {
+              "evidence_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observation": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "minItems": 0
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "判定不可"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "classification": {
+                "const": "UNVERIFIED"
+              },
+              "confidence": {
+                "const": "unknown"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "classification": {
+                "const": "UNVERIFIED"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "判定不可",
+                  "要確認"
+                ]
+              },
+              "confidence": {
+                "const": "unknown"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "classification": {
+                "const": "HYPOTHESIS"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence": {
+                "minItems": 1
               }
             }
           }

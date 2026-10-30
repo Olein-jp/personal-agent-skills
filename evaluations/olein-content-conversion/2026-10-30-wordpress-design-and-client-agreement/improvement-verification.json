@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-30T08:23:41+09:00",
+  "test_exit_code": 0,
+  "test_log": "test-run-v1.1.txt",
+  "report_validation": [
+    {
+      "report": "audit-result.json",
+      "exit_code": 0,
+      "output": "構造・参照整合性: 合格 (内容の真偽・因果関係は別途レビューが必要です)",
+      "errors": ""
+    },
+    {
+      "report": "audit-result-v1.1.json",
+      "exit_code": 0,
+      "output": "構造・参照整合性: 合格 (内容の真偽・因果関係は別途レビューが必要です)",
+      "errors": ""
+    }
+  ],
+  "skill_validation": {
+    "exit_code": 0,
+    "output": "Skill is valid!"
+  },
+  "same_article_version": true,
+  "same_source_evidence": true,
+  "same_parent_findings": true,
+  "current_skill_sha256": "539950cf77b85395bdc20167b435fe06073f06a7d673b0c1bc42c6e2f7eb9e45",
+  "current_rules_sha256": "7f35f8f5ecbf5ed131d807bfe56a12ba040a97eab5da75b8c6f28fcc1497d4c5",
+  "limitations": [
+    "1.1は同じ取得版を根拠に部分判断を補った比較。新しい外部取得や送信テストではない。",
+    "自動検査は構造と整合性。未知記事の意味評価性能は証明しない。"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "ARTICLE": {
+    "source": "https://olein-design.com/blog/web-engineer-cost-and-work-breakdown",
+    "final_url": "https://olein-design.com/blog/web-engineer-cost-and-work-breakdown",
+    "status": 200,
+    "checked_at": "2026-10-30T09:01:15+09:00",
+    "sha256": "2c610aebbf6da4066b5e4a8ecca5de1a958994ec0295f0b2aec1e2b81107366d",
+    "local_snapshot": "/private/tmp/olein-cost-evaluation/ARTICLE.html",
+    "snapshot_retention": "一時キャッシュのみ。恒久的な同一版再現は保証しない。"
+  },
+  "SOUDAN": {
+    "source": "https://web-soudan.co.jp/service/wordpress-support/",
+    "final_url": "https://web-soudan.co.jp/service/wordpress-support/",
+    "status": 200,
+    "checked_at": "2026-10-30T09:01:15+09:00",
+    "sha256": "910a3d89f1b91f0716b6e41aa1d3a98a94848968a71bb4cd34ea16d410e417ea",
+    "local_snapshot": "/private/tmp/olein-cost-evaluation/SOUDAN.html",
+    "snapshot_retention": "一時キャッシュのみ。恒久的な同一版再現は保証しない。"
+  },
+  "TANUKI": {
+    "source": "https://www.web-t.jp/services/wordpress-investigation/",
+    "final_url": "https://www.web-t.jp/services/wordpress-investigation/",
+    "status": 200,
+    "checked_at": "2026-10-30T09:01:15+09:00",
+    "sha256": "13a46a15688d0a37fd57cf4f2b525c9a2fdca2b400c5117634d45ceb3857a7c1",
+    "local_snapshot": "/private/tmp/olein-cost-evaluation/TANUKI.html",
+    "snapshot_retention": "一時キャッシュのみ。恒久的な同一版再現は保証しない。"
+  },
+  "WP-PHP": {
+    "source": "https://ja.wordpress.org/support/update-php/",
+    "final_url": "https://ja.wordpress.org/support/update-php/",
+    "status": 200,
+    "checked_at": "2026-10-30T09:01:17+09:00",
+    "sha256": "c58d77b88b167de04fc8778ad78b80129dc37b4435dcea397aa66504584734a7",
+    "local_snapshot": "/private/tmp/olein-cost-evaluation/WP-PHP.html",
+    "snapshot_retention": "一時キャッシュのみ。恒久的な同一版再現は保証しない。"
+  },
+  "SERVICE": {
+    "source": "https://olein-design.com/service/maintenance",
+    "final_url": "https://olein-design.com/service/maintenance",
+    "status": 200,
+    "checked_at": "2026-10-30T09:01:15+09:00",
+    "sha256": "128187c1b4b3a0319f5b24e600410e0f7d8538c8693bff925e84d7f9aaf192cc",
+    "local_snapshot": "/private/tmp/olein-cost-evaluation/SERVICE.html",
+    "snapshot_retention": "一時キャッシュのみ。恒久的な同一版再現は保証しない。"
+  },
+  "CONTACT": {
+    "source": "https://olein-design.com/contact",
+    "final_url": "https://olein-design.com/contact",
+    "status": 200,
+    "checked_at": "2026-10-30T09:01:15+09:00",
+    "sha256": "ffefe6f329192e38c06f9c3ff940f09c40da5857a72257906c895bdc4daaaf09",
+    "local_snapshot": "/private/tmp/olein-cost-evaluation/CONTACT.html",
+    "snapshot_retention": "一時キャッシュのみ。恒久的な同一版再現は保証しない。"
+  },
+  "execution_context": {
+    "schema_version": "1.1",
+    "rules_version": "1.1",
+    "base_commit": "6c17029e83a73b7d7e7aded65ddb072782fb1738",
+    "skill_state": "前回の改善を含む未コミットの1.1版。実ファイルのハッシュで識別。",
+    "file_sha256": {
+      "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/SKILL.md": "539950cf77b85395bdc20167b435fe06073f06a7d673b0c1bc42c6e2f7eb9e45",
+      "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/references/audit-rules.json": "7f35f8f5ecbf5ed131d807bfe56a12ba040a97eab5da75b8c6f28fcc1497d4c5",
+      "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/schemas/audit-result.schema.json": "160a488aaf7edef905870f88ff8edae630dbf056905bdef92b82226a2b241bda",
+      "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/scripts/validate-audit.py": "9efe2a76be36dfd6dfe3efce168c1cd72a99da4dcd628f17a074277180de7c76"
+    }
+  }
+}

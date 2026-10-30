@@ -22,7 +22,7 @@ description: オレインデザインのブログについて検索意図、情�
 3. [audit-rules.json](references/audit-rules.json) の固定18項目を適用する。[audit-rules.md](references/audit-rules.md) の判定手順を使う。記事全文・公開画面・取得範囲を区別する。MarkdownでCTAがなくてもサイト共通CTAの不存在とはしない。
 4. 外部主張には実際に開いた一次資料を使う。[sources.md](references/sources.md) は再調査の入口であり、今回の確認証拠ではない。技術のバージョンや対象条件も確かめる。未取得資料はUNVERIFIEDとし、未確認を虚偽と断定しない。
 5. サービス・内部リンク・CTAを評価するときだけ [service-mapping.md](references/service-mapping.md) を読み、該当公式ページを再確認する。取得不能なら現行の内容は判定不可。分析資料がある、または検証計画を作るときは [measurement.md](references/measurement.md) を読む。認証連携は必須にしない。
-6. 各項目に根拠、条件、理由、制限、確信度、改善確認方法を残す。判断の種類と評価状態を別に付ける。総合点・順位予測を出さない。観測事実から改善効果への飛躍はHYPOTHESISに分離する。
+6. 各項目に根拠、条件、理由、制限、確信度、改善確認方法を残す。A-01とE-03は定義済みの部分確認を`checks`へ分け、確認済みと未確認を両方残す。判断の種類と評価状態を別に付ける。総合点・順位予測を出さない。観測事実から改善効果への飛躍はHYPOTHESISに分離する。
 7. [output-contract.md](references/output-contract.md) に従い、[テンプレート](assets/audit-report-template.md) からMarkdownと、`schemas/audit-result.schema.json`に適合するJSONを作る。明示的に片方だけ求められた場合は尊重する。原稿と別ファイルに保存し、両形式のID・状態・根拠を一致させる。
 8. JSONは `python3 <skill-dir>/scripts/validate-audit.py <result.json>` で検証する。失敗を直し、残る意味的な確認と未検証事項を報告する。検証器は根拠の実在や文章の真偽を自動認定しない。
 
@@ -32,7 +32,7 @@ description: オレインデザインのブログについて検索意図、情�
 
 ## AUDIT
 
-本文を変更せず18項目を監査する。SEO・コンテンツ品質、コンバージョン導線品質、読者体験・信頼性を別々に報告し、各領域に未評価範囲を残す。根拠一覧、問題、仮説、判断不可事項、優先順位、公開後の指標を添える。JSONの`plan`はnull、`revisions`は空配列とする。
+本文を変更せず18項目を監査する。SEO・コンテンツ品質、コンバージョン導線品質、読者体験・信頼性を別々に報告する。各領域の「構造品質」と「実測・成果確認」を分け、未確認の動作も一覧に残す。データ不足で確認済みの構造品質を判定不可にしない。根拠一覧、問題、仮説、判断不可事項、優先順位、公開後の指標を添える。新規JSONは1.1版とし、`plan`はnull、`revisions`は空配列とする。
 
 ## REVISE
 

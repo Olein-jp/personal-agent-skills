@@ -43,6 +43,8 @@ python3 -m venv /tmp/olein-content-conversion-venv
 /tmp/olein-content-conversion-venv/bin/python -m unittest discover -s olein-content-conversion/tests -v
 ```
 
+新規出力はスキーマ・ルール1.1。既存1.0出力は旧形式のまま検証できる。版番号だけの自動移行はしない。
+
 検証器はネットワークアクセスや記事の上書きを行わない。JSON Schema Draft 2020-12に加えてID、根拠取得状態、全18項目、3領域、モードと差分の整合を検査する。出典の実在・意味・CV因果関係の正しさは別途確認が必要。
 
 ## 機能と制限
@@ -51,7 +53,7 @@ python3 -m venv /tmp/olein-content-conversion-venv
 - AUDIT: 6領域18項目。各項目の根拠・条件・確信度・制限・検証方法を記録。
 - REVISE: 監査IDと対応する変更前後の提案。原稿や既存スタイルを無断変更しない。
 - 判断の種類はFACT / EVALUATION / HYPOTHESIS / UNVERIFIED。評価状態は適切 / 改善推奨 / 要確認 / 判定不可 / 評価対象外。
-- SEO・コンテンツ、コンバージョン導線、読者体験・信頼性の3領域を別々に表示。点数や成果保証はない。
+- SEO・コンテンツ、コンバージョン導線、読者体験・信頼性の3領域で、構造品質と実測・成果確認を別々に表示。A-01/E-03は部分確認を記録し、未確認動作も残す。点数や成果保証はない。
 - 分析データなしでも構造監査は可能だが実際のSEO/CV成果は認定できない。
 - 「WordPress健康診断」の独立サービスとしての提供条件は未確認。既存の基本チェックの範囲から商品名・料金・納品物を推測しない。
 - CTAの最適位置・詳しさとCVの関係等にはサイト固有の実測が必要。一般公式資料では効果を確定できない。
@@ -71,11 +73,13 @@ python3 -m venv /tmp/olein-content-conversion-venv
 | `references/sources.md` | 確認した公式資料のURL・箇所・日時精度・限界、環境調査 |
 | `references/measurement.md` | GSC/GA4/問い合わせの項目・取得条件・集計・検証計画 |
 | `references/output-contract.md` | Markdown/JSONの対応・正式出力仕様 |
-| `schemas/audit-result.schema.json` | 検証可能な出力スキーマ |
+| `schemas/audit-result.schema.json` | 1.1版の出力スキーマ |
+| `schemas/audit-result.v1.0.schema.json` | 過去の1.0出力を検証する凍結スキーマ |
 | `assets/audit-report-template.md` | 人向けレポートの雛形 |
 | `scripts/validate-audit.py` | 構造と参照整合の検査。終了コード0=合格、1=不整合、2=読込/依存エラー |
 | `scripts/requirements.txt` | 検証器の依存関係 |
 | `tests/test_validate_audit.py` | 構造回帰・破損入力の自動検査 |
+| `tests/test_partial_results.py` | 1.1の部分確認・範囲別集約と1.0互換性の検査 |
 | `tests/test-cases.md` | A〜Hの入力・期待結果・合格条件・禁止事項との対応 |
 | `tests/results.md` | 実行結果、意味レビューと自動検査の区別 |
 | `tests/fixtures/cases.json` | ケースの指定条件・合成事業資料・期待状態 |

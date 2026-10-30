@@ -16,6 +16,26 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def aggregate_status(states):
+    """対象外を除き、未確認も隠さず同じ確認範囲内で集約する。"""
+    return next((s for s in ['改善推奨', '判定不可', '要確認', '適切'] if s in states), '評価対象外')
+
+
+def assessment_units(report, rules):
+    """固定項目を、定義済みの部分確認または単一項目として展開する。"""
+    units = []
+    for finding, rule in zip(report['findings'], rules):
+        if rule.get('checks'):
+            for check, definition in zip(finding['checks'], rule['checks']):
+                units.append({'id': finding['id'] + '.' + check['key'],
+                              'domain': rule['domain'], 'scope': definition['scope'],
+                              'status': check['status']})
+        else:
+            units.append({'id': finding['id'], 'domain': rule['domain'],
+                          'scope': rule['assessment_scope'], 'status': finding['status']})
+    return units
+
+
 def load_json(path):
     def unique_pairs(pairs):
         result = {}
@@ -29,7 +49,11 @@ def load_json(path):
 
 
 def validate(report):
-    schema = load_json(ROOT / 'schemas/audit-result.schema.json')
+    version = report.get('schema_version') if isinstance(report, dict) else None
+    if not isinstance(version, str) or version not in {'1.0', '1.1'}:
+        return ['schema_version: 対応している版は1.0と1.1です']
+    schema_name = 'audit-result.v1.0.schema.json' if version == '1.0' else 'audit-result.schema.json'
+    schema = load_json(ROOT / 'schemas' / schema_name)
     Draft202012Validator.check_schema(schema)
     errors = [f'{"/".join(map(str, e.absolute_path)) or "$"}: {e.message}'
               for e in Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(report)]
@@ -43,6 +67,7 @@ def validate(report):
     ids = [f['id'] for f in report['findings']]
     if ids != [r['id'] for r in rules]:
         errors.append('findingsは固定18項目を重複なくA-01〜F-02順で含めてください')
+        return errors
 
     def check_ref(eid, context, available=False):
         item = evidence.get(eid)
@@ -78,6 +103,27 @@ def validate(report):
             errors.append(f'{fid}: 判断を支える取得済み根拠が必要です')
         if f['classification'] != 'UNVERIFIED' and f['confidence'] == 'unknown':
             errors.append(f'{fid}: 確信度unknownはUNVERIFIEDに使用してください')
+        if version == '1.1' and by_rule[fid].get('checks'):
+            checks = f['checks']
+            expected_keys = [c['key'] for c in by_rule[fid]['checks']]
+            if [c['key'] for c in checks] != expected_keys:
+                errors.append(f'{fid}: checksは定義済みの部分項目を重複なく定義順で含めてください')
+            expected_status = aggregate_status([c['status'] for c in checks])
+            if f['status'] != expected_status:
+                errors.append(f'{fid}: 項目全体の状態は部分確認から{expected_status}となります')
+            for c in checks:
+                context = fid + '.' + c['key']
+                for e in c['evidence']:
+                    check_ref(e['evidence_id'], context,
+                              c['classification'] != 'UNVERIFIED' and c['status'] != '評価対象外')
+                if c['classification'] != 'UNVERIFIED' and c['status'] != '評価対象外' and not c['evidence']:
+                    errors.append(f'{context}: 部分確認を支える取得済み根拠が必要です')
+                if c['classification'] != 'UNVERIFIED' and c['confidence'] == 'unknown':
+                    errors.append(f'{context}: 確信度unknownはUNVERIFIEDに使用してください')
+                if (fid == 'A-01' and c['key'] == 'observed_queries' and
+                        not any(d['kind'] == 'search_console' and d['status'] != 'missing' for d in datasets) and
+                        c['status'] not in {'判定不可', '評価対象外'}):
+                    errors.append(f'{context}: 実クエリ未取得のまま一致を評価できません')
         if f['status'] in {'適切', '評価対象外'} and (f['severity'] != 'none' or f['priority'] != 'none'):
             errors.append(f'{fid}: 適切・対象外を問題の重要度や優先度に変換しないでください')
         if f['status'] in {'判定不可', '要確認'} and f['severity'] == 'critical':
@@ -106,12 +152,30 @@ def validate(report):
     domains = ['seo_content', 'conversion', 'reader_trust']
     if [s['domain'] for s in report['summaries']] != domains:
         errors.append('summariesは3領域をseo_content、conversion、reader_trustの順で指定してください')
-    order = ['改善推奨', '判定不可', '要確認', '適切']
-    for s in report['summaries']:
-        states = [f['status'] for f in report['findings'] if by_rule[f['id']]['domain'] == s['domain']]
-        expected = next((state for state in order if state in states), '評価対象外')
-        if s['status'] != expected:
-            errors.append(f'{s["domain"]}: 領域状態は{expected}です。未確認や改善点を隠さないでください')
+    if version == '1.0':
+        for s in report['summaries']:
+            states = [f['status'] for f in report['findings'] if by_rule[f['id']]['domain'] == s['domain']]
+            expected = aggregate_status(states)
+            if s['status'] != expected:
+                errors.append(f'{s["domain"]}: 領域状態は{expected}です。未確認や改善点を隠さないでください')
+    else:
+        # 部分項目が欠落・重複している場合は不完全な集約を行わない。
+        if any([c['key'] for c in f.get('checks', [])] !=
+               [c['key'] for c in by_rule[f['id']].get('checks', [])] for f in report['findings']):
+            return errors
+        units = assessment_units(report, rules)
+        for s in report['summaries']:
+            domain_units = [u for u in units if u['domain'] == s['domain']]
+            for facet, scope in [('structure', 'structure'), ('outcomes', 'outcome')]:
+                selected = [u for u in domain_units if u['scope'] == scope]
+                expected = aggregate_status([u['status'] for u in selected])
+                if s[facet]['status'] != expected:
+                    errors.append(f'{s["domain"]}/{facet}: 確認範囲別の状態は{expected}です')
+                if s[facet]['check_ids'] != [u['id'] for u in selected]:
+                    errors.append(f'{s["domain"]}/{facet}: 集約対象の確認IDが一致しません')
+            pending = [u['id'] for u in domain_units if u['status'] in {'判定不可', '要確認'}]
+            if s['unverified_checks'] != pending:
+                errors.append(f'{s["domain"]}: 未確認の部分項目・動作確認を隠さないでください')
     for change in report['revisions']:
         for fid in change['finding_ids']:
             if fid not in ids:

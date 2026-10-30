@@ -1,5 +1,5 @@
 {
-  "rules_version": "1.0",
+  "rules_version": "1.1",
   "rules": [
     {
       "id": "A-01",
@@ -12,7 +12,20 @@
       "pass_if": "目的と回答が対応し、推定意図と観測クエリを区別する",
       "undetermined_if": "読者・目的の根拠も本文もない。クエリ未取得なら実クエリ一致は判定不可",
       "confidence_guidance": "明示要件と本文比較はhigh、意図推定はlow〜medium",
-      "improvement_validation": "中心疑問への回答箇所を再確認。対象クエリ別の流入変化は期間・流入構成を添えて観測"
+      "improvement_validation": "中心疑問への回答箇所を再確認。対象クエリ別の流入変化は期間・流入構成を添えて観測",
+      "assessment_scope": "structure",
+      "checks": [
+        {
+          "key": "audience_goal",
+          "scope": "structure",
+          "target": "本文・企画から確認する想定読者と目的"
+        },
+        {
+          "key": "observed_queries",
+          "scope": "outcome",
+          "target": "実クエリに基づく検索意図との一致"
+        }
+      ]
     },
     {
       "id": "A-02",
@@ -25,7 +38,8 @@
       "pass_if": "主要な約束を本文で満たし、ページの役割を説明できる",
       "undetermined_if": "タイトル・本文の片方がない。SERP未確認なら表示タイトルは判定不可",
       "confidence_guidance": "本文の不一致はhigh、検索意図の適合はmedium以下",
-      "improvement_validation": "約束と対応箇所を照合。CTRは同種クエリ・端末等で比較し順位効果とは分ける"
+      "improvement_validation": "約束と対応箇所を照合。CTRは同種クエリ・端末等で比較し順位効果とは分ける",
+      "assessment_scope": "structure"
     },
     {
       "id": "B-01",
@@ -38,7 +52,8 @@
       "pass_if": "対象条件付きで一次情報と一致し、未確定事項は留保する",
       "undetermined_if": "技術一次情報が未取得、バージョン不明、または矛盾未解消",
       "confidence_guidance": "一致・矛盾を直接確認できればhigh、一般化にはmedium以下",
-      "improvement_validation": "修正した主張を同じ対象条件の一次情報で再照合。成果の主張は実測も確認"
+      "improvement_validation": "修正した主張を同じ対象条件の一次情報で再照合。成果の主張は実測も確認",
+      "assessment_scope": "structure"
     },
     {
       "id": "B-02",
@@ -51,7 +66,8 @@
       "pass_if": "主要な外部主張と著者の判断・経験の来歴が追跡できる",
       "undetermined_if": "著者資料未提供なら経験の真偽は判定不可。経験がないだけでは問題にしない",
       "confidence_guidance": "参照の存在はhigh、経験の一般化はmedium以下",
-      "improvement_validation": "主張から出典と該当箇所をたどれ、創作経験が含まれないことを確認"
+      "improvement_validation": "主張から出典と該当箇所をたどれ、創作経験が含まれないことを確認",
+      "assessment_scope": "structure"
     },
     {
       "id": "B-03",
@@ -64,7 +80,8 @@
       "pass_if": "読者が目的を達成する必要情報を含み、見出しと順序が判断を助ける",
       "undetermined_if": "本文なし、または何を達成する記事か決められない",
       "confidence_guidance": "明示要件の欠落はhigh、認知負荷の評価はmedium",
-      "improvement_validation": "対象読者が手順・比較条件を追えるかレビュー。文字数・見出し数は合否に使わない"
+      "improvement_validation": "対象読者が手順・比較条件を追えるかレビュー。文字数・見出し数は合否に使わない",
+      "assessment_scope": "structure"
     },
     {
       "id": "B-04",
@@ -77,7 +94,8 @@
       "pass_if": "影響する仕様の版・条件が適切で、古い情報の対象が明記される",
       "undetermined_if": "現行一次情報が取得できず、影響する変更の有無を確かめられない",
       "confidence_guidance": "当該版との差分確認はhigh、未確認ならunknown",
-      "improvement_validation": "対象版での一次資料・動作確認。公開日が古いだけでは修正理由にしない"
+      "improvement_validation": "対象版での一次資料・動作確認。公開日が古いだけでは修正理由にしない",
+      "assessment_scope": "structure"
     },
     {
       "id": "B-05",
@@ -90,7 +108,8 @@
       "pass_if": "関連した実在の情報へ内容を説明するリンクを必要に応じて置く",
       "undetermined_if": "リンク先取得不能、MarkdownしかなくHTMLのクロール可否を確認できない",
       "confidence_guidance": "リンク先との一致はhigh、導線効果は仮説",
-      "improvement_validation": "リンク先とアンカーを再確認。遷移効果は実測、リンク数自体を成果にしない"
+      "improvement_validation": "リンク先とアンカーを再確認。遷移効果は実測、リンク数自体を成果にしない",
+      "assessment_scope": "structure"
     },
     {
       "id": "C-01",
@@ -103,7 +122,8 @@
       "pass_if": "自力確認できることと作業の条件が具体的で、必要な情報を提供する",
       "undetermined_if": "原稿や作業の前提が不明。実行手順・判断を扱わない記事は対象外にできる",
       "confidence_guidance": "具体的な条件の有無はhigh、個別環境への適合はmedium以下",
-      "improvement_validation": "読者の権限・復元手段・環境で判断が分かれる箇所を再確認"
+      "improvement_validation": "読者の権限・復元手段・環境で判断が分かれる箇所を再確認",
+      "assessment_scope": "structure"
     },
     {
       "id": "C-02",
@@ -116,7 +136,8 @@
       "pass_if": "自力対応困難になる具体条件、相談で整理する課題、適切な相談先を示す",
       "undetermined_if": "サービス情報や相談対象の課題が不明。無関係な技術資料は対象外にできる",
       "confidence_guidance": "条件とサービスの対応はmedium、成果は未検証",
-      "improvement_validation": "相談対象者と解決可能な課題を照合。匿名問い合わせの適合度は後日観測"
+      "improvement_validation": "相談対象者と解決可能な課題を照合。匿名問い合わせの適合度は後日観測",
+      "assessment_scope": "structure"
     },
     {
       "id": "C-03",
@@ -129,7 +150,8 @@
       "pass_if": "必要情報を保ち、除外範囲が読者・目的・安全性に基づく",
       "undetermined_if": "編集意図が不明なら隠蔽の意図は断定不可。記述の不足自体はB-03で評価",
       "confidence_guidance": "明示的な出し惜しみはhigh、意図推定はlow",
-      "improvement_validation": "修正後も読者が中心疑問を解決でき、必要情報が残るか比較する"
+      "improvement_validation": "修正後も読者が中心疑問を解決でき、必要情報が残るか比較する",
+      "assessment_scope": "structure"
     },
     {
       "id": "D-01",
@@ -142,7 +164,8 @@
       "pass_if": "現行で確認した範囲と記事の説明が一致する",
       "undetermined_if": "取得不能・未確認サービスは判定不可。サービスを扱わず誘導予定もない場合は対象外",
       "confidence_guidance": "現行の明示範囲はhigh、未掲載領域はunknown",
-      "improvement_validation": "公式ページとの再照合。サービス未確認を不存在と断定しない"
+      "improvement_validation": "公式ページとの再照合。サービス未確認を不存在と断定しない",
+      "assessment_scope": "structure"
     },
     {
       "id": "D-02",
@@ -155,7 +178,8 @@
       "pass_if": "課題・対象者・相談範囲が具体的に一致する、または関連がないので誘導しない",
       "undetermined_if": "サービス範囲か記事目的が不明。誘導しない技術資料は対象外にできる",
       "confidence_guidance": "直接対応はmedium〜high、効果は仮説",
-      "improvement_validation": "記事の未解決課題と対応内容の対応を確認。問い合わせの適合分類を後日観測"
+      "improvement_validation": "記事の未解決課題と対応内容の対応を確認。問い合わせの適合分類を後日観測",
+      "assessment_scope": "structure"
     },
     {
       "id": "E-01",
@@ -168,7 +192,8 @@
       "pass_if": "目的に合う案内がある、または技術情報提供の目的ではCTAなしが妥当",
       "undetermined_if": "本文が部分取得、サイト共通導線が未確認ならその範囲は判定不可",
       "confidence_guidance": "有無の観測はhigh、必要性評価はmedium",
-      "improvement_validation": "目的に合う次の行動の有無を確認。CTA不存在からCV低下を断定しない"
+      "improvement_validation": "目的に合う次の行動の有無を確認。CTA不存在からCV低下を断定しない",
+      "assessment_scope": "structure"
     },
     {
       "id": "E-02",
@@ -181,7 +206,8 @@
       "pass_if": "結論から自然につながり、対象者・相談課題・次の行動が分かる",
       "undetermined_if": "CTAなしなら対象外、前後文脈・リンク先不明なら判定不可",
       "confidence_guidance": "文脈の適合はmedium、具体的な不一致はhigh",
-      "improvement_validation": "前後とリンク先の整合をレビュー。クリックや適合問い合わせは仮説検証"
+      "improvement_validation": "前後とリンク先の整合をレビュー。クリックや適合問い合わせは仮説検証",
+      "assessment_scope": "structure"
     },
     {
       "id": "E-03",
@@ -194,7 +220,20 @@
       "pass_if": "関連サービス・連絡先への経路と必要情報を確認できる",
       "undetermined_if": "URL文字列のみ、ページ取得不能、送信未確認なら到達・送信成功は判定不可。導線不要なら対象外",
       "confidence_guidance": "静的な到達観測はhigh、送信等の未操作部分はunknown",
-      "improvement_validation": "許可範囲で経路を再確認。フォーム送信は別途許可。静的抽出のエラーだけで故障と断定しない"
+      "improvement_validation": "許可範囲で経路を再確認。フォーム送信は別途許可。静的抽出のエラーだけで故障と断定しない",
+      "assessment_scope": "structure",
+      "checks": [
+        {
+          "key": "static_path",
+          "scope": "structure",
+          "target": "記事から相談先までの静的な案内と到達"
+        },
+        {
+          "key": "submission",
+          "scope": "behavior",
+          "target": "フォームの入力・送信・完了・受信の動作"
+        }
+      ]
     },
     {
       "id": "E-04",
@@ -207,7 +246,8 @@
       "pass_if": "数値・母数・期間・範囲・制限を明示し、変化の観測と因果を分ける",
       "undetermined_if": "実測なし、計測定義・範囲不足、比較不能なら実成果を判定不可",
       "confidence_guidance": "観測値はhighでも、少数・帰属不明の効果はlowまたはunknown",
-      "improvement_validation": "分母・イベント・期間を固定し流入/季節/同時変更を記録。前後比較だけなら記述的観測に留める"
+      "improvement_validation": "分母・イベント・期間を固定し流入/季節/同時変更を記録。前後比較だけなら記述的観測に留める",
+      "assessment_scope": "outcome"
     },
     {
       "id": "F-01",
@@ -220,7 +260,8 @@
       "pass_if": "リスクの対象・条件・行動を限定し、相談しない選択も尊重する",
       "undetermined_if": "リスクの一次情報がなく真偽を確かめられない。表現の観測は別にできる",
       "confidence_guidance": "実際の表現と条件の欠落はhigh、心理的影響は仮説",
-      "improvement_validation": "対象・条件・根拠・行動を再照合。読者の理解や問い合わせの質は別途観測"
+      "improvement_validation": "対象・条件・根拠・行動を再照合。読者の理解や問い合わせの質は別途観測",
+      "assessment_scope": "structure"
     },
     {
       "id": "F-02",
@@ -233,7 +274,8 @@
       "pass_if": "必要な条件・注意・確認方法があり、読者が判断して止めることもできる",
       "undetermined_if": "作業一次情報や環境条件が不明。実行手順・操作を扱わない記事は対象外にできる",
       "confidence_guidance": "一次手順との具体的な矛盾はhigh、個別環境の安全性保証は不可",
-      "improvement_validation": "前提・復元手段・事後確認をレビュー。実行テストは別途許可された環境のみ"
+      "improvement_validation": "前提・復元手段・事後確認をレビュー。実行テストは別途許可された環境のみ",
+      "assessment_scope": "structure"
     }
   ]
 }

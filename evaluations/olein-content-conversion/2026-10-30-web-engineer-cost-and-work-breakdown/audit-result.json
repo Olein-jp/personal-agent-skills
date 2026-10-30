@@ -1,0 +1,1204 @@
+{
+  "schema_version": "1.1",
+  "rules_version": "1.1",
+  "mode": "AUDIT",
+  "created_at": "2026-10-30T09:03:55+09:00",
+  "subject": {
+    "source": "https://olein-design.com/blog/web-engineer-cost-and-work-breakdown",
+    "version": "html-sha256:2c610aebbf6da4066b5e4a8ecca5de1a958994ec0295f0b2aec1e2b81107366d",
+    "audience": "ホームページの相談・調査・修正を依頼したいサイト所有者や担当者と推定。",
+    "goal": "依頼する仕事と完了条件、提示価格の対象範囲を理解し、納得できる依頼・見積もり比較を助ける。副目的として自社への相談案内。",
+    "content_type": "比較・意思決定型",
+    "determination": "inferred",
+    "type_reason": "料金体系・作業範囲・成果物の比較と依頼判断が中心。一般向けでも集客・相談型に自動分類しない。",
+    "scope": "記事本文・タイトル・メタデータ・本文リンク、および選んだ一次ページを確認。共通広告/関連記事リンクの全件監査、視覚配置、実サイト操作、送信、分析データは対象外・未確認。"
+  },
+  "evidence": [
+    {
+      "id": "EV-ARTICLE",
+      "source_type": "article",
+      "title": "Web エンジニアへの依頼はいくらかかる ? 相談・調査・修正の費用と作業時間の内訳 | オレインデザイン",
+      "publisher": "オレインデザイン",
+      "source": "https://olein-design.com/blog/web-engineer-cost-and-work-breakdown",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:01:15+09:00",
+      "published_date": "2026-10-26",
+      "updated_date": "2026-10-26",
+      "location": "冒頭、公開料金表、架空試算、依頼前の整理、結論",
+      "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。",
+      "supports": [
+        "記事の読者・目的・表現・導線"
+      ],
+      "limitations": [
+        "本文とHTMLの確認。外部料金の過去の状態や実際の工数・成果を証明しない。",
+        "URL・取得時刻・ハッシュはretrieval.json。原文の長期保存は行わない。"
+      ]
+    },
+    {
+      "id": "EV-SOUDAN",
+      "source_type": "service",
+      "title": "WordPress向けサポートメニュー | サービス案内 | 株式会社Webの相談所",
+      "publisher": "株式会社Webの相談所",
+      "source": "https://web-soudan.co.jp/service/wordpress-support/",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:01:15+09:00",
+      "published_date": "2024-04-16",
+      "updated_date": "2026-07-17",
+      "location": "サイト所有者向けの相談・診断・スポット保守・定期保守の各料金と注記",
+      "observation": "相談6,000円/時間、診断100,000円/回、スポット保守100,000円/サイト。定期保守は初期50,000円〜・月30,000円〜。各税抜。対象と除外条件も記載。",
+      "supports": [
+        "記事中の第三者料金と条件"
+      ],
+      "limitations": [
+        "現在の公式表示。市場相場、自社料金、過去の2026-10-26の表示、個別見積もりの証明ではない。",
+        "URL・取得時刻・ハッシュはretrieval.json。原文の長期保存は行わない。"
+      ]
+    },
+    {
+      "id": "EV-TANUKI",
+      "source_type": "service",
+      "title": "調査・報告 – たぬきのWeb万屋",
+      "publisher": "たぬきのWeb万屋",
+      "source": "https://www.web-t.jp/services/wordpress-investigation/",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:01:15+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "料金・対応内容、報告書の利用",
+      "observation": "基本55,000円〜/1サイト。内部・外部・環境調査と報告書作成を掲載。他社へ修正を依頼する利用も案内。",
+      "supports": [
+        "調査・報告の公開例"
+      ],
+      "limitations": [
+        "このページの本文から税区分は確認できない。他ページの条件や個別見積もりは未調査。",
+        "URL・取得時刻・ハッシュはretrieval.json。原文の長期保存は行わない。"
+      ]
+    },
+    {
+      "id": "EV-WP-PHP",
+      "source_type": "official",
+      "title": "Update PHP – サポートフォーラム – WordPress.org 日本語",
+      "publisher": "WordPress.org 日本語",
+      "source": "https://ja.wordpress.org/support/update-php/",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:01:17+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "PHPバージョンを確認する方法、更新前、問題発生時",
+      "observation": "サイトヘルスでの確認、バックアップ・互換性・元に戻す確認を説明。",
+      "supports": [
+        "確認操作と変更・復元の区別"
+      ],
+      "limitations": [
+        "一般案内の該当箇所だけを適用。資料の他のSEOや安全性の断定を採用せず、全構成での成功を保証しない。",
+        "URL・取得時刻・ハッシュはretrieval.json。原文の長期保存は行わない。"
+      ]
+    },
+    {
+      "id": "EV-SERVICE",
+      "source_type": "service",
+      "title": "WordPress運用・実装サポート | オレインデザイン",
+      "publisher": "オレインデザイン",
+      "source": "https://olein-design.com/service/maintenance",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:01:15+09:00",
+      "published_date": "2026-01-15",
+      "updated_date": "2026-09-29",
+      "location": "対応できること、ご相談から運用開始まで",
+      "observation": "実装相談、不具合調査、改修等を扱い、現状と条件を整理して進める。継続的な関係を基本とする。",
+      "supports": [
+        "記事末尾の相談内容との関連"
+      ],
+      "limitations": [
+        "7,000円や49,000円の仮定を自社の料金へ変換しない。個別案件の受諾・復旧は未確認。",
+        "URL・取得時刻・ハッシュはretrieval.json。原文の長期保存は行わない。"
+      ]
+    },
+    {
+      "id": "EV-CONTACT",
+      "source_type": "service",
+      "title": "お問い合わせ | オレインデザイン",
+      "publisher": "オレインデザイン",
+      "source": "https://olein-design.com/contact",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:01:15+09:00",
+      "published_date": "2015-06-30",
+      "updated_date": "2025-04-15",
+      "location": "公開フォーム・問い合わせ種別",
+      "observation": "記事のリンク先で公開フォームと関連する問い合わせ種別を静的に確認。",
+      "supports": [
+        "連絡先への到達"
+      ],
+      "limitations": [
+        "入力操作・送信完了・通知受信は未検証。静的抽出のエラー文だけで故障とは認定しない。",
+        "URL・取得時刻・ハッシュはretrieval.json。原文の長期保存は行わない。"
+      ]
+    },
+    {
+      "id": "EV-CALC",
+      "source_type": "business",
+      "title": "架空試算の算術検算",
+      "publisher": "今回の監査でのローカル再計算",
+      "source": "/Users/olein/GitHub/personal-agent-skills/evaluations/olein-content-conversion/2026-10-30-web-engineer-cost-and-work-breakdown/numeric-checks.json",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:02:16+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "rows / total / revenue_example",
+      "observation": "9行の時間は420分=7時間、金額は49,000円。各行は仮の7,000円/時間と整合。仮の売上700,000円÷100時間=7,000円も整合。",
+      "supports": [
+        "算術整合だけの検証"
+      ],
+      "limitations": [
+        "作業時間の妥当性・業界相場・実績・顧客請求の証明ではない。"
+      ]
+    },
+    {
+      "id": "EV-SEARCH-CONSOLE",
+      "source_type": "analytics",
+      "title": "search_console (未提供)",
+      "publisher": "未提供",
+      "source": "未提供:search_console",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "取得状態",
+      "observation": "今回、対象記事の計測データは提供されていない。",
+      "supports": [
+        "実測評価の制限"
+      ],
+      "limitations": [
+        "欠測を0件に換算しない。"
+      ]
+    },
+    {
+      "id": "EV-GA4",
+      "source_type": "analytics",
+      "title": "ga4 (未提供)",
+      "publisher": "未提供",
+      "source": "未提供:ga4",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "取得状態",
+      "observation": "今回、対象記事の計測データは提供されていない。",
+      "supports": [
+        "実測評価の制限"
+      ],
+      "limitations": [
+        "欠測を0件に換算しない。"
+      ]
+    },
+    {
+      "id": "EV-INQUIRIES",
+      "source_type": "analytics",
+      "title": "inquiries (未提供)",
+      "publisher": "未提供",
+      "source": "未提供:inquiries",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "取得状態",
+      "observation": "今回、対象記事の計測データは提供されていない。",
+      "supports": [
+        "実測評価の制限"
+      ],
+      "limitations": [
+        "欠測を0件に換算しない。"
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "kind": "search_console",
+      "status": "missing",
+      "evidence_id": "EV-SEARCH-CONSOLE",
+      "acquired_at": null,
+      "period": null,
+      "scope": "今回の記事に対する実測未取得",
+      "timezone": null,
+      "definitions": "母数・イベント定義・集計期間・帰属未確認",
+      "limitations": [
+        "実測成果と因果関係は評価できない。"
+      ]
+    },
+    {
+      "kind": "ga4",
+      "status": "missing",
+      "evidence_id": "EV-GA4",
+      "acquired_at": null,
+      "period": null,
+      "scope": "今回の記事に対する実測未取得",
+      "timezone": null,
+      "definitions": "母数・イベント定義・集計期間・帰属未確認",
+      "limitations": [
+        "実測成果と因果関係は評価できない。"
+      ]
+    },
+    {
+      "kind": "inquiries",
+      "status": "missing",
+      "evidence_id": "EV-INQUIRIES",
+      "acquired_at": null,
+      "period": null,
+      "scope": "今回の記事に対する実測未取得",
+      "timezone": null,
+      "definitions": "母数・イベント定義・集計期間・帰属未確認",
+      "limitations": [
+        "実測成果と因果関係は評価できない。"
+      ]
+    }
+  ],
+  "summaries": [
+    {
+      "domain": "seo_content",
+      "unverified_checks": [
+        "A-01.observed_queries"
+      ],
+      "limitations": [
+        "構造品質と実測・動作を分離している。適切は成果や送信成功の保証ではない。"
+      ],
+      "structure": {
+        "status": "適切",
+        "check_ids": [
+          "A-01.audience_goal",
+          "A-02",
+          "B-01",
+          "B-02",
+          "B-03",
+          "B-04",
+          "B-05"
+        ],
+        "reason": "当該確認範囲の項目・部分確認を集約。",
+        "limitations": [
+          "視覚、実装、送信、実測成果を一括で保証しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "判定不可",
+        "check_ids": [
+          "A-01.observed_queries"
+        ],
+        "reason": "当該確認範囲の項目・部分確認を集約。",
+        "limitations": [
+          "実測資料なし。構造の評価とは別。"
+        ]
+      }
+    },
+    {
+      "domain": "conversion",
+      "unverified_checks": [
+        "E-03.submission",
+        "E-04"
+      ],
+      "limitations": [
+        "構造品質と実測・動作を分離している。適切は成果や送信成功の保証ではない。"
+      ],
+      "structure": {
+        "status": "適切",
+        "check_ids": [
+          "C-01",
+          "C-02",
+          "C-03",
+          "D-01",
+          "D-02",
+          "E-01",
+          "E-02",
+          "E-03.static_path"
+        ],
+        "reason": "当該確認範囲の項目・部分確認を集約。",
+        "limitations": [
+          "視覚、実装、送信、実測成果を一括で保証しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "判定不可",
+        "check_ids": [
+          "E-04"
+        ],
+        "reason": "当該確認範囲の項目・部分確認を集約。",
+        "limitations": [
+          "実測資料なし。構造の評価とは別。"
+        ]
+      }
+    },
+    {
+      "domain": "reader_trust",
+      "unverified_checks": [],
+      "limitations": [
+        "構造品質と実測・動作を分離している。適切は成果や送信成功の保証ではない。"
+      ],
+      "structure": {
+        "status": "適切",
+        "check_ids": [
+          "F-01",
+          "F-02"
+        ],
+        "reason": "当該確認範囲の項目・部分確認を集約。",
+        "limitations": [
+          "視覚、実装、送信、実測成果を一括で保証しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "評価対象外",
+        "check_ids": [],
+        "reason": "当該確認範囲の項目・部分確認を集約。",
+        "limitations": [
+          "視覚、実装、送信、実測成果を一括で保証しない。"
+        ]
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "A-01",
+      "category": "search_intent",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "想定読者・目的は読めるが、実クエリとの一致は判定できない。",
+      "rationale": "一般の依頼者向けという本文上の判断と、実際の検索者の意図を分ける。 適用基準: A-01",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "冒頭・依頼前の整理",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-SEARCH-CONSOLE",
+          "location": "未提供",
+          "observation": "今回、対象記事の計測データは提供されていない。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "実クエリが必要な段階で、対象期間とページを指定して確認する。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "中心疑問への回答箇所を再確認。対象クエリ別の流入変化は期間・流入構成を添えて観測",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      },
+      "checks": [
+        {
+          "key": "audience_goal",
+          "classification": "EVALUATION",
+          "status": "適切",
+          "confidence": "medium",
+          "finding": "費用と依頼範囲を判断したい一般読者向けに説明が組み立てられている。",
+          "rationale": "本文の事例と判断材料から読者・目的の一致を評価。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ARTICLE",
+              "location": "冒頭と見積もり確認・準備",
+              "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+            }
+          ],
+          "limitations": [
+            "実検索者の属性は未取得。"
+          ]
+        },
+        {
+          "key": "observed_queries",
+          "classification": "UNVERIFIED",
+          "status": "判定不可",
+          "confidence": "unknown",
+          "finding": "実クエリとの一致は確認できない。",
+          "rationale": "本文から想定する意図を、観測した意図に置き換えない。",
+          "evidence": [
+            {
+              "evidence_id": "EV-SEARCH-CONSOLE",
+              "location": "取得状態",
+              "observation": "今回、対象記事の計測データは提供されていない。"
+            }
+          ],
+          "limitations": [
+            "クエリ・期間・検索タイプが未提供。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-02",
+      "category": "search_intent",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "タイトルが示す費用と作業内訳を本文で扱い、対象範囲を限定している。",
+      "rationale": "大規模開発の相場を約束せず、相談・調査・修正の判断に範囲を絞る。 適用基準: A-02",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "タイトル・冒頭・表",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "タイトルと回答範囲の対応を保つ。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "約束と対応箇所を照合。CTRは同種クエリ・端末等で比較し順位効果とは分ける",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "B-01",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "照合した公開料金・条件と算術は、確認した範囲で整合する。",
+      "rationale": "公開価格、税区分、対象者、仮定の計算を分けて確認。実際の必要工数の正しさとは別。 適用基準: B-01",
+      "evidence": [
+        {
+          "evidence_id": "EV-SOUDAN",
+          "location": "各料金と税抜注記",
+          "observation": "相談6,000円/時間、診断100,000円/回、スポット保守100,000円/サイト。定期保守は初期50,000円〜・月30,000円〜。各税抜。対象と除外条件も記載。"
+        },
+        {
+          "evidence_id": "EV-TANUKI",
+          "location": "料金・対応内容",
+          "observation": "基本55,000円〜/1サイト。内部・外部・環境調査と報告書作成を掲載。他社へ修正を依頼する利用も案内。"
+        },
+        {
+          "evidence_id": "EV-CALC",
+          "location": "計算結果",
+          "observation": "9行の時間は420分=7時間、金額は49,000円。各行は仮の7,000円/時間と整合。仮の売上700,000円÷100時間=7,000円も整合。"
+        },
+        {
+          "evidence_id": "EV-WP-PHP",
+          "location": "確認方法・更新前",
+          "observation": "サイトヘルスでの確認、バックアップ・互換性・元に戻す確認を説明。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "仮定を相場や自社実績に変えず、料金を更新する場合は条件も再確認する。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "公開料金の対象者・単位・税・除外条件を一次ページと照合し、仮の表の行・合計を再計算する。妥当な標準工数だったと認定しない。",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "B-02",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "実在する料金出典と架空の試算が明確に区別されている。",
+      "rationale": "実測を装う記述や架空の顧客経験を足す必要はない。 適用基準: B-02",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "出典・仮定の明示",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-SOUDAN",
+          "location": "所有者向け料金",
+          "observation": "相談6,000円/時間、診断100,000円/回、スポット保守100,000円/サイト。定期保守は初期50,000円〜・月30,000円〜。各税抜。対象と除外条件も記載。"
+        },
+        {
+          "evidence_id": "EV-TANUKI",
+          "location": "基本料金",
+          "observation": "基本55,000円〜/1サイト。内部・外部・環境調査と報告書作成を掲載。他社へ修正を依頼する利用も案内。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "出典と仮定の区別を維持し、実例の追加を必須にしない。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "主張から出典と該当箇所をたどれ、創作経験が含まれないことを確認",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "B-03",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "料金だけでなく、依頼範囲・成果物・追加費用を判断できる構成。",
+      "rationale": "一般読者の判断支援として評価し、コードや相場統計の網羅を要件にしない。 適用基準: B-03",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "料金体系・見積もり確認・準備",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "必要な判断材料を残す。長いという理由だけで内訳を削らない。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "対象読者が手順・比較条件を追えるかレビュー。文字数・見出し数は合否に使わない",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "B-04",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "確認日と変更可能性の注記があり、今回の参照先とも一致する。",
+      "rationale": "今回の現在表示は確認できるが、記事が挙げる2026-10-26の表示履歴を遡及証明していない。 適用基準: B-04",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "公開料金表の確認日・注記",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-SOUDAN",
+          "location": "現在の公開表示",
+          "observation": "相談6,000円/時間、診断100,000円/回、スポット保守100,000円/サイト。定期保守は初期50,000円〜・月30,000円〜。各税抜。対象と除外条件も記載。"
+        },
+        {
+          "evidence_id": "EV-TANUKI",
+          "location": "現在の公開表示",
+          "observation": "基本55,000円〜/1サイト。内部・外部・環境調査と報告書作成を掲載。他社へ修正を依頼する利用も案内。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "将来の変更時も確認日・対象者・税区分と範囲を併せて見直す。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "対象版での一次資料・動作確認。公開日が古いだけでは修正理由にしない",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "B-05",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "本文の参照と連絡先リンクは、説明に関連する先に到達する。",
+      "rationale": "リンク数を基準にせず、必要な一次情報と問い合わせ先の関連を確認した。 適用基準: B-05",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "本文のa[href]",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-SOUDAN",
+          "location": "料金ページ",
+          "observation": "相談6,000円/時間、診断100,000円/回、スポット保守100,000円/サイト。定期保守は初期50,000円〜・月30,000円〜。各税抜。対象と除外条件も記載。"
+        },
+        {
+          "evidence_id": "EV-TANUKI",
+          "location": "調査・報告",
+          "observation": "基本55,000円〜/1サイト。内部・外部・環境調査と報告書作成を掲載。他社へ修正を依頼する利用も案内。"
+        },
+        {
+          "evidence_id": "EV-CONTACT",
+          "location": "公開フォーム",
+          "observation": "記事のリンク先で公開フォームと関連する問い合わせ種別を静的に確認。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "関連記事やサービスリンクの増設を必須にしない。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "リンク先とアンカーを再確認。遷移効果は実測、リンク数自体を成果にしない",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "C-01",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "自分で整理・確認できる範囲と、変更の判断を分けている。",
+      "rationale": "権限条件を付けた番号確認を、更新してよいという判断へ拡張していない。 適用基準: C-01",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "依頼する前に、自分で整理できること",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-WP-PHP",
+          "location": "PHPバージョンを確認する方法",
+          "observation": "サイトヘルスでの確認、バックアップ・互換性・元に戻す確認を説明。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "自己確認の範囲と、認証情報を最初に送らない配慮を保つ。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "読者の権限・復元手段・環境で判断が分かれる箇所を再確認",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "C-02",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "原因や復元方法を判断できない場合の相談と、調査から依頼する価値を説明。",
+      "rationale": "相談を一律に強制せず、必要な段階・範囲を選ぶ条件がある。 適用基準: C-02",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "自己確認・結論",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-SERVICE",
+          "location": "対応できること",
+          "observation": "実装相談、不具合調査、改修等を扱い、現状と条件を整理して進める。継続的な関係を基本とする。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "相談条件と完了範囲の区別を維持する。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "相談対象者と解決可能な課題を照合。匿名問い合わせの適合度は後日観測",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "C-03",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "必要な判断情報を問い合わせのために意図的に伏せる記述は認めない。",
+      "rationale": "費用の判断が主目的であり、実装手順をすべて載せないことは出し惜しみとしない。 適用基準: C-03",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全体の情報範囲",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "内訳や質問例を削って相談を増やす提案は行わない。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "修正後も読者が中心疑問を解決でき、必要情報が残るか比較する",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "D-01",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "外部の実サービスと、自社への一般的な相談案内は確認できる範囲に収まる。",
+      "rationale": "第三者の価格・仮の単価・自社サービスを混同していない。 適用基準: D-01",
+      "evidence": [
+        {
+          "evidence_id": "EV-SOUDAN",
+          "location": "料金と条件",
+          "observation": "相談6,000円/時間、診断100,000円/回、スポット保守100,000円/サイト。定期保守は初期50,000円〜・月30,000円〜。各税抜。対象と除外条件も記載。"
+        },
+        {
+          "evidence_id": "EV-TANUKI",
+          "location": "料金・対応内容",
+          "observation": "基本55,000円〜/1サイト。内部・外部・環境調査と報告書作成を掲載。他社へ修正を依頼する利用も案内。"
+        },
+        {
+          "evidence_id": "EV-SERVICE",
+          "location": "自社の対応範囲",
+          "observation": "実装相談、不具合調査、改修等を扱い、現状と条件を整理して進める。継続的な関係を基本とする。"
+        },
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "仮定の明示・結論",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "7,000円や49,000円を自社の提供価格として案内しない。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "公式ページとの再照合。サービス未確認を不存在と断定しない",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "D-02",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "調査や修正の依頼範囲を整理したい課題と、自社の実装相談・原因調査が関連する。",
+      "rationale": "単発対応や修正完了を無条件に約束する案内とは読まない。 適用基準: D-02",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "結論の相談対象",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-SERVICE",
+          "location": "対応範囲・関わり方",
+          "observation": "実装相談、不具合調査、改修等を扱い、現状と条件を整理して進める。継続的な関係を基本とする。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "現状の条件付き案内を保ち、対応の受諾や成功を保証しない。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "記事の未解決課題と対応内容の対応を確認。問い合わせの適合分類を後日観測",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "E-01",
+      "category": "conversion_path",
+      "classification": "FACT",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "本文の末尾に問い合わせ案内とリンクが存在する。",
+      "rationale": "CTAの有無の観測であり、成果が出ているという認定ではない。 適用基準: E-01",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "結論の連絡先リンク",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "CTAを増やす必要性を、存在だけから推測しない。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "目的に合う次の行動の有無を確認。CTA不存在からCV低下を断定しない",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "E-02",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "相談対象と準備情報が、本文の判断材料から自然につながる。",
+      "rationale": "依頼範囲が整理できない読者への案内であり、恐怖や一律契約で迫らない。 適用基準: E-02",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "依頼前の整理・結論",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-SERVICE",
+          "location": "現状整理と条件の確認",
+          "observation": "実装相談、不具合調査、改修等を扱い、現状と条件を整理して進める。継続的な関係を基本とする。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "具体的な状況と期限を伝える現在の案内を維持する。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "前後とリンク先の整合をレビュー。クリックや適合問い合わせは仮説検証",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "E-03",
+      "category": "conversion_path",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "静的な案内先は確認したが、送信完了・受信は未検証。",
+      "rationale": "静的到達と実際の動作を分ける。 適用基準: E-03",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "連絡先リンク",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-CONTACT",
+          "location": "公開フォーム",
+          "observation": "記事のリンク先で公開フォームと関連する問い合わせ種別を静的に確認。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "送信未確認を故障とも成功とも扱わない。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "許可範囲で経路を再確認。フォーム送信は別途許可。静的抽出のエラーだけで故障と断定しない",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      },
+      "checks": [
+        {
+          "key": "static_path",
+          "classification": "FACT",
+          "status": "適切",
+          "confidence": "high",
+          "finding": "本文の連絡先リンクから公開フォームのページを取得できた。",
+          "rationale": "hrefとHTTP200・フォーム要素の静的確認に限定する。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ARTICLE",
+              "location": "末尾のa[href]",
+              "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+            },
+            {
+              "evidence_id": "EV-CONTACT",
+              "location": "公開フォーム",
+              "observation": "記事のリンク先で公開フォームと関連する問い合わせ種別を静的に確認。"
+            }
+          ],
+          "limitations": [
+            "視覚・入力・送信・通知は別確認。"
+          ]
+        },
+        {
+          "key": "submission",
+          "classification": "UNVERIFIED",
+          "status": "判定不可",
+          "confidence": "unknown",
+          "finding": "フォームの入力、送信、完了表示、受信は未検証。",
+          "rationale": "静的取得を送信成功に拡張せず、操作も行わない。",
+          "evidence": [
+            {
+              "evidence_id": "EV-CONTACT",
+              "location": "静的取得の範囲",
+              "observation": "記事のリンク先で公開フォームと関連する問い合わせ種別を静的に確認。"
+            }
+          ],
+          "limitations": [
+            "フォーム故障とも送信成功とも認定しない。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-04",
+      "category": "conversion_path",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "実際の検索・遷移・問い合わせ成果は評価できない。",
+      "rationale": "分析データ・母数・期間・帰属がすべて未提供。 適用基準: E-04",
+      "evidence": [
+        {
+          "evidence_id": "EV-SEARCH-CONSOLE",
+          "location": "未提供",
+          "observation": "今回、対象記事の計測データは提供されていない。"
+        },
+        {
+          "evidence_id": "EV-GA4",
+          "location": "未提供",
+          "observation": "今回、対象記事の計測データは提供されていない。"
+        },
+        {
+          "evidence_id": "EV-INQUIRIES",
+          "location": "未提供",
+          "observation": "今回、対象記事の計測データは提供されていない。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "構造品質とは分けて、必要な計測条件を整理する。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "ページ・期間・検索タイプを揃えたGSC、記事閲覧セッションと遷移/送信イベントの定義、匿名問い合わせ分類を取得する。必要母数・比較期間・成功条件を事前に定める。",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "F-01",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "確認した本文に、恐怖や成功保証で契約を迫る表現を認めない。",
+      "rationale": "価格への疑問を否定せず、依頼する範囲を選べる説明として評価。 適用基準: F-01",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "費用の説明・結論",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "穏当な相談案内を維持する。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "対象・条件・根拠・行動を再照合。読者の理解や問い合わせの質は別途観測",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    },
+    {
+      "id": "F-02",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "復元・テスト環境・送信先や請求への影響など、確認の境界を説明している。",
+      "rationale": "無条件な本番操作を勧めず、番号の確認と更新判断を分ける。 適用基準: F-02",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "テスト環境・本番更新・自己確認",
+          "observation": "一般の依頼者向けに仕事内容と費用の判断を説明。公開料金と仮定を区別し、自力確認・相談案内を掲載。"
+        },
+        {
+          "evidence_id": "EV-WP-PHP",
+          "location": "更新前・問題発生時",
+          "observation": "サイトヘルスでの確認、バックアップ・互換性・元に戻す確認を説明。"
+        }
+      ],
+      "limitations": [
+        "確認した本文・参照先の該当箇所の評価。未確認の市場全体、過去価格、個別実装、実測成果まで保証しない。"
+      ],
+      "recommendation": "本番での不用意な試行を追加せず、実施と承認の範囲を保つ。",
+      "priority": "none",
+      "priority_reason": "今回、具体的な問題条件に該当する修正必須事項は確認していない。欠測だけで修正の優先度を付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "今回の評価からSEO/CV改善効果は認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記述・根拠・読者目的の一致。計測する場合は、記事閲覧セッションを分母にした遷移セッション率や適合相談数等を別に定義。",
+        "method": "前提・復元手段・事後確認をレビュー。実行テストは別途許可された環境のみ",
+        "success_condition": "文書は根拠・計算・適用範囲が整合すること。実成果は比較条件と必要母数・目標差を事前設定するまで成功と認定しない。",
+        "confounders": [
+          "料金改定、対象者・税・範囲の違い、流入/季節/端末、同時変更、計測漏れ・帰属、仮定の現実への適用誤り"
+        ]
+      }
+    }
+  ],
+  "plan": null,
+  "revisions": [],
+  "limitations": [
+    "同じCodexによる新しい記事の監査と根拠照合。独立評価者や盲検による検証ではない。",
+    "公開ページは今回取得した版。価格の過去履歴や市場平均、工数の現実的な標準値は検証していない。",
+    "分析データ、フォーム送信、実環境での操作は未検証。記事・スキル・外部設定は変更していない。",
+    "一時キャッシュの保持は保証しない。根拠のURL・日時・ハッシュと短い観測を保存。"
+  ]
+}
