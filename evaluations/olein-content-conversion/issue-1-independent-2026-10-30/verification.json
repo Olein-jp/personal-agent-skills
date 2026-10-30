@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-10-30T09:15:07+09:00",
+  "reports": [
+    {
+      "case": "a",
+      "content_type": "集客・相談型",
+      "initial_sha256": "318cc134dcc4c4828a54c7e5a28a1fdd777dcde27b8386606ce8c4a8179996e3",
+      "final_sha256": "318cc134dcc4c4828a54c7e5a28a1fdd777dcde27b8386606ce8c4a8179996e3",
+      "initial_equals_final": true,
+      "validator_exit_code": 0,
+      "validator_output": "構造・参照整合性: 合格 (内容の真偽・因果関係は別途レビューが必要です)",
+      "validator_errors": "",
+      "status_counts": {
+        "適切": 5,
+        "改善推奨": 9,
+        "要確認": 0,
+        "判定不可": 4,
+        "評価対象外": 0
+      },
+      "improvement_ids": [
+        "B-01",
+        "B-02",
+        "B-03",
+        "C-01",
+        "C-02",
+        "D-01",
+        "E-02",
+        "F-01",
+        "F-02"
+      ]
+    },
+    {
+      "case": "b",
+      "content_type": "技術解説型",
+      "initial_sha256": "ec43f71cc41c74f30e042b27f5fdb957179b5a2529f378a6e8eeab400d7dd40a",
+      "final_sha256": "ec43f71cc41c74f30e042b27f5fdb957179b5a2529f378a6e8eeab400d7dd40a",
+      "initial_equals_final": true,
+      "validator_exit_code": 0,
+      "validator_output": "構造・参照整合性: 合格 (内容の真偽・因果関係は別途レビューが必要です)",
+      "validator_errors": "",
+      "status_counts": {
+        "適切": 9,
+        "改善推奨": 0,
+        "要確認": 0,
+        "判定不可": 2,
+        "評価対象外": 7
+      },
+      "improvement_ids": []
+    },
+    {
+      "case": "c",
+      "content_type": "比較・意思決定型",
+      "initial_sha256": "a3142c8b161697ee33c463e5129965b5f073a65d2c46c655d2e77972f3e42eb4",
+      "final_sha256": "a3142c8b161697ee33c463e5129965b5f073a65d2c46c655d2e77972f3e42eb4",
+      "initial_equals_final": true,
+      "validator_exit_code": 0,
+      "validator_output": "構造・参照整合性: 合格 (内容の真偽・因果関係は別途レビューが必要です)",
+      "validator_errors": "",
+      "status_counts": {
+        "適切": 9,
+        "改善推奨": 0,
+        "要確認": 0,
+        "判定不可": 2,
+        "評価対象外": 7
+      },
+      "improvement_ids": []
+    },
+    {
+      "case": "d",
+      "content_type": "技術解説型",
+      "initial_sha256": "6bcd14297d49af2b0a6fa6935747baed3ffa22e0b2ef10494e1bf0d41d831657",
+      "final_sha256": "6bcd14297d49af2b0a6fa6935747baed3ffa22e0b2ef10494e1bf0d41d831657",
+      "initial_equals_final": true,
+      "validator_exit_code": 0,
+      "validator_output": "構造・参照整合性: 合格 (内容の真偽・因果関係は別途レビューが必要です)",
+      "validator_errors": "",
+      "status_counts": {
+        "適切": 8,
+        "改善推奨": 0,
+        "要確認": 2,
+        "判定不可": 2,
+        "評価対象外": 6
+      },
+      "improvement_ids": []
+    }
+  ],
+  "all_inputs_unchanged": true,
+  "current_skill_unchanged": true,
+  "human_review_status": "approved",
+  "scope": "形式・参照・固定入力の整合検査。意味判断の正しさや人間レビューの実施を自動認定しない。",
+  "reviewer": "利用者（このチャットで明示確認）",
+  "reviewed_at": "2026-10-30T09:18:10+09:00",
+  "human_review_record": "human-review-record.json"
+}

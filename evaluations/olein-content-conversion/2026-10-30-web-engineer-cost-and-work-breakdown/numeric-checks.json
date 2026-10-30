@@ -1,0 +1,85 @@
+{
+  "checked_at": "2026-10-30T09:02:16+09:00",
+  "article_source": "https://olein-design.com/blog/web-engineer-cost-and-work-breakdown",
+  "scope": "説明用の架空試算の算術整合のみ。実作業時間・標準単価・実績の検証ではない。",
+  "hypothetical_hourly_rate_yen": 7000,
+  "rows": [
+    {
+      "row": 1,
+      "minutes": 30,
+      "stated_yen": 3500,
+      "calculated_yen": 3500,
+      "matches": true
+    },
+    {
+      "row": 2,
+      "minutes": 15,
+      "stated_yen": 1750,
+      "calculated_yen": 1750,
+      "matches": true
+    },
+    {
+      "row": 3,
+      "minutes": 90,
+      "stated_yen": 10500,
+      "calculated_yen": 10500,
+      "matches": true
+    },
+    {
+      "row": 4,
+      "minutes": 90,
+      "stated_yen": 10500,
+      "calculated_yen": 10500,
+      "matches": true
+    },
+    {
+      "row": 5,
+      "minutes": 15,
+      "stated_yen": 1750,
+      "calculated_yen": 1750,
+      "matches": true
+    },
+    {
+      "row": 6,
+      "minutes": 45,
+      "stated_yen": 5250,
+      "calculated_yen": 5250,
+      "matches": true
+    },
+    {
+      "row": 7,
+      "minutes": 45,
+      "stated_yen": 5250,
+      "calculated_yen": 5250,
+      "matches": true
+    },
+    {
+      "row": 8,
+      "minutes": 60,
+      "stated_yen": 7000,
+      "calculated_yen": 7000,
+      "matches": true
+    },
+    {
+      "row": 9,
+      "minutes": 30,
+      "stated_yen": 3500,
+      "calculated_yen": 3500,
+      "matches": true
+    }
+  ],
+  "total": {
+    "calculated_minutes": 420,
+    "stated_minutes": 420,
+    "stated_hours": 7,
+    "calculated_yen": 49000,
+    "stated_yen": 49000
+  },
+  "revenue_example": {
+    "hypothetical_revenue_yen": 700000,
+    "hypothetical_billable_hours": 100,
+    "stated_rate_yen": 7000,
+    "matches": true
+  },
+  "all_checks_pass": true
+}

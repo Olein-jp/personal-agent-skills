@@ -1,0 +1,1076 @@
+{
+  "schema_version": "1.1",
+  "rules_version": "1.1",
+  "mode": "AUDIT",
+  "created_at": "2026-10-30T09:13:50+09:00",
+  "subject": {
+    "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-d/article.md",
+    "version": "sha256:41e19008ad0ed641df60496b463b32dc7fd101c67fa96a99838e869ea9f5dafa",
+    "audience": "WordPressの実装担当者",
+    "goal": "編集範囲を絞る案の検討状況の共有",
+    "content_type": "技術解説型",
+    "determination": "inferred",
+    "type_reason": "読者・目的は依頼に明示されている。記事タイプ名は、実装担当者に設計判断を共有する内容から技術解説型と推定する。",
+    "scope": "提供Markdown全文と依頼、許可された公式固定HTMLのみ。実サイト、外部サイトの再取得、実装・フォーム操作なし。"
+  },
+  "evidence": [
+    {
+      "id": "EV-ARTICLE",
+      "source_type": "article",
+      "title": "内容だけを編集する画面を考える設計メモ",
+      "publisher": "依頼者",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-d/article.md",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:50+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "見出し・全段落",
+      "observation": "# 内容だけを編集する画面を考える設計メモ  対象はWordPressの実装担当者です。これは公開前の設計を検討する評価用の合成原稿です。実装済みの結果や動作検証の報告ではありません。  本文中のブロックを動かしたり削除したりする操作は、通常のブロックロックで制限できます。canLockBlocksをfalseにしてロック操作を許可しない設定も、設計の選択肢になります。  content-only編集は、内容の編集に操作を絞るための別の仕組みです。公開後は担当者が文章や画像を更新し、構造を変える作業は制作者へ依頼する運用を目指しています。  通常ロックとcontent-only編集を組み合わせる案を考えていますが、実現条件はまだ確認していません。WordPressの対象版、テーマ、担当者のロール、具体的な設定値も未決定です。この段階で、構造を変更するすべての経路を防げると保証するものではありません。  機能の説明を読んだことと、組み合わせた案が想定どおり機能することは別です。対象条件を決めて、追加、移動、削除、内容の編集、制限を解除する操作を分けて確認してから、運用範囲を確定します。[WordPress公式のBlock Locking API](https://developer.wordpress.org/block-editor/how-to-guides/curating-the-editor-experience/block-locking/)を参照します。 ",
+      "supports": [
+        "本文記述と記事範囲"
+      ],
+      "limitations": [
+        "提供範囲のみ。実サイト・実装動作を保証しない。"
+      ]
+    },
+    {
+      "id": "EV-REQUEST",
+      "source_type": "business",
+      "title": "AUDIT依頼",
+      "publisher": "依頼者",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-d/request.txt",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:50+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "全文",
+      "observation": "AUDITで監査してください。実装担当者向けに、編集範囲を絞る案の検討状況を説明する設計メモです。分析データ、実サイト、フォームの動作記録は提供されていません。原稿は変更せず、Markdownと正式JSONの両方を作成してください。\n",
+      "supports": [
+        "読者・目的・データ未提供"
+      ],
+      "limitations": [
+        "提供範囲のみ。実サイト・実装動作を保証しない。"
+      ]
+    },
+    {
+      "id": "EV-LOCK",
+      "source_type": "official",
+      "title": "Block Locking API",
+      "publisher": "WordPress.org",
+      "source": "https://developer.wordpress.org/block-editor/how-to-guides/curating-the-editor-experience/block-locking/",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:50+09:00",
+      "published_date": "2023-12-27",
+      "updated_date": "2026-10-14",
+      "location": "Lock the ability to move or remove specific blocks／Apply content-only editing in patterns or templates／Change permissions to control locking ability",
+      "observation": "通常ロックは移動・削除を制限。canLockBlocksでロック・解除権限を制御。content-onlyは6.1導入でtemplateLock:contentOnlyを使い、子の追加・移動・削除やデザインを制限するがModify操作による切替の説明がある。",
+      "supports": [
+        "機能ごとの仕様と組合せ案を区別する根拠"
+      ],
+      "limitations": [
+        "取得済みHTMLの固定スナップショットのみ。監査時の外部再取得や対象環境での実装再現は行っていない。"
+      ]
+    },
+    {
+      "id": "EV-SEARCH-CONSOLE",
+      "source_type": "analytics",
+      "title": "search_console 未提供",
+      "publisher": "未提供",
+      "source": "未提供",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "該当資料なし",
+      "observation": "依頼に分析データが提供されていないことを確認。実数・母数・期間は不明。",
+      "supports": [
+        "成果判断の欠測"
+      ],
+      "limitations": [
+        "提供範囲のみ。実サイト・実装動作を保証しない。"
+      ]
+    },
+    {
+      "id": "EV-GA4",
+      "source_type": "analytics",
+      "title": "ga4 未提供",
+      "publisher": "未提供",
+      "source": "未提供",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "該当資料なし",
+      "observation": "依頼に分析データが提供されていないことを確認。実数・母数・期間は不明。",
+      "supports": [
+        "成果判断の欠測"
+      ],
+      "limitations": [
+        "提供範囲のみ。実サイト・実装動作を保証しない。"
+      ]
+    },
+    {
+      "id": "EV-INQUIRIES",
+      "source_type": "analytics",
+      "title": "inquiries 未提供",
+      "publisher": "未提供",
+      "source": "未提供",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "該当資料なし",
+      "observation": "依頼に分析データが提供されていないことを確認。実数・母数・期間は不明。",
+      "supports": [
+        "成果判断の欠測"
+      ],
+      "limitations": [
+        "提供範囲のみ。実サイト・実装動作を保証しない。"
+      ]
+    },
+    {
+      "id": "EV-SITE",
+      "source_type": "supplementary",
+      "title": "実サイト・フォーム記録 未提供",
+      "publisher": "未提供",
+      "source": "未提供",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "該当資料なし",
+      "observation": "公開画面・フォームの動作記録は提供されていない。",
+      "supports": [
+        "サイト共通導線と送信動作の未確認"
+      ],
+      "limitations": [
+        "提供範囲のみ。実サイト・実装動作を保証しない。"
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "kind": "search_console",
+      "status": "missing",
+      "evidence_id": "EV-SEARCH-CONSOLE",
+      "acquired_at": null,
+      "period": null,
+      "scope": "提供なし",
+      "timezone": null,
+      "definitions": "期間・指標定義・集計条件は不明。",
+      "limitations": [
+        "欠測であり0件を意味しない。"
+      ]
+    },
+    {
+      "kind": "ga4",
+      "status": "missing",
+      "evidence_id": "EV-GA4",
+      "acquired_at": null,
+      "period": null,
+      "scope": "提供なし",
+      "timezone": null,
+      "definitions": "期間・指標定義・集計条件は不明。",
+      "limitations": [
+        "欠測であり0件を意味しない。"
+      ]
+    },
+    {
+      "kind": "inquiries",
+      "status": "missing",
+      "evidence_id": "EV-INQUIRIES",
+      "acquired_at": null,
+      "period": null,
+      "scope": "提供なし",
+      "timezone": null,
+      "definitions": "期間・指標定義・集計条件は不明。",
+      "limitations": [
+        "欠測であり0件を意味しない。"
+      ]
+    }
+  ],
+  "summaries": [
+    {
+      "domain": "seo_content",
+      "unverified_checks": [
+        "A-01.observed_queries",
+        "B-01",
+        "B-04"
+      ],
+      "limitations": [
+        "構造品質と実測・成果を分離。対象外は未確認の動作成功を意味しない。"
+      ],
+      "structure": {
+        "status": "要確認",
+        "check_ids": [
+          "A-01.audience_goal",
+          "A-02",
+          "B-01",
+          "B-02",
+          "B-03",
+          "B-04",
+          "B-05"
+        ],
+        "reason": "各確認IDを固定ルールの優先順に集約。詳細の観測・留保は項目別評価を参照。",
+        "limitations": [
+          "実クエリ・実成果・実サイト動作を取得なしに認定しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "判定不可",
+        "check_ids": [
+          "A-01.observed_queries"
+        ],
+        "reason": "各確認IDを固定ルールの優先順に集約。詳細の観測・留保は項目別評価を参照。",
+        "limitations": [
+          "実クエリ・実成果・実サイト動作を取得なしに認定しない。"
+        ]
+      }
+    },
+    {
+      "domain": "conversion",
+      "unverified_checks": [
+        "E-04"
+      ],
+      "limitations": [
+        "構造品質と実測・成果を分離。対象外は未確認の動作成功を意味しない。"
+      ],
+      "structure": {
+        "status": "適切",
+        "check_ids": [
+          "C-01",
+          "C-02",
+          "C-03",
+          "D-01",
+          "D-02",
+          "E-01",
+          "E-02",
+          "E-03.static_path"
+        ],
+        "reason": "各確認IDを固定ルールの優先順に集約。詳細の観測・留保は項目別評価を参照。",
+        "limitations": [
+          "実クエリ・実成果・実サイト動作を取得なしに認定しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "判定不可",
+        "check_ids": [
+          "E-04"
+        ],
+        "reason": "各確認IDを固定ルールの優先順に集約。詳細の観測・留保は項目別評価を参照。",
+        "limitations": [
+          "実クエリ・実成果・実サイト動作を取得なしに認定しない。"
+        ]
+      }
+    },
+    {
+      "domain": "reader_trust",
+      "unverified_checks": [],
+      "limitations": [
+        "構造品質と実測・成果を分離。対象外は未確認の動作成功を意味しない。"
+      ],
+      "structure": {
+        "status": "適切",
+        "check_ids": [
+          "F-01",
+          "F-02"
+        ],
+        "reason": "各確認IDを固定ルールの優先順に集約。詳細の観測・留保は項目別評価を参照。",
+        "limitations": [
+          "実クエリ・実成果・実サイト動作を取得なしに認定しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "評価対象外",
+        "check_ids": [],
+        "reason": "当該領域にこの確認範囲の評価項目はない。",
+        "limitations": [
+          "実クエリ・実成果・実サイト動作を取得なしに認定しない。"
+        ]
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "A-01",
+      "category": "search_intent",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "明示した読者・目的には対応するが、実クエリとの一致は判定できない。",
+      "rationale": "A-01は想定読者と実クエリを分け、後者の欠測から親を判定不可とする。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "冒頭〜末尾",
+          "observation": "実装担当者向けに編集範囲を絞る案の検討状況の共有を扱う。"
+        }
+      ],
+      "limitations": [
+        "提供Markdownの評価に限る。公開画面と個別環境での再現は未確認。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "成果改善の効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "読者・目的・検索意図の確認",
+        "method": "本文の読者と回答を照合。GSCが得られた場合のみ対象ページ・同種クエリ・期間・端末を揃えて確認する。",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      },
+      "checks": [
+        {
+          "key": "audience_goal",
+          "classification": "EVALUATION",
+          "status": "適切",
+          "confidence": "medium",
+          "finding": "実装担当者に編集範囲を絞る案の検討状況の共有を提供する。",
+          "rationale": "依頼の中心目的に本文が対応する。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ARTICLE",
+              "location": "冒頭・全体",
+              "observation": "対象と編集範囲を絞る案の検討状況の共有が示されている。"
+            }
+          ],
+          "limitations": [
+            "実検索ユーザー全体の意図を証明しない。"
+          ]
+        },
+        {
+          "key": "observed_queries",
+          "classification": "UNVERIFIED",
+          "status": "判定不可",
+          "confidence": "unknown",
+          "finding": "実クエリ未提供。",
+          "rationale": "GSCデータがなく検索意図との実一致を判定できない。",
+          "evidence": [
+            {
+              "evidence_id": "EV-SEARCH-CONSOLE",
+              "location": "未提供",
+              "observation": "ページ別・クエリ別資料なし。"
+            }
+          ],
+          "limitations": [
+            "検索流入・CTR・順位は不明。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-02",
+      "category": "search_intent",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "設計メモというタイトルの約束を本文が満たす。",
+      "rationale": "実装完了や全面的な保証を約束する見出しではない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "見出し・全体",
+          "observation": "内容だけを編集する画面を考える設計メモ"
+        }
+      ],
+      "limitations": [
+        "HTMLのtitle要素・SERP表示タイトル・CTRは未確認。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "タイトルと本文・クエリの役割の確認",
+        "method": "約束と対応箇所を照合。CTRは同種クエリ・端末等で比較し順位効果とは分ける",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "B-01",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "要確認",
+      "severity": "info",
+      "confidence": "medium",
+      "finding": "通常ロック・canLockBlocks・content-onlyの個別説明は整合するが、組合せ案の実現条件は未確認。",
+      "rationale": "公式説明は個別機能を裏付ける。組合せ後の全経路を保証せず、本文も未検証と留保しているため、誤情報や実績化とは扱わない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "第2〜5段落",
+          "observation": "組合せ案の実現条件・対象版・テーマ・ロール・設定値は未確認と明示。"
+        },
+        {
+          "evidence_id": "EV-LOCK",
+          "location": "通常ロック／content-only／permissions",
+          "observation": "各機能の説明とModifyによる切替の制限が記載される。"
+        }
+      ],
+      "limitations": [
+        "個別機能の文献一致から組合せ案の実現性へ一般化しない。",
+        "対象版・テーマ・権限・設定・動作確認が未確定。"
+      ],
+      "recommendation": "対象条件を決め、通常ロック・ロック解除権限・content-onlyのModify切替を別々に確認し、案の検証結果を追記する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "成果改善の効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "情報の正確性・断定の確認",
+        "method": "対象版・テーマ・担当者ロール・設定値を固定し、追加・移動・削除・内容編集・通常ロック解除・Modify切替の各経路を許可された検証環境で確認する。",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "B-02",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "合成原稿であることが明示され、主要な外部説明の公式出典をたどれる。",
+      "rationale": "著者の判断と実績を区別し、案件経験や実測成果を創作していない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "冒頭・最終段落",
+          "observation": "合成原稿の明示とWordPress公式リンク。"
+        },
+        {
+          "evidence_id": "EV-LOCK",
+          "location": "上記本文該当節",
+          "observation": "主張に対応した公式説明を確認。"
+        }
+      ],
+      "limitations": [
+        "合成原稿を実案件の実績とは扱わない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "出典・独自分析・経験の来歴の確認",
+        "method": "主張から出典と該当箇所をたどれ、創作経験が含まれないことを確認",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "B-03",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "目的に必要な判断材料と扱わない範囲が示される。",
+      "rationale": "技術メモとしての目的は再現手順の完備ではなく、設計判断又は検討状況の共有である。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全体",
+          "observation": "機能の区別、未確定条件、操作別の確認予定を説明。"
+        }
+      ],
+      "limitations": [
+        "実装手順書としての網羅性は評価しない。文字数や見出し数で不足としない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "構成・網羅性・範囲・実用性の確認",
+        "method": "対象読者が手順・比較条件を追えるかレビュー。文字数・見出し数は合否に使わない",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "B-04",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "要確認",
+      "severity": "info",
+      "confidence": "medium",
+      "finding": "適用版・テーマ・ロール・設定が未決定で、組合せ案の適用条件は確定できない。",
+      "rationale": "本文は未決定事項を開示しており旧仕様の現行断定は確認していないが、利用対象の版への適合は調査が必要。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "第4段落",
+          "observation": "WordPress対象版・テーマ・担当者ロール・設定値を未決定と明示。"
+        },
+        {
+          "evidence_id": "EV-LOCK",
+          "location": "content-only節・更新日",
+          "observation": "content-onlyの6.1導入と2026-10-14更新記載。"
+        }
+      ],
+      "limitations": [
+        "対象環境がなく適用可否は未確定。資料更新日だけで実装検証済みとはしない。"
+      ],
+      "recommendation": "対象条件と公式資料確認日を記録し、その条件で案の確認を行う。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "成果改善の効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "情報の鮮度・適用条件の確認",
+        "method": "対象版での一次資料・動作確認。公開日が古いだけでは修正理由にしない",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "B-05",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "内部リンクの追加を必要とする目的・不足は確認していない。",
+      "rationale": "原稿のリンクは公式外部資料であり、自サイト内記事の回遊を求める要件はない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "末尾",
+          "observation": "WordPress公式への外部リンクのみ。"
+        }
+      ],
+      "limitations": [
+        "公開HTMLの内部リンク・クロール可否やサイト共通導線は未確認。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "内部リンクの関連性・説明の確認",
+        "method": "リンク先とアンカーを再確認。遷移効果は実測、リンク数自体を成果にしない",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "C-01",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "自力の設計検討に必要な条件・確認事項が示される。",
+      "rationale": "一律に実装や外注を勧めず、要件又は対象条件を整理して判断できる。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "第3〜5段落",
+          "observation": "版・テーマ・ロールを決め、追加・移動・削除等を分けて確認。"
+        }
+      ],
+      "limitations": [
+        "個別本番環境での実行可否は評価していない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "自分で対応できる範囲の確認",
+        "method": "読者の権限・復元手段・環境で判断が分かれる箇所を再確認",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "C-02",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "事業者への相談判断を目的とする記事ではない。",
+      "rationale": "実装担当者向けの技術資料であり、サービス相談の条件を設ける必要はない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "冒頭・全体",
+          "observation": "編集範囲を絞る案の検討状況の共有を目的とする。"
+        }
+      ],
+      "limitations": [
+        "Dの制作者への構造変更依頼は想定運用の役割分担であり、特定サービスの案内ではない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "相談が合理的な条件と価値の確認",
+        "method": "相談対象者と解決可能な課題を照合。匿名問い合わせの適合度は後日観測",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "C-03",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "目的に沿って説明範囲を限定し、相談誘導のために必要情報を隠していない。",
+      "rationale": "中心疑問の判断材料を示し、実装手順や未検証結果を範囲外と明示する。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "末尾又は第4〜5段落",
+          "observation": "範囲外の手順又は未検証事項の開示。"
+        }
+      ],
+      "limitations": [
+        "隠蔽する編集意図の有無までは推定しない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "情報の出し惜しみ・詳細さの扱いの確認",
+        "method": "修正後も読者が中心疑問を解決でき、必要情報が残るか比較する",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "D-01",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "特定サービスを案内せず、現行提供範囲の判定対象がない。",
+      "rationale": "技術メモの目的から営業サービスの案内を強制しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文",
+          "observation": "価格・保証・サービス案内・営業リンクなし。"
+        }
+      ],
+      "limitations": [
+        "サービス未調査であり、不存在や提供可否を意味しない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "サービス実在・提供範囲の確認",
+        "method": "公式ページとの再照合。サービス未確認を不存在と断定しない",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "D-02",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "記事の課題を特定サービスへ接続する誘導がない。",
+      "rationale": "技術メモの目的から営業サービスの案内を強制しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文",
+          "observation": "価格・保証・サービス案内・営業リンクなし。"
+        }
+      ],
+      "limitations": [
+        "サービス未調査であり、不存在や提供可否を意味しない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "記事課題とサービスの適合の確認",
+        "method": "記事の未解決課題と対応内容の対応を確認。問い合わせの適合分類を後日観測",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "E-01",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "本文に営業CTAはなく、技術メモの目的上、追加は必須でない。",
+      "rationale": "相談獲得を主要目的とせず、設計検討と公式資料参照で次の行動が分かる。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文・末尾",
+          "observation": "営業CTAなし。公式説明への参照あり。"
+        }
+      ],
+      "limitations": [
+        "Markdown本文の有無の観測のみ。サイト共通CTAの不存在は断定しない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "CTAの有無と必要性の確認",
+        "method": "目的に合う次の行動の有無を確認。CTA不存在からCV低下を断定しない",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "E-02",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "評価する営業CTAが原稿にない。",
+      "rationale": "不要なCTAの具体性・配置を問題化しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文",
+          "observation": "CTAなし。"
+        }
+      ],
+      "limitations": [
+        "提供Markdownの評価に限る。公開画面と個別環境での再現は未確認。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "CTAの具体性・配置文脈・対象者の確認",
+        "method": "前後とリンク先の整合をレビュー。クリックや適合問い合わせは仮説検証",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "E-03",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "目的上、問い合わせ経路は必要とされない。",
+      "rationale": "案内しないサービスやフォームの未提供を、技術メモの導線欠陥に変換しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文",
+          "observation": "サービスや問い合わせ先への誘導なし。"
+        }
+      ],
+      "limitations": [
+        "実サイト・フォーム記録は未提供で、サイト共通導線・入力・送信・完了・受信の動作は未確認。対象外は動作成功を意味しない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "問い合わせまでの経路・判断材料の確認",
+        "method": "許可範囲で経路を再確認。フォーム送信は別途許可。静的抽出のエラーだけで故障と断定しない",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      },
+      "checks": [
+        {
+          "key": "static_path",
+          "classification": "EVALUATION",
+          "status": "評価対象外",
+          "confidence": "medium",
+          "finding": "問い合わせへの静的案内は本記事の目的に不要。",
+          "rationale": "本文が技術判断を扱い、相談誘導を目的としない。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ARTICLE",
+              "location": "全文",
+              "observation": "営業経路を案内しない。"
+            }
+          ],
+          "limitations": [
+            "実サイトの共通導線の有無・到達は未確認。"
+          ]
+        },
+        {
+          "key": "submission",
+          "classification": "EVALUATION",
+          "status": "評価対象外",
+          "confidence": "medium",
+          "finding": "問い合わせ送信の動作は本記事の評価範囲外。",
+          "rationale": "記事で問い合わせ行動を案内しておらず送信成功を目的としない。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ARTICLE",
+              "location": "全文",
+              "observation": "フォームや送信行動の案内なし。"
+            }
+          ],
+          "limitations": [
+            "フォーム入力・送信・完了・受信は未操作・未確認。成功を保証しない。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-04",
+      "category": "conversion_path",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "分析データがなく実際の検索・遷移・問い合わせ成果は判定できない。",
+      "rationale": "欠測を0件にせず、構造評価から成果へ飛躍しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "依頼・全体",
+          "observation": "成果数値を主張していない。"
+        },
+        {
+          "evidence_id": "EV-GA4",
+          "location": "未提供",
+          "observation": "イベント・母数・期間不明。"
+        },
+        {
+          "evidence_id": "EV-INQUIRIES",
+          "location": "未提供",
+          "observation": "相談件数と分類なし。"
+        }
+      ],
+      "limitations": [
+        "合成原稿に実流入や実問い合わせの記録はない。計測定義・対象期間・件数・母数は不明。"
+      ],
+      "recommendation": "必要な評価目的が生じた場合にGSC・GA4・匿名問い合わせ集計の期間・分母・定義を揃えて取得する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "成果改善の効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "観測成果と改善仮説の検証の確認",
+        "method": "公開後に計測する場合、対象ページ・期間・クエリ・端末を固定してGSCのクリック合計/表示合計を観測する。GA4は閲覧セッションを分母とし、送信クリック・完了・実問い合わせを分離。基準・比較期間と成功条件は流量・季節性・計測遅延を得て事前設定する。対照なしの前後差は記述に留める。",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "F-01",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "恐怖営業・無条件の保証・架空実績を確認していない。",
+      "rationale": "合成原稿であることと判断の条件・限界を明示し、依頼を強制しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "冒頭・全体",
+          "observation": "実績ではない旨、又は未検証案で保証しない旨を明示。"
+        }
+      ],
+      "limitations": [
+        "読者の心理的反応は測定していない。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "誇張・恐怖営業・信頼の確認",
+        "method": "対象・条件・根拠・行動を再照合。読者の理解や問い合わせの質は別途観測",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    },
+    {
+      "id": "F-02",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "未確定条件を決めて操作を分けて確認するまで、運用範囲を確定しない。",
+      "rationale": "無条件に本番導入を勧めず、未検証段階で止めて判断できる。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "第4〜5段落",
+          "observation": "保証せず操作ごとの確認後に運用範囲を確定。"
+        },
+        {
+          "evidence_id": "EV-LOCK",
+          "location": "content-only・permissions",
+          "observation": "ロック解除とModify切替は別に扱う必要がある。"
+        }
+      ],
+      "limitations": [
+        "実装手順の安全性や全経路の防止効果は保証しない。許可された検証環境の確認は未実施。"
+      ],
+      "recommendation": "現状の記述範囲を維持する。",
+      "priority": "none",
+      "priority_reason": "未確認事項の調査又は現状維持であり、具体的な修正必須問題は確認していない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "成果変化を主張する修正提案はない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "安全な手順・疑問の解消の確認",
+        "method": "前提・復元手段・事後確認をレビュー。実行テストは別途許可された環境のみ",
+        "success_condition": "記事の目的と明示した範囲で主張・根拠・留保が対応する。営業成果とは分けて判断する。",
+        "confounders": [
+          "対象版・テーマ・権限の差",
+          "提供原稿と公開画面の差"
+        ]
+      }
+    }
+  ],
+  "plan": null,
+  "revisions": [],
+  "limitations": [
+    "原稿・スキルは未変更。外部公開・送信・設定変更なし。",
+    "固定HTMLの内容を確認したのみで、現行外部状態や個別環境での実現を保証しない。",
+    "検索意図の実一致・実成果・サイト共通導線・フォーム動作は未確認。",
+    "総合点・順位予測・問い合わせ増加保証は行わない。"
+  ]
+}

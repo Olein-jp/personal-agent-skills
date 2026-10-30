@@ -1,0 +1,98 @@
+{
+  "created_at": "2026-10-30T09:11:08+09:00",
+  "issue": "https://github.com/Olein-jp/personal-agent-skills/issues/1",
+  "base_commit": "6c17029e83a73b7d7e7aded65ddb072782fb1738",
+  "skill_version": "1.1",
+  "rules_version": "1.1",
+  "input_root": "/private/tmp/olein-issue1-blind-20261030/inputs",
+  "input_sha256": {
+    "source-manifest.json": "3fc6dbed2f6071e96d0cff4e0d4688defa86604880ade2d2a00b1a6fbe1bafc7",
+    "skill/SKILL.md": "539950cf77b85395bdc20167b435fe06073f06a7d673b0c1bc42c6e2f7eb9e45",
+    "case-d/article.md": "41e19008ad0ed641df60496b463b32dc7fd101c67fa96a99838e869ea9f5dafa",
+    "case-d/request.txt": "c7c716f5e173b27954b76631cd7c3fd42cd5c0c2606409c25784b9449a284244",
+    "case-c/article.md": "ecf18ed609c581fa440704429253bfb10030b82634dd0de38298341d997ac740",
+    "case-c/request.txt": "23718aae23de479832092d15852b985579c595534613bce7afecf4b6bffba127",
+    "case-b/article.md": "03d8560ffd51f4bf0856c15c22cc70dc821fb75de991d1c795436a5e8c6952b3",
+    "case-b/request.txt": "34d3c8177e3774c49d90d15c4569eed7f3ccca5d41faa40c827d1a92cf6a673d",
+    "sources/wp-lock.html": "8403e6e5a7a97e8f0842c0119c276ffeedf16baf9155f534aed0c2b1294d40ff",
+    "sources/wp-loop.html": "90b74f5272e832be3dc422ff4dac14590879c9b84869a6cb7919b318edec262e",
+    "sources/contact.html": "ffefe6f329192e38c06f9c3ff940f09c40da5857a72257906c895bdc4daaaf09",
+    "sources/service.html": "128187c1b4b3a0319f5b24e600410e0f7d8538c8693bff925e84d7f9aaf192cc",
+    "sources/wp-meta.html": "164f81cb70aaf71d8c43135e3ef7ebb590981e9e5d37a0e68078f3517ef1d91c",
+    "sources/wp-php.html": "c58d77b88b167de04fc8778ad78b80129dc37b4435dcea397aa66504584734a7",
+    "case-a/article.md": "beba7f2c419f9ea820fd20e9aee4b3b6b178441adc0ef660361daf664b8ec5a7",
+    "case-a/request.txt": "672f267f85fe935174f432e823f7d23a35099a8b8696b1a1d23b21e2952fab60",
+    "skill/references/audit-rules.json": "7f35f8f5ecbf5ed131d807bfe56a12ba040a97eab5da75b8c6f28fcc1497d4c5",
+    "skill/references/sources.md": "3cbde1b600e7d7041e65d1d12c28f01e9595a3a1b2c28e70f5c40b2c8aadf197",
+    "skill/references/output-contract.md": "8661375aa7f02bfe7e68dfbf99b69f867cd88e91888f95a4b02ca181237f79d0",
+    "skill/references/content-types.md": "77de7b950d43e924656b69fd66dbba1c25bae58858b3eb9bde1788d88bd58efb",
+    "skill/references/audit-rules.md": "2a1da1940fa3dcf06f2c7ca403805e33a274d2eb2488b77b6c51ca1c81196411",
+    "skill/references/service-mapping.md": "4ec371f783ea1032d593b0493cd9154d73eaaa9744ab0655831f575cadbe876a",
+    "skill/references/measurement.md": "17b8bf802c4338b0d63ae1fd94f48d2b4efd0027bdbb16a06dd14290bd35db24",
+    "skill/references/evidence-policy.md": "080bf7c3dfba0ca48b3d2f7825a1a9c81d5af29cb62fab0e2012f24049372294",
+    "skill/agents/openai.yaml": "6ce889b3788b871125c82573706315c70b7a2be2ded50a0e69bd36d1ca15101b",
+    "skill/schemas/audit-result.schema.json": "160a488aaf7edef905870f88ff8edae630dbf056905bdef92b82226a2b241bda",
+    "skill/schemas/audit-result.v1.0.schema.json": "149305834329f92cf58ae489ed866e850c92242e95aacda16aa81efc5f05652b",
+    "skill/scripts/requirements.txt": "94b5b7688faae59b76140b80f72729c657883f34b58499d8e4d181be6313a02f",
+    "skill/scripts/validate-audit.py": "9efe2a76be36dfd6dfe3efce168c1cd72a99da4dcd628f17a074277180de7c76",
+    "skill/assets/audit-report-template.md": "fc6e5d3ae70633017dcf16acaa143215f2d8be1a05ff355eb7026ed68a8a5d5b"
+  },
+  "sources": {
+    "wp-meta": {
+      "url": "https://developer.wordpress.org/news/2023/03/creating-a-custom-block-that-stores-post-meta/",
+      "checked_at": "2026-10-30T08:14:48+09:00",
+      "sha256": "164f81cb70aaf71d8c43135e3ef7ebb590981e9e5d37a0e68078f3517ef1d91c",
+      "file": "/private/tmp/olein-issue1-blind-20261030/inputs/sources/wp-meta.html",
+      "status": 200,
+      "scope": "取得済みHTMLの固定スナップショット。現在の外部状態や実装の再現を保証しない。"
+    },
+    "wp-loop": {
+      "url": "https://developer.wordpress.org/themes/classic-themes/basics/the-loop/",
+      "checked_at": "2026-10-30T08:14:47+09:00",
+      "sha256": "90b74f5272e832be3dc422ff4dac14590879c9b84869a6cb7919b318edec262e",
+      "file": "/private/tmp/olein-issue1-blind-20261030/inputs/sources/wp-loop.html",
+      "status": 200,
+      "scope": "取得済みHTMLの固定スナップショット。現在の外部状態や実装の再現を保証しない。"
+    },
+    "wp-lock": {
+      "url": "https://developer.wordpress.org/block-editor/how-to-guides/curating-the-editor-experience/block-locking/",
+      "checked_at": "2026-10-30T08:14:47+09:00",
+      "sha256": "8403e6e5a7a97e8f0842c0119c276ffeedf16baf9155f534aed0c2b1294d40ff",
+      "file": "/private/tmp/olein-issue1-blind-20261030/inputs/sources/wp-lock.html",
+      "status": 200,
+      "scope": "取得済みHTMLの固定スナップショット。現在の外部状態や実装の再現を保証しない。"
+    },
+    "wp-php": {
+      "url": "https://ja.wordpress.org/support/update-php/",
+      "checked_at": "2026-10-30T09:01:17+09:00",
+      "sha256": "c58d77b88b167de04fc8778ad78b80129dc37b4435dcea397aa66504584734a7",
+      "file": "/private/tmp/olein-issue1-blind-20261030/inputs/sources/wp-php.html",
+      "status": 200,
+      "scope": "取得済みHTMLの固定スナップショット。現在の外部状態や実装の再現を保証しない。"
+    },
+    "service": {
+      "url": "https://olein-design.com/service/maintenance",
+      "checked_at": "2026-10-30T09:01:15+09:00",
+      "sha256": "128187c1b4b3a0319f5b24e600410e0f7d8538c8693bff925e84d7f9aaf192cc",
+      "file": "/private/tmp/olein-issue1-blind-20261030/inputs/sources/service.html",
+      "status": 200,
+      "scope": "取得済みHTMLの固定スナップショット。現在の外部状態や実装の再現を保証しない。"
+    },
+    "contact": {
+      "url": "https://olein-design.com/contact",
+      "checked_at": "2026-10-30T09:01:15+09:00",
+      "sha256": "ffefe6f329192e38c06f9c3ff940f09c40da5857a72257906c895bdc4daaaf09",
+      "file": "/private/tmp/olein-issue1-blind-20261030/inputs/sources/contact.html",
+      "status": 200,
+      "scope": "取得済みHTMLの固定スナップショット。現在の外部状態や実装の再現を保証しない。"
+    }
+  },
+  "isolation": "fork_turns=noneの新しい評価実行。開発会話・期待結果・既存レポートは渡さない。共有ファイルシステム上の読取範囲を指示で限定し、OSによるアクセス分離は行わない。",
+  "human_review_status": "approved",
+  "output_root": "/private/tmp/olein-issue1-blind-20261030/outputs",
+  "reviewer": "利用者（このチャットで明示確認）",
+  "reviewed_at": "2026-10-30T09:18:10+09:00",
+  "human_review_record": "human-review-record.json",
+  "evaluated_skill_commit": "49ddd23efad265f2b4187c48c2241207cabdb1ea",
+  "skill_commit_scope": "このコミット内のolein-content-conversionの評価に必要なファイルは、固定スナップショットのハッシュと一致。testsやREADMEは評価者に渡していない。"
+}

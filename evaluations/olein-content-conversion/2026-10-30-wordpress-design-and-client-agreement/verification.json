@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-30T08:18:21+09:00",
+  "validator_command": "python3 olein-content-conversion/scripts/validate-audit.py evaluations/olein-content-conversion/2026-10-30-wordpress-design-and-client-agreement/audit-result.json",
+  "exit_code": 0,
+  "stdout": "構造・参照整合性: 合格 (内容の真偽・因果関係は別途レビューが必要です)",
+  "stderr": "",
+  "status_counts": {
+    "適切": 14,
+    "改善推奨": 0,
+    "要確認": 1,
+    "判定不可": 3,
+    "評価対象外": 0
+  },
+  "structural_checks": {
+    "固定18項目": true,
+    "取得済み12資料": true,
+    "3分析資料が欠測": true,
+    "観測済みの改善効果を認定しない": true,
+    "全参照元の一時HTMLハッシュが一致": true,
+    "新規監査とMarkdownの項目IDが対応": true,
+    "既存の監査・文体スキルに差分なし": true
+  },
+  "semantic_review": "同じCodexによる本文・一次資料との照合。独立評価ではない。",
+  "not_covered": [
+    "記事の真偽や因果関係の自動検出",
+    "実環境での編集制限の再現",
+    "フォーム送信",
+    "実測成果",
+    "PLAN・REVISE"
+  ]
+}

@@ -1,0 +1,895 @@
+{
+  "schema_version": "1.0",
+  "rules_version": "1.0",
+  "mode": "AUDIT",
+  "created_at": "2026-10-29T15:29:10+09:00",
+  "subject": {
+    "source": "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/tests/fixtures/article-F.md",
+    "version": "sha256:6dd399f4f05b0d3931b580a7a3583942b20c59f4d8f56ea97eeb978569e23e8f",
+    "audience": "WordPressサイト所有者",
+    "goal": "更新の相談が必要な条件を知る",
+    "content_type": "集客・相談型",
+    "determination": "explicit",
+    "type_reason": "合成ケースに指定された目的と読者。",
+    "scope": "提供された短い教材の全文。実際の公開ページ・フォームは未操作。"
+  },
+  "evidence": [
+    {
+      "id": "EV-ARTICLE",
+      "source_type": "article",
+      "title": "合成入力 F",
+      "publisher": "開発用合成資料",
+      "source": "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/tests/fixtures/article-F.md",
+      "availability": "available",
+      "checked_at": "2026-10-29T15:29:10+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "全文",
+      "observation": "# WordPress更新と相談の判断\nこれは架空の教材です。更新前に復元方法と影響する機能を確認します。\n決済などの影響範囲が不明な場合は、担当者と作業条件を整理します。\n## 案内\n更新方針や原因調査を相談したい方は[運用・実装サポート](https://olein-design.com/service/maintenance)の対応範囲をご確認ください。\n",
+      "supports": [
+        "限定されたテスト条件の確認"
+      ],
+      "limitations": [
+        "合成資料は実際のサービス・成果の証拠ではない"
+      ]
+    },
+    {
+      "id": "EV-SERVICE",
+      "source_type": "business",
+      "title": "合成の提供範囲",
+      "publisher": "開発用合成資料",
+      "source": "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/tests/fixtures/cases.json#/F/service_note",
+      "availability": "available",
+      "checked_at": "2026-10-29T15:29:10+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "全文",
+      "observation": "合成の事業資料: 更新方針、不具合調査、実装相談を扱う。",
+      "supports": [
+        "限定されたテスト条件の確認"
+      ],
+      "limitations": [
+        "合成資料は実際のサービス・成果の証拠ではない"
+      ]
+    },
+    {
+      "id": "EV-SEARCH-CONSOLE",
+      "source_type": "analytics",
+      "title": "合成分析データ",
+      "publisher": "開発用合成資料",
+      "source": "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/tests/fixtures/analytics-f.json",
+      "availability": "available",
+      "checked_at": "2026-10-29T15:29:10+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "全文",
+      "observation": "前後28日の合成集計、少数例、流入構成と帰属条件未提供",
+      "supports": [
+        "限定されたテスト条件の確認"
+      ],
+      "limitations": [
+        "合成資料は実際のサービス・成果の証拠ではない"
+      ]
+    },
+    {
+      "id": "EV-GA4",
+      "source_type": "analytics",
+      "title": "合成分析データ",
+      "publisher": "開発用合成資料",
+      "source": "/Users/olein/GitHub/personal-agent-skills/olein-content-conversion/tests/fixtures/analytics-f.json",
+      "availability": "available",
+      "checked_at": "2026-10-29T15:29:10+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "全文",
+      "observation": "前後28日の合成集計、少数例、流入構成と帰属条件未提供",
+      "supports": [
+        "限定されたテスト条件の確認"
+      ],
+      "limitations": [
+        "合成資料は実際のサービス・成果の証拠ではない"
+      ]
+    },
+    {
+      "id": "EV-INQUIRIES",
+      "source_type": "analytics",
+      "title": "未提供の分析データ",
+      "publisher": "開発用合成資料",
+      "source": "未提供:inquiries",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "取得状態",
+      "observation": "このデータは提供されていない",
+      "supports": [
+        "限定されたテスト条件の確認"
+      ],
+      "limitations": [
+        "合成資料は実際のサービス・成果の証拠ではない"
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "kind": "search_console",
+      "status": "partial",
+      "evidence_id": "EV-SEARCH-CONSOLE",
+      "acquired_at": "2026-10-28T12:00:00+09:00",
+      "period": {
+        "start": "2026-09-02",
+        "end": "2026-10-27"
+      },
+      "scope": "教材ページの前後各28日",
+      "timezone": "Asia/Tokyo",
+      "definitions": "analytics-f.jsonのdefinitionsとbefore/afterを参照。前閲覧記事別の受注は不明。",
+      "limitations": [
+        "合成データ。実サイトの観測ではない。",
+        "流入内訳・帰属・同意・閾値・サンプリングが未確認"
+      ]
+    },
+    {
+      "kind": "ga4",
+      "status": "partial",
+      "evidence_id": "EV-GA4",
+      "acquired_at": "2026-10-28T12:00:00+09:00",
+      "period": {
+        "start": "2026-09-02",
+        "end": "2026-10-27"
+      },
+      "scope": "教材ページの前後各28日",
+      "timezone": "Asia/Tokyo",
+      "definitions": "analytics-f.jsonのdefinitionsとbefore/afterを参照。前閲覧記事別の受注は不明。",
+      "limitations": [
+        "合成データ。実サイトの観測ではない。",
+        "流入内訳・帰属・同意・閾値・サンプリングが未確認"
+      ]
+    },
+    {
+      "kind": "inquiries",
+      "status": "missing",
+      "evidence_id": "EV-INQUIRIES",
+      "acquired_at": null,
+      "period": null,
+      "scope": "取得なし",
+      "timezone": null,
+      "definitions": "未取得のため不明",
+      "limitations": [
+        "合成データ。実サイトの観測ではない。",
+        "欠測を0件としない"
+      ]
+    }
+  ],
+  "summaries": [
+    {
+      "domain": "seo_content",
+      "status": "判定不可",
+      "reason": "固定項目の状態を保守的に集約。構造品質と実際の成果は分ける。",
+      "limitations": [
+        "未確認: B-01, B-02, B-04, B-05"
+      ]
+    },
+    {
+      "domain": "conversion",
+      "status": "判定不可",
+      "reason": "固定項目の状態を保守的に集約。構造品質と実際の成果は分ける。",
+      "limitations": [
+        "未確認: C-01, C-02, D-01, E-02, E-03"
+      ]
+    },
+    {
+      "domain": "reader_trust",
+      "status": "判定不可",
+      "reason": "固定項目の状態を保守的に集約。構造品質と実際の成果は分ける。",
+      "limitations": [
+        "未確認: F-02"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "A-01",
+      "category": "search_intent",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "合成GSCの更新判断クエリと本文の更新判断が対応する。これだけで検索者全員の意図は確定しない。",
+      "rationale": "A-01のpass_ifまたは適用範囲を入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 読者・目的・検索意図",
+          "observation": "合成GSCの更新判断クエリと本文の更新判断が対応する。これだけで検索者全員の意図は確定しない。"
+        },
+        {
+          "evidence_id": "EV-SEARCH-CONSOLE",
+          "location": "before / after",
+          "observation": "合成前後各28日の集計"
+        },
+        {
+          "evidence_id": "EV-GA4",
+          "location": "before / after",
+          "observation": "合成前後各28日の集計"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "中心疑問への回答箇所を再確認。対象クエリ別の流入変化は期間・流入構成を添えて観測",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "A-02",
+      "category": "search_intent",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "提供されたタイトルと本文の中心テーマが対応する。検索結果の表示タイトルは未調査。",
+      "rationale": "A-02のpass_ifまたは適用範囲を入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: タイトルと本文・クエリの役割",
+          "observation": "提供されたタイトルと本文の中心テーマが対応する。検索結果の表示タイトルは未調査。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "約束と対応箇所を照合。CTRは同種クエリ・端末等で比較し順位効果とは分ける",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "B-01",
+      "category": "seo_quality",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "情報の正確性・断定について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "B-01のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 情報の正確性・断定",
+          "observation": "情報の正確性・断定について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "修正した主張を同じ対象条件の一次情報で再照合。成果の主張は実測も確認",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "B-02",
+      "category": "seo_quality",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "出典・独自分析・経験の来歴について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "B-02のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 出典・独自分析・経験の来歴",
+          "observation": "出典・独自分析・経験の来歴について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "主張から出典と該当箇所をたどれ、創作経験が含まれないことを確認",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "B-03",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "明示された目的に必要な判断材料を本文内で確認できる。文字数では評価しない。",
+      "rationale": "B-03のpass_ifまたは適用範囲を入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 構成・網羅性・範囲・実用性",
+          "observation": "明示された目的に必要な判断材料を本文内で確認できる。文字数では評価しない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "対象読者が手順・比較条件を追えるかレビュー。文字数・見出し数は合否に使わない",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "B-04",
+      "category": "seo_quality",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "情報の鮮度・適用条件について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "B-04のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 情報の鮮度・適用条件",
+          "observation": "情報の鮮度・適用条件について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "対象版での一次資料・動作確認。公開日が古いだけでは修正理由にしない",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "B-05",
+      "category": "seo_quality",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "内部リンクの関連性・説明について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "B-05のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 内部リンクの関連性・説明",
+          "observation": "内部リンクの関連性・説明について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "リンク先とアンカーを再確認。遷移効果は実測、リンク数自体を成果にしない",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "C-01",
+      "category": "consultation_value",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "自分で対応できる範囲について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "C-01のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 自分で対応できる範囲",
+          "observation": "自分で対応できる範囲について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "読者の権限・復元手段・環境で判断が分かれる箇所を再確認",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "C-02",
+      "category": "consultation_value",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "相談が合理的な条件と価値について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "C-02のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 相談が合理的な条件と価値",
+          "observation": "相談が合理的な条件と価値について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "相談対象者と解決可能な課題を照合。匿名問い合わせの適合度は後日観測",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "C-03",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "読者の中心疑問に必要な情報を営業目的で伏せる明示的な記述はない。編集者の内心は断定しない。",
+      "rationale": "C-03のpass_ifまたは適用範囲を入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 情報の出し惜しみ・詳細さの扱い",
+          "observation": "読者の中心疑問に必要な情報を営業目的で伏せる明示的な記述はない。編集者の内心は断定しない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "修正後も読者が中心疑問を解決でき、必要情報が残るか比較する",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "D-01",
+      "category": "service_fit",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "サービス実在・提供範囲について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "D-01のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: サービス実在・提供範囲",
+          "observation": "サービス実在・提供範囲について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        },
+        {
+          "evidence_id": "EV-SERVICE",
+          "location": "service_note",
+          "observation": "合成の事業資料: 更新方針、不具合調査、実装相談を扱う。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "公式ページとの再照合。サービス未確認を不存在と断定しない",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "D-02",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "提供された合成サービス範囲の更新方針・調査と、案内の対象課題が一致する。",
+      "rationale": "D-02のpass_ifまたは適用範囲を入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 記事課題とサービスの適合",
+          "observation": "提供された合成サービス範囲の更新方針・調査と、案内の対象課題が一致する。"
+        },
+        {
+          "evidence_id": "EV-SERVICE",
+          "location": "service_note",
+          "observation": "合成の事業資料: 更新方針、不具合調査、実装相談を扱う。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "記事の未解決課題と対応内容の対応を確認。問い合わせの適合分類を後日観測",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "E-01",
+      "category": "conversion_path",
+      "classification": "FACT",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "本文にサービス案内がある。効果は別途未検証。",
+      "rationale": "E-01のpass_ifまたは適用範囲を入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: CTAの有無と必要性",
+          "observation": "本文にサービス案内がある。効果は別途未検証。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "目的に合う次の行動の有無を確認。CTA不存在からCV低下を断定しない",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "E-02",
+      "category": "conversion_path",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "CTAの具体性・配置文脈・対象者について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "E-02のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: CTAの具体性・配置文脈・対象者",
+          "observation": "CTAの具体性・配置文脈・対象者について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "前後とリンク先の整合をレビュー。クリックや適合問い合わせは仮説検証",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "E-03",
+      "category": "conversion_path",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "問い合わせまでの経路・判断材料について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "E-03のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 問い合わせまでの経路・判断材料",
+          "observation": "問い合わせまでの経路・判断材料について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "許可範囲で経路を再確認。フォーム送信は別途許可。静的抽出のエラーだけで故障と断定しない",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "E-04",
+      "category": "conversion_path",
+      "classification": "FACT",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "合成データでは前28日が遷移4/100=4%、後28日が8/120=約6.67%、差は約2.67ポイント。送信完了は0件から1件。GSCのCTRは両期間2%。施策の因果効果は未検証で、少数例の成功認定はしない。",
+      "rationale": "E-04のpass_ifまたは適用範囲を入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 観測成果と改善仮説の検証",
+          "observation": "合成データでは前28日が遷移4/100=4%、後28日が8/120=約6.67%、差は約2.67ポイント。送信完了は0件から1件。GSCのCTRは両期間2%。施策の因果効果は未検証で、少数例の成功認定はしない。"
+        },
+        {
+          "evidence_id": "EV-SEARCH-CONSOLE",
+          "location": "before / after",
+          "observation": "合成前後各28日の集計"
+        },
+        {
+          "evidence_id": "EV-GA4",
+          "location": "before / after",
+          "observation": "合成前後各28日の集計"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "observed",
+        "description": "合成データの遷移率の記述的な増加。因果や受注への効果は未検証。",
+        "evidence_ids": [
+          "EV-GA4"
+        ]
+      },
+      "validation": {
+        "metric": "記事閲覧後にサービスを見た重複なしセッション数 / 対象記事閲覧セッション数。副指標は送信完了・相談適合数。",
+        "method": "計測定義と帰属条件を確認した後、変更日を記録し、まず前後各28日の探索的観測を行う。端末・国・流入元・クエリ構成・曜日・同時変更を照合する。目標差と流量から必要母数を決め、足りなければ期間延長か実験設計を再検討する。",
+        "success_condition": "同じ計測定義と比較可能な流入条件で主要率が上がり、不確実性と必要母数を確認でき、相談適合度が悪化しないこと。目標差・必要母数の事前設定までは効果確定を保留する。差がない・悪化する場合はCTA変更仮説を再検討する。",
+        "confounders": [
+          "流入構成、季節、検索更新、同時改修、同意・閾値・帰属モデル、1件のみの送信完了、計測定義変更"
+        ]
+      }
+    },
+    {
+      "id": "F-01",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "提供された短い本文の範囲では、条件のない恐怖や成果保証で契約を迫る表現は確認していない。読者の心理的効果は未検証。",
+      "rationale": "F-01のpass_ifまたは適用範囲を入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 誇張・恐怖営業・信頼",
+          "observation": "提供された短い本文の範囲では、条件のない恐怖や成果保証で契約を迫る表現は確認していない。読者の心理的効果は未検証。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "対象・条件・根拠・行動を再照合。読者の理解や問い合わせの質は別途観測",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    },
+    {
+      "id": "F-02",
+      "category": "reader_trust",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "安全な手順・疑問の解消について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。",
+      "rationale": "F-02のundetermined_ifを入力目的と観測範囲に適用。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文: 安全な手順・疑問の解消",
+          "observation": "安全な手順・疑問の解消について、当該技術の一次情報や必要な実測・公開画面の証拠をこの限定ケースでは取得していない。"
+        }
+      ],
+      "limitations": [
+        "開発用の限定ケースであり実記事・実サービスの包括的な認証ではない。",
+        "検索意図・実際の成果・今回読んでいない範囲は未確認。"
+      ],
+      "recommendation": "根拠が不足する範囲を追加確認し、適切な説明は保つ。",
+      "priority": "none",
+      "priority_reason": "未確認や対象外を減点しない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "構造上の観測・文書確認。SEO/CV成果を認定しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "中心疑問への回答と適用条件の充足。導線変更時は記事閲覧セッションに対する遷移セッション率。",
+        "method": "前提・復元手段・事後確認をレビュー。実行テストは別途許可された環境のみ",
+        "success_condition": "修正前後で必要情報と条件が対応する。CVの成功条件・比較期間・必要母数は実測設計後に事前設定する。",
+        "confounders": [
+          "流入構成、季節、同時改修、計測定義変更、少数例"
+        ]
+      }
+    }
+  ],
+  "plan": null,
+  "revisions": [],
+  "limitations": [
+    "開発者による限定的な意味レビューを正規化した参照出力。独立モデルの再実行や人間の最終レビューではない。",
+    "実際のSEO/CV効果は未測定。合成の数値は実績として引用しない。"
+  ]
+}

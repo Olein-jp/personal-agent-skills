@@ -1,0 +1,1231 @@
+{
+  "schema_version": "1.1",
+  "rules_version": "1.1",
+  "mode": "AUDIT",
+  "created_at": "2026-10-30T09:13:30+09:00",
+  "subject": {
+    "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-a/article.md",
+    "version": "sha256:beba7f2c419f9ea820fd20e9aee4b3b6b178441adc0ef660361daf664b8ec5a7",
+    "audience": "自社のWordPressサイトを管理する担当者・サイト所有者",
+    "goal": "更新の自力対応と相談の判断材料を伝える。二次目的は相談前の課題・依頼範囲整理。",
+    "content_type": "集客・相談型",
+    "determination": "inferred",
+    "type_reason": "読者と目的は依頼・本文で明示。主タイプ名は相談前整理と自社サービス案内を重視する構成から推定。",
+    "scope": "提供Markdown全文、依頼、指定3ページの取得済みHTML。公開画面・送信・実環境・外部の現行状態は範囲外。"
+  },
+  "evidence": [
+    {
+      "id": "EV-ART",
+      "source_type": "article",
+      "title": "PHP更新を相談する前に整理したいこと",
+      "publisher": "提供者",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-a/article.md",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:30+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "全文（見出しと本文6段落）",
+      "observation": "本文4段落で全サイトの解消保証と構成確認不要、5段落でバックアップなしのファイル削除を指示。冒頭は合成原稿と明示。",
+      "supports": [
+        "A-01",
+        "A-02",
+        "B-01",
+        "B-02",
+        "B-03",
+        "B-04",
+        "B-05",
+        "C-01",
+        "C-02",
+        "C-03",
+        "D-01",
+        "D-02",
+        "E-01",
+        "E-02",
+        "E-03",
+        "E-04",
+        "F-01",
+        "F-02"
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ]
+    },
+    {
+      "id": "EV-REQ",
+      "source_type": "plan",
+      "title": "監査依頼",
+      "publisher": "提供者",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-a/request.txt",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:30+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "全文",
+      "observation": "サイト所有者向けに自力対応と相談判断を伝える。分析・実サイト・フォーム記録なし。",
+      "supports": [
+        "A-01",
+        "E-04"
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ]
+    },
+    {
+      "id": "EV-PHP",
+      "source_type": "official",
+      "title": "WordPress PHPの更新",
+      "publisher": "WordPress.org 日本語",
+      "source": "https://ja.wordpress.org/support/update-php/",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:30+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "PHP バージョンを確認する方法／PHP をバージョンアップする前に／サイトの PHP をバージョンアップして、より速く、より安全にするには",
+      "observation": "サイトヘルスで版を確認。更新成功は保証不可。事前バックアップ・互換性確認、問題時はPHP版を戻してバックアップ復元、必要ならホスト等へ相談。",
+      "supports": [
+        "B-01",
+        "C-01",
+        "F-02"
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。",
+        "取得済みHTML: /private/tmp/olein-issue1-blind-20261030/inputs/sources/wp-php.html。取得日時 2026-10-30T09:01:17+09:00、HTTP 200、SHA-256 c58d77b88b167de04fc8778ad78b80129dc37b4435dcea397aa66504584734a7。今回はローカルで読了し、外部再取得は行っていない。"
+      ]
+    },
+    {
+      "id": "EV-SVC",
+      "source_type": "service",
+      "title": "WordPress運用・実装サポート",
+      "publisher": "オレインデザイン",
+      "source": "https://olein-design.com/service/maintenance",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:30+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "対応できること／ご相談から運用開始までの流れ／よくあるご質問",
+      "observation": "更新方針整理、原因調査、対応方針、基本チェックを扱う。構成や状況を確認し対応可否を案内。断る場合や別提案もあり、継続が基本。",
+      "supports": [
+        "B-01",
+        "B-05",
+        "C-02",
+        "D-01",
+        "D-02",
+        "E-02",
+        "E-03",
+        "F-01"
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。",
+        "取得済みHTML: /private/tmp/olein-issue1-blind-20261030/inputs/sources/service.html。取得日時 2026-10-30T09:01:15+09:00、HTTP 200、SHA-256 128187c1b4b3a0319f5b24e600410e0f7d8538c8693bff925e84d7f9aaf192cc。今回はローカルで読了し、外部再取得は行っていない。"
+      ]
+    },
+    {
+      "id": "EV-CON",
+      "source_type": "service",
+      "title": "お問い合わせ",
+      "publisher": "オレインデザイン",
+      "source": "https://olein-design.com/contact",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:30+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "お問い合わせフォーム欄",
+      "observation": "名前・メール・種別・内容の表示と運用支援の選択肢あり。「予期しない問題が発生しました」の文字列あり。送信操作なし。",
+      "supports": [
+        "B-05",
+        "E-03"
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。",
+        "取得済みHTML: /private/tmp/olein-issue1-blind-20261030/inputs/sources/contact.html。取得日時 2026-10-30T09:01:15+09:00、HTTP 200、SHA-256 ffefe6f329192e38c06f9c3ff940f09c40da5857a72257906c895bdc4daaaf09。今回はローカルで読了し、外部再取得は行っていない。"
+      ]
+    },
+    {
+      "id": "EV-GSC",
+      "source_type": "analytics",
+      "title": "Search Console",
+      "publisher": "提供者",
+      "source": "未提供",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "該当資料なし",
+      "observation": "資料・記録なし。",
+      "supports": [
+        "A-01",
+        "E-04"
+      ],
+      "limitations": [
+        "資料未提供。欠測を0件と解釈しない。"
+      ]
+    },
+    {
+      "id": "EV-GA4",
+      "source_type": "analytics",
+      "title": "GA4",
+      "publisher": "提供者",
+      "source": "未提供",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "該当資料なし",
+      "observation": "資料・記録なし。",
+      "supports": [
+        "A-01",
+        "E-04"
+      ],
+      "limitations": [
+        "資料未提供。欠測を0件と解釈しない。"
+      ]
+    },
+    {
+      "id": "EV-INQ",
+      "source_type": "analytics",
+      "title": "匿名問い合わせ集計",
+      "publisher": "提供者",
+      "source": "未提供",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "該当資料なし",
+      "observation": "資料・記録なし。",
+      "supports": [
+        "A-01",
+        "E-04"
+      ],
+      "limitations": [
+        "資料未提供。欠測を0件と解釈しない。"
+      ]
+    },
+    {
+      "id": "EV-FORM",
+      "source_type": "business",
+      "title": "フォーム動作記録",
+      "publisher": "提供者",
+      "source": "未提供",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "該当資料なし",
+      "observation": "資料・記録なし。",
+      "supports": [
+        "E-03"
+      ],
+      "limitations": [
+        "資料未提供。欠測を0件と解釈しない。"
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "kind": "search_console",
+      "status": "missing",
+      "evidence_id": "EV-GSC",
+      "acquired_at": null,
+      "period": null,
+      "scope": "対象記事の実測資料なし",
+      "timezone": null,
+      "definitions": "指標・イベント・母数・帰属条件は未提供",
+      "limitations": [
+        "欠測は0件ではない。成果評価不可。"
+      ]
+    },
+    {
+      "kind": "ga4",
+      "status": "missing",
+      "evidence_id": "EV-GA4",
+      "acquired_at": null,
+      "period": null,
+      "scope": "対象記事の実測資料なし",
+      "timezone": null,
+      "definitions": "指標・イベント・母数・帰属条件は未提供",
+      "limitations": [
+        "欠測は0件ではない。成果評価不可。"
+      ]
+    },
+    {
+      "kind": "inquiries",
+      "status": "missing",
+      "evidence_id": "EV-INQ",
+      "acquired_at": null,
+      "period": null,
+      "scope": "対象記事の実測資料なし",
+      "timezone": null,
+      "definitions": "指標・イベント・母数・帰属条件は未提供",
+      "limitations": [
+        "欠測は0件ではない。成果評価不可。"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "A-01",
+      "category": "search_intent",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "実クエリ一致は未確認。本文の読者・相談前整理という目的は依頼と一致。",
+      "rationale": "読者・目的の明示は確認できる一方、実クエリの必須証拠がない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文1〜3段落",
+          "observation": "担当者向け、情報整理と更新可否を分離。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "指定読者を維持し、公開後のクエリを確認する。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      },
+      "checks": [
+        {
+          "key": "audience_goal",
+          "classification": "EVALUATION",
+          "status": "適切",
+          "confidence": "high",
+          "finding": "指定読者と相談前の整理という目的を確認。",
+          "rationale": "本文1〜3段落に自社担当者と準備事項が明示。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ART",
+              "location": "本文1〜3段落",
+              "observation": "サイト担当者向けに情報・復元手段・範囲を整理。"
+            },
+            {
+              "evidence_id": "EV-REQ",
+              "location": "全文",
+              "observation": "サイト所有者の自力対応と相談判断。"
+            }
+          ],
+          "limitations": [
+            "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+          ]
+        },
+        {
+          "key": "observed_queries",
+          "classification": "UNVERIFIED",
+          "status": "判定不可",
+          "confidence": "unknown",
+          "finding": "実クエリとの一致は未確認。",
+          "rationale": "GSC未提供。想定意図は相談前に何を整理するかという仮説に留まる。",
+          "evidence": [
+            {
+              "evidence_id": "EV-GSC",
+              "location": "未提供",
+              "observation": "クエリデータなし。"
+            }
+          ],
+          "limitations": [
+            "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-02",
+      "category": "search_intent",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "タイトルの相談前整理という約束に本文2〜3段落が対応。",
+      "rationale": "タイトルは作業の完全手順を約束せず、準備事項を本文で示す。危険・保証表現は別項目で指摘。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "見出し／本文2〜3段落",
+          "observation": "URL、困りごと、影響機能、担当者、復元手段、依頼範囲を整理。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。",
+        "公開ページのtitle要素・SERP表示・クロール可否・サイト共通導線・クリック動作は未確認。"
+      ],
+      "recommendation": "タイトルと準備事項の対応を維持する。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "B-01",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "critical",
+      "confidence": "high",
+      "finding": "無条件の解消保証とバックアップなし削除が一次資料に反する。",
+      "rationale": "公式は成功保証不可・バックアップと復元を案内し、サービスは個別確認後に可否を判断する。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文4〜5段落",
+          "observation": "どのサイトも必ず解消、構成確認不要、バックアップなしで公開ファイル削除。"
+        },
+        {
+          "evidence_id": "EV-PHP",
+          "location": "更新前／問題発生時",
+          "observation": "事前バックアップと互換性確認、PHP版を戻し復元する案内。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "保証・確認不要の断定を撤回し、削除の指示を止め、復元手段確認と適切な相談を示す。",
+      "priority": "P1",
+      "priority_reason": "読者の安全・依頼判断を大きく損なうため最優先。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "B-02",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "improvement",
+      "confidence": "high",
+      "finding": "合成原稿の明示はあるが、主要な外部主張の来歴が追跡できない。",
+      "rationale": "技術手順の一次出典が本文になく、サービスの無条件保証はリンク先の記述と一致しない。顧客体験の創作とは判定しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文1・4〜6段落",
+          "observation": "合成原稿と明示。保証と削除の根拠なし。"
+        },
+        {
+          "evidence_id": "EV-PHP",
+          "location": "更新前／問題発生時",
+          "observation": "事前バックアップと互換性確認、PHP版を戻し復元する案内。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "修正した技術主張に公式出典を対応させ、サービス説明を確認済み範囲に限定する。",
+      "priority": "P2",
+      "priority_reason": "主要目的の判断材料と説明の一貫性を整えるため。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "B-03",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "improvement",
+      "confidence": "high",
+      "finding": "前半の準備事項を後半が打ち消し、自力対応の判断基準が一貫しない。",
+      "rationale": "復元手段・個別構成の確認が要ると説明した後に確認不要・復元不能な操作へ進ませ、中心目的を損なう。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文2〜5段落",
+          "observation": "復元手段確認と確認不要・削除指示が併存。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "整理事項→作業を止める条件→相談範囲の順で矛盾を除く。完全な更新手順へ拡張する必要はない。",
+      "priority": "P2",
+      "priority_reason": "主要目的の判断材料と説明の一貫性を整えるため。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "B-04",
+      "category": "seo_quality",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "外部の現在の仕様・サービス変更は確認できない。",
+      "rationale": "固定資料には記述があるが、外部の現行状態を再取得できる資料範囲ではない。旧仕様と断定する根拠もない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-PHP",
+          "location": "更新前／問題発生時",
+          "observation": "事前バックアップと互換性確認、PHP版を戻し復元する案内。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "公開前に対象環境の版・サービス条件を再確認し確認日と適用範囲を記録する。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "公開時点の適用仕様・条件を一次資料で確認できる。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "B-05",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "2つの内部リンクの説明と静的なリンク先内容が対応。",
+      "rationale": "運用支援とお問い合わせは取得済み資料で関連性を確認。保証の矛盾はD-01等で扱う。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文6段落",
+          "observation": "運用・実装サポートとお問い合わせへのリンク。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        },
+        {
+          "evidence_id": "EV-CON",
+          "location": "フォーム欄",
+          "observation": "問い合わせ項目とエラー文字列を静的HTMLで確認。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。",
+        "公開ページのtitle要素・SERP表示・クロール可否・サイト共通導線・クリック動作は未確認。"
+      ],
+      "recommendation": "関連リンクを維持する。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "C-01",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "critical",
+      "confidence": "high",
+      "finding": "権限・復元を確認する説明を、無条件の削除指示が覆す。",
+      "rationale": "運用判断を扱いながら復元手段を無視した一律の実行を勧める問題条件に当たる。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文2・3・5段落",
+          "observation": "権限・復元への言及後、バックアップなし削除を指示。"
+        },
+        {
+          "evidence_id": "EV-PHP",
+          "location": "更新前／問題発生時",
+          "observation": "事前バックアップと互換性確認、PHP版を戻し復元する案内。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "自力の情報確認と変更作業を分け、復元方法不明なら変更せず担当者・ホストへ相談する条件を明確にする。",
+      "priority": "P1",
+      "priority_reason": "読者の安全・依頼判断を大きく損なうため最優先。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "C-02",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "improvement",
+      "confidence": "high",
+      "finding": "相談条件は具体的だが、後段の確認不要・必ず解消が相談価値を誤認させる。",
+      "rationale": "検証環境や復元方法を決められない条件は適切。個別確認を省略する断定は、調査して方針を決める実際の支援と矛盾。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文3〜4段落",
+          "observation": "担当者確認・範囲整理と、個別確認不要を併記。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "相談で整理できる課題と、構成確認後に対応可否・範囲を決めることを示す。",
+      "priority": "P2",
+      "priority_reason": "主要目的の判断材料と説明の一貫性を整えるため。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "C-03",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "問い合わせのために必要情報を伏せる明示的な記述はない。",
+      "rationale": "準備事項は提供され、完全な更新手順を扱わない範囲も相談前整理という目的に対応。危険・不足の指摘から隠蔽意図を推定しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文1〜3・6段落",
+          "observation": "準備情報を示してから相談先を案内。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "安全に必要な情報を保ち、CTA強化を理由に削らない。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "D-01",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "critical",
+      "confidence": "high",
+      "finding": "全サイトの不具合解消保証・確認不要は確認済み提供範囲に反する。",
+      "rationale": "公式FAQは構成・状況確認後の可否案内、断る場合も明示。実在サービスを過剰な保証へ拡張している。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文4段落",
+          "observation": "どのサイトの不具合も必ず解消、個別構成等の確認不要。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "保証を撤回し、状況確認・原因調査・方針提案と個別の対応可否判断に限定する。",
+      "priority": "P1",
+      "priority_reason": "読者の安全・依頼判断を大きく損なうため最優先。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "D-02",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "更新判断や不具合調査という課題は運用・実装サポートに関連する。",
+      "rationale": "更新方針整理、Site Health基本チェック、原因調査・技術相談と直接対応。保証まで適合と認める判断ではない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文2〜3・6段落",
+          "observation": "更新前の整理と調査依頼。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "継続関係が基本で対応範囲はすり合わせる点を案内し、関連を維持する。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "E-01",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "相談先が分からない読者への次の行動がある。",
+      "rationale": "記事目的に沿いサービス確認から問い合わせへの案内が本文に存在する。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文6段落",
+          "observation": "対応範囲を確認し困っている状況を相談する。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。",
+        "公開ページのtitle要素・SERP表示・クロール可否・サイト共通導線・クリック動作は未確認。"
+      ],
+      "recommendation": "目的に合う案内を維持する。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "E-02",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "improvement",
+      "confidence": "medium",
+      "finding": "末尾の案内は自然だが、直前の保証・危険手順が相談対象の期待を歪める。",
+      "rationale": "困りごとの相談は具体的でも、個別確認不要という文脈で無条件復旧を期待させる。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文4〜6段落",
+          "observation": "保証、削除指示に続く問い合わせ案内。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "前段の保証と危険手順を修正し、相談で確認する内容・対応範囲を合わせる。",
+      "priority": "P2",
+      "priority_reason": "主要目的の判断材料と説明の一貫性を整えるため。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "E-03",
+      "category": "conversion_path",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "静的なリンク先とフォーム項目は確認できるが、送信成功は未確認。",
+      "rationale": "静的HTMLのエラー文字列は故障の証明ではなく、入力・送信・完了・受信の記録がない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文6段落",
+          "observation": "実在するサービス・連絡先URL。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        },
+        {
+          "evidence_id": "EV-CON",
+          "location": "フォーム欄",
+          "observation": "問い合わせ項目とエラー文字列を静的HTMLで確認。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "静的導線を保持し、送信・受信は別途許可された確認で検証する。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      },
+      "checks": [
+        {
+          "key": "static_path",
+          "classification": "EVALUATION",
+          "status": "適切",
+          "confidence": "high",
+          "finding": "原稿リンクのURLに対応するサービスと問い合わせ項目を固定資料で確認。",
+          "rationale": "URL文字列だけでなくリンク先HTMLを読了し、関連する相談種別まで確認。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ART",
+              "location": "本文6段落",
+              "observation": "サービスと問い合わせへの案内。"
+            },
+            {
+              "evidence_id": "EV-SVC",
+              "location": "流れ／FAQ",
+              "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+            },
+            {
+              "evidence_id": "EV-CON",
+              "location": "フォーム欄",
+              "observation": "問い合わせ項目とエラー文字列を静的HTMLで確認。"
+            }
+          ],
+          "limitations": [
+            "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+          ]
+        },
+        {
+          "key": "submission",
+          "classification": "UNVERIFIED",
+          "status": "判定不可",
+          "confidence": "unknown",
+          "finding": "入力・送信・完了・受信は未確認。",
+          "rationale": "動作記録なし。静的エラー文字列から送信不能とは結論しない。",
+          "evidence": [
+            {
+              "evidence_id": "EV-CON",
+              "location": "フォーム欄",
+              "observation": "問い合わせ項目とエラー文字列を静的HTMLで確認。"
+            },
+            {
+              "evidence_id": "EV-FORM",
+              "location": "未提供",
+              "observation": "動作記録なし。"
+            }
+          ],
+          "limitations": [
+            "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-04",
+      "category": "conversion_path",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "成果データ・計測定義がなく、SEO/CV成果も改善の因果効果も判定できない。",
+      "rationale": "Search Console・GA4・問い合わせ集計が未提供。欠測を0件や低成果にしない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-GSC",
+          "location": "未提供",
+          "observation": "実クエリ・集計なし。"
+        },
+        {
+          "evidence_id": "EV-GA4",
+          "location": "未提供",
+          "observation": "遷移・イベントデータなし。"
+        },
+        {
+          "evidence_id": "EV-INQ",
+          "location": "未提供",
+          "observation": "実問い合わせ・適合相談の集計なし。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "計測定義と母数・期間を確認してから同条件の観測計画を決める。",
+      "priority": "none",
+      "priority_reason": "確認済み範囲を維持するか、追加証拠待ち。修正優先度は付けない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "実成果の改善効果は評価していない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "対象記事→サービス遷移率、実問い合わせ数、適合相談数、実クエリ",
+        "method": "公開後、対象記事閲覧セッションのうちサービスへ遷移したセッション／対象記事閲覧セッションを集計。クリック・フォーム閲覧・送信完了・実問い合わせ・受注は別段階。計測定義、同意状態、流量、季節性を確認後、同じ曜日構成・長さの基準期間と比較期間、必要母数と期待差を事前に決める。",
+        "success_condition": "数値目標と必要母数・期間はデータ取得後に事前設定。安全な判断の理解が得られ、同条件で適合相談の変化が検証可能であること。少数増や前後差だけで因果を確定せず、定義変更・欠測が大きければ比較を停止し再設計。",
+        "confounders": [
+          "流入元・クエリ・端末・国の構成",
+          "季節性・キャンペーン・検索更新",
+          "同時改修・イベント定義・同意設定・帰属・計測遅延"
+        ]
+      }
+    },
+    {
+      "id": "F-01",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "critical",
+      "confidence": "high",
+      "finding": "どのサイトも必ず解消という保証は判断を誤らせる誇張。",
+      "rationale": "公式の個別可否判断・断る場合と矛盾し、条件を示さず期待を固定する。恐怖営業や心理的影響を観測したとはしない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文4段落",
+          "observation": "無条件の解消保証と個別確認不要。"
+        },
+        {
+          "evidence_id": "EV-SVC",
+          "location": "流れ／FAQ",
+          "observation": "構成・状況確認後に対応可否を案内。断る場合もある。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "無条件保証を撤回し、調査と修正、対応可否を分ける。",
+      "priority": "P1",
+      "priority_reason": "読者の安全・依頼判断を大きく損なうため最優先。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    },
+    {
+      "id": "F-02",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "改善推奨",
+      "severity": "critical",
+      "confidence": "high",
+      "finding": "バックアップなしで公開中ファイルを削除させる危険な手順がある。",
+      "rationale": "公式のバックアップ取得・PHP版を戻して復元という対処に反し、復元手段と影響確認なしで破壊的変更を勧める。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ART",
+          "location": "本文5段落",
+          "observation": "バックアップがなくても公開サイトのファイルを削除して解決。"
+        },
+        {
+          "evidence_id": "EV-PHP",
+          "location": "更新前／問題発生時",
+          "observation": "事前バックアップと互換性確認、PHP版を戻し復元する案内。"
+        }
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ],
+      "recommendation": "削除指示を撤回する。問題時は作業を止め、担当者やホストと復元手段・影響範囲を確認し対処を決める。",
+      "priority": "P1",
+      "priority_reason": "読者の安全・依頼判断を大きく損なうため最優先。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "修正により判断の誤認を減らせる可能性があるという仮説。順位・問い合わせへの効果は未検証。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "指摘箇所と出典・判断条件の一致",
+        "method": "修正後の該当箇所を同じ公式固定資料と比較し、安全・保証・適用条件を再レビューする。公開時の現行確認は別途必要。",
+        "success_condition": "指摘した矛盾がなく、前提・復元・個別対応可否が誤認されない。",
+        "confounders": [
+          "公開時点の仕様・サービス条件の変更",
+          "個別環境の構成差"
+        ]
+      }
+    }
+  ],
+  "summaries": [
+    {
+      "domain": "seo_content",
+      "structure": {
+        "status": "改善推奨",
+        "check_ids": [
+          "A-01.audience_goal",
+          "A-02",
+          "B-01",
+          "B-02",
+          "B-03",
+          "B-04",
+          "B-05"
+        ],
+        "reason": "危険手順・無条件保証等の具体的な問題を確認。",
+        "limitations": [
+          "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+        ]
+      },
+      "outcomes": {
+        "status": "判定不可",
+        "check_ids": [
+          "A-01.observed_queries"
+        ],
+        "reason": "実クエリ・実測データ未提供。",
+        "limitations": [
+          "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+        ]
+      },
+      "unverified_checks": [
+        "A-01.observed_queries",
+        "B-04"
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ]
+    },
+    {
+      "domain": "conversion",
+      "structure": {
+        "status": "改善推奨",
+        "check_ids": [
+          "C-01",
+          "C-02",
+          "C-03",
+          "D-01",
+          "D-02",
+          "E-01",
+          "E-02",
+          "E-03.static_path"
+        ],
+        "reason": "危険手順・無条件保証等の具体的な問題を確認。",
+        "limitations": [
+          "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+        ]
+      },
+      "outcomes": {
+        "status": "判定不可",
+        "check_ids": [
+          "E-04"
+        ],
+        "reason": "実クエリ・実測データ未提供。",
+        "limitations": [
+          "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+        ]
+      },
+      "unverified_checks": [
+        "E-03.submission",
+        "E-04"
+      ],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ]
+    },
+    {
+      "domain": "reader_trust",
+      "structure": {
+        "status": "改善推奨",
+        "check_ids": [
+          "F-01",
+          "F-02"
+        ],
+        "reason": "危険手順・無条件保証等の具体的な問題を確認。",
+        "limitations": [
+          "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+        ]
+      },
+      "outcomes": {
+        "status": "評価対象外",
+        "check_ids": [],
+        "reason": "当該領域に固定ルールの成果確認項目はない。成果良好という意味ではない。",
+        "limitations": [
+          "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+        ]
+      },
+      "unverified_checks": [],
+      "limitations": [
+        "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。"
+      ]
+    }
+  ],
+  "plan": null,
+  "revisions": [],
+  "limitations": [
+    "固定スナップショットと提供原稿の範囲。現在の公開表示・実環境・実成果は未確認。",
+    "合成原稿であり顧客事例ではない。",
+    "フォームHTMLのエラー文字列だけでは故障と判定しない。",
+    "実検索意図、送信・受信、計測設定、問い合わせ成果、因果効果は未確認。"
+  ]
+}

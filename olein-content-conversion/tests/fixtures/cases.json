@@ -1,0 +1,206 @@
+[
+  {
+    "id": "A",
+    "mode": "AUDIT",
+    "type": "技術解説型",
+    "audience": "WordPressのPHPを読む実装担当者",
+    "goal": "フィルター処理の設計と検証方法を理解する",
+    "expected": {
+      "B-03": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "入力・返り値・分岐・検証記録という設計上の中心疑問を扱う。詳細であることを問題にしない。"
+      },
+      "C-03": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "必要情報を伏せない方針と具体的な設計説明を確認した。"
+      },
+      "E-01": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "提供本文に営業CTAはない。技術情報の提供が目的のため、追加を強制しない。"
+      }
+    }
+  },
+  {
+    "id": "B",
+    "mode": "AUDIT",
+    "type": "集客・相談型",
+    "audience": "小規模企業のサイト所有者",
+    "goal": "WordPress更新前の判断と相談条件を整理する",
+    "service_note": "合成の事業資料: 運用・実装サポートは更新方針、不具合調査、基本チェックを扱う。実在の契約・実績は示さない。",
+    "expected": {
+      "C-01": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "バックアップと復元、権限、検証環境という自力で確認する項目を示す。"
+      },
+      "C-02": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "復元方法不明・影響が大きい機能・切り分け困難を相談条件として説明する。"
+      },
+      "D-01": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "提供された合成事業資料の更新方針・調査範囲と案内が対応する。現行の公式サービスの評価ではない。"
+      },
+      "F-01": {
+        "classification": "EVALUATION",
+        "status": "改善推奨",
+        "reason": "「必ずサイトを失います」「今すぐ契約」は条件のない破局予測と契約の強制。具体的条件による説明に直す。"
+      }
+    }
+  },
+  {
+    "id": "C",
+    "mode": "AUDIT",
+    "type": "技術解説型",
+    "audience": "実装担当者",
+    "goal": "検証記録の残し方を共有する",
+    "expected": {
+      "E-01": {
+        "classification": "FACT",
+        "status": "適切",
+        "reason": "提供された本文全体にはCTAが存在しない。技術メモの目的から営業導線は必須ではない。サイト共通CTAは未確認。"
+      },
+      "E-02": {
+        "classification": "EVALUATION",
+        "status": "評価対象外",
+        "reason": "本文にCTAがなく、営業導線を必要としない技術メモである。"
+      },
+      "E-03": {
+        "classification": "EVALUATION",
+        "status": "評価対象外",
+        "reason": "相談への誘導を目的としないため問い合わせ経路の品質は対象外。"
+      }
+    }
+  },
+  {
+    "id": "D",
+    "mode": "REVISE",
+    "type": "集客・相談型",
+    "audience": "サイト所有者",
+    "goal": "保守の相談を検討する",
+    "expected": {
+      "B-01": {
+        "classification": "EVALUATION",
+        "status": "改善推奨",
+        "reason": "順位・問い合わせ保証と未確認の3倍実績を裏付ける資料がない。主張の掲載は確認できるが効果や実績をFACTにしない。"
+      },
+      "B-02": {
+        "classification": "UNVERIFIED",
+        "status": "判定不可",
+        "reason": "実績記録・著者の一次資料がなく「3倍」の真偽は判断できない。根拠の提示または主張の削除を提案する。"
+      },
+      "C-03": {
+        "classification": "EVALUATION",
+        "status": "改善推奨",
+        "reason": "「問い合わせを増やすため公開しません」と必要情報を意図的に隠す方針を明示している。"
+      },
+      "D-01": {
+        "classification": "UNVERIFIED",
+        "status": "判定不可",
+        "reason": "「全環境永久復旧保証」の実在や範囲は確認できない。実在サービスとして推奨しない。"
+      },
+      "F-01": {
+        "classification": "EVALUATION",
+        "status": "改善推奨",
+        "reason": "全サイトの被害を断定し契約を急がせる表現は、対象条件に基づく説明ではない。"
+      },
+      "F-02": {
+        "classification": "EVALUATION",
+        "status": "改善推奨",
+        "reason": "本番ファイルを復元手段なしで削除する無条件の手順を提示している。教材で提供された公式更新資料の復元前提と矛盾する。"
+      }
+    }
+  },
+  {
+    "id": "E",
+    "mode": "AUDIT",
+    "type": "比較・意思決定型",
+    "audience": "サイト担当者",
+    "goal": "内製と外注を比較する",
+    "expected": {
+      "C-01": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "内製の選択肢を保ち、権限・復元方法・影響範囲を判断材料として示す。"
+      },
+      "E-04": {
+        "classification": "UNVERIFIED",
+        "status": "判定不可",
+        "reason": "Search Console、GA4、問い合わせ履歴がない。CV低下や改善効果を評価できず、欠測を0件として扱わない。"
+      }
+    }
+  },
+  {
+    "id": "F",
+    "mode": "AUDIT",
+    "type": "集客・相談型",
+    "audience": "WordPressサイト所有者",
+    "goal": "更新の相談が必要な条件を知る",
+    "service_note": "合成の事業資料: 更新方針、不具合調査、実装相談を扱う。",
+    "expected": {
+      "A-01": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "提供された合成GSCでは更新関連クエリが観測され、本文も更新判断を扱う。ただし匿名・欠落クエリや個別意図は把握できない。"
+      },
+      "D-02": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "更新方針と原因調査という案内が提供された合成事業資料に対応する。"
+      },
+      "E-04": {
+        "classification": "FACT",
+        "status": "適切",
+        "reason": "合成データの前期間は遷移4/100セッション=4%、後期間は8/120=約6.67%。差は約2.67ポイント。問い合わせ完了は0件から1件で少数。観測差であり施策の因果効果は判定していない。"
+      }
+    }
+  },
+  {
+    "id": "G",
+    "mode": "REVISE",
+    "type": "技術解説型",
+    "audience": "実装担当者",
+    "goal": "自身の実装判断を伝える",
+    "expected": {
+      "B-03": {
+        "classification": "EVALUATION",
+        "status": "改善推奨",
+        "reason": "まとめが「確認できたら確認できていないことを確認」と循環し、作業を進める条件が読み取れない。職業上の判断は保ったまま結論を明確にする。"
+      },
+      "E-01": {
+        "classification": "EVALUATION",
+        "status": "適切",
+        "reason": "技術説明と筆者の判断を伝える目的であり、営業CTAを追加する必要はない。"
+      }
+    }
+  },
+  {
+    "id": "H",
+    "mode": "PLAN",
+    "type": "集客・相談型",
+    "audience": "サイト所有者",
+    "goal": "PHP更新を自力で進める条件を企画する",
+    "expected": {
+      "A-01": {
+        "classification": "HYPOTHESIS",
+        "status": "要確認",
+        "reason": "サイト所有者の事前確認ニーズを想定する企画だが、実際のクエリによる検証はできない。"
+      },
+      "B-01": {
+        "classification": "UNVERIFIED",
+        "status": "判定不可",
+        "reason": "対象PHPと互換性の一次資料が取得できず、技術的な適否は判断できない。"
+      },
+      "D-01": {
+        "classification": "UNVERIFIED",
+        "status": "判定不可",
+        "reason": "サービスページにアクセスできず、健康診断の独立サービスの提供範囲・価格を確認できない。"
+      }
+    }
+  }
+]
