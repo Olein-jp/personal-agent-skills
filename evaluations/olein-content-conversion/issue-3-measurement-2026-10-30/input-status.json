@@ -91,7 +91,7 @@
     "human_source_and_interpretation_review": "not_executed",
     "common_implementation_changed": false
   },
-  "issue_resolution": "incomplete_keep_open",
+  "issue_resolution": "completed_for_provided_gsc_scope",
   "limits": [
     "今回確認した範囲で未提供。利用者の他の保存先にデータが存在しないとは断定しない。",
     "以前のAUDITの構造判定を実測・送信動作確認として流用しない。",
@@ -101,5 +101,24 @@
     "response": "実データはまだありません",
     "recorded_at": "2026-10-30T09:33:57+09:00",
     "meaning": "利用者が実データ未提供を明示。実測評価は未実施のまま。"
-  }
+  },
+  "current_assessment": {
+    "status": "evaluation_complete_with_documented_limitations",
+    "directory": "gsc-php-security-2026-10-30",
+    "source": "利用者提供GSC ZIPと指定記事",
+    "confirmation": "加工していません",
+    "completed": [
+      "GSCの来歴・版・期間・不明条件の記録",
+      "表別の合計・率・空欄の再計算",
+      "構造・実測・未確認動作を分離した監査",
+      "監査JSON形式・参照検証",
+      "利用者による元データ・計算・解釈の照合承認 (M1〜M5)"
+    ],
+    "remaining": [],
+    "limits": [
+      "過去のstatus/datasets/acceptance_conditionsは実データ未提供時の記録。現在の取得状態は実測評価のaudit-result.jsonとprovenance.jsonを正本とする。",
+      "表間差・出力日時・タイムゾーン不明は解消せず制限として残す。GA4・問い合わせは今回の提供対象外。"
+    ]
+  },
+  "history_note": "上記の当初status・acceptance_conditions・verificationは入力未提供時の履歴。現在の完了状態はcurrent_assessmentとissue_resolution、実測評価ファイルを参照。"
 }

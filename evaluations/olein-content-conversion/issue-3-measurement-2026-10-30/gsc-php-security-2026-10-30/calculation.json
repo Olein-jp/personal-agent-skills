@@ -1,0 +1,146 @@
+{
+  "zip_sha256": "c14979aa225c878a2b87ca7c0f63fab03647f38e5a42b40a4e31e098f85016f2",
+  "tables": {
+    "平均読み込み時間のチャート.csv": {
+      "sha256": "5a2ea77b1ad11b1851886f9b42d19679b7700ce68cd3bb52f0ef1b647c3c41c9",
+      "rows": 92,
+      "columns": [
+        "日付",
+        "クリック数",
+        "表示回数",
+        "CTR",
+        "掲載順位"
+      ],
+      "clicks": 2093,
+      "impressions": 112004,
+      "ctr": 0.01868683261312096,
+      "missing_count_cells": 0,
+      "blank_ctr_cells": 85,
+      "blank_position_cells": 85,
+      "ctr_mismatch_csv_rows": [],
+      "period": {
+        "start": "2026-07-28",
+        "end": "2026-10-27"
+      },
+      "first_positive_date": "2026-10-21",
+      "first_positive_day": {
+        "date": "2026-10-21",
+        "clicks": 2019,
+        "impressions": 98825,
+        "share_of_export_clicks": 0.9646440516005733
+      }
+    },
+    "クエリ.csv": {
+      "sha256": "193d2b9de793e687fc8358e533f319f6b6e6f78f16517df28d2f595cd1e486a5",
+      "rows": 1000,
+      "columns": [
+        "上位のクエリ",
+        "クリック数",
+        "表示回数",
+        "CTR",
+        "掲載順位"
+      ],
+      "clicks": 946,
+      "impressions": 39876,
+      "ctr": 0.02372354298324807,
+      "missing_count_cells": 0,
+      "blank_ctr_cells": 0,
+      "blank_position_cells": 0,
+      "ctr_mismatch_csv_rows": []
+    },
+    "ページ.csv": {
+      "sha256": "cf90b3b752884e635581b714b9fee08406689c33e65172374ec55ead731d6cdb",
+      "rows": 1,
+      "columns": [
+        "上位のページ",
+        "クリック数",
+        "表示回数",
+        "CTR",
+        "掲載順位"
+      ],
+      "clicks": 2093,
+      "impressions": 112004,
+      "ctr": 0.01868683261312096,
+      "missing_count_cells": 0,
+      "blank_ctr_cells": 0,
+      "blank_position_cells": 0,
+      "ctr_mismatch_csv_rows": []
+    },
+    "国.csv": {
+      "sha256": "3b60bcfb7791ba5c92f917490926742e6735308a6c149e8a084e5e8c883d6022",
+      "rows": 71,
+      "columns": [
+        "国",
+        "クリック数",
+        "表示回数",
+        "CTR",
+        "掲載順位"
+      ],
+      "clicks": 946,
+      "impressions": 41669,
+      "ctr": 0.022702728647195757,
+      "missing_count_cells": 0,
+      "blank_ctr_cells": 0,
+      "blank_position_cells": 0,
+      "ctr_mismatch_csv_rows": []
+    },
+    "デバイス.csv": {
+      "sha256": "9b3535b278b4ceb10afb82ae4c3f86739858ba8013595a130590304b6b80fa5b",
+      "rows": 3,
+      "columns": [
+        "デバイス",
+        "クリック数",
+        "表示回数",
+        "CTR",
+        "掲載順位"
+      ],
+      "clicks": 946,
+      "impressions": 41669,
+      "ctr": 0.022702728647195757,
+      "missing_count_cells": 0,
+      "blank_ctr_cells": 0,
+      "blank_position_cells": 0,
+      "ctr_mismatch_csv_rows": []
+    },
+    "検索での見え方.csv": {
+      "sha256": "3f592f1418ca8425d72a601dccca13f34ebfb0297f67209714651dd2e32564bd",
+      "rows": 0,
+      "columns": [
+        "検索での見え方",
+        "クリック数",
+        "表示回数",
+        "CTR",
+        "掲載順位"
+      ],
+      "clicks": null,
+      "impressions": null,
+      "ctr": null,
+      "missing_count_cells": 0,
+      "blank_ctr_cells": 0,
+      "blank_position_cells": 0,
+      "ctr_mismatch_csv_rows": []
+    },
+    "フィルタ.csv": {
+      "sha256": "add3cb6e93ad500d0c89547e382ac21956123a7353eee3a288dee6291d1f3b90",
+      "rows": 3,
+      "columns": [
+        "フィルタ",
+        "値"
+      ],
+      "filters": {
+        "検索タイプ": "ウェブ（テキストベース）",
+        "日付": "過去 3 か月間",
+        "ページ": "https://olein-design.com/blog/php-security-announcement-2026-10-20"
+      }
+    }
+  },
+  "reconciliation": {
+    "page_equals_daily": true,
+    "devices_equal_countries": true,
+    "page_minus_devices": {
+      "clicks": 1147,
+      "impressions": 70335
+    },
+    "explanation": "差の原因は未特定。表の合計を混ぜない。クエリ表は1000行で、匿名クエリ・切捨て等の影響を分離できない。国別・デバイス別の差も同じ理由と断定しない。"
+  }
+}

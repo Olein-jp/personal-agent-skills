@@ -1,0 +1,28 @@
+{
+  "status": "approved",
+  "items": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5"
+  ],
+  "response": "元データと照合し、M1〜M5の計算・解釈を承認します",
+  "reviewed_at": "2026-10-30T12:05:24+09:00",
+  "reviewer": "利用者",
+  "scope": "元ZIPのM1〜M5。構造・実測・未確認動作を分離した計算と解釈の承認。",
+  "limitations": [
+    "表間差・出力日時・タイムゾーンの不明点を解消した承認ではない。",
+    "SEO/CV改善、フォーム送信成功、安全性、公開許可を認定するものではない。"
+  ],
+  "publication_approval": {
+    "response": "上記の評価成果物をPR #7へ公開することを承認します",
+    "recorded_at": "2026-10-30T12:06:37+09:00",
+    "destination": "https://github.com/Olein-jp/personal-agent-skills/pull/7",
+    "scope": "表別クリック数・表示回数・CTR、日別の集計、検索語の限定例、来歴・ハッシュ・照合記録・検証スクリプト",
+    "excluded": [
+      "元ZIP",
+      "全クエリCSV"
+    ]
+  }
+}
