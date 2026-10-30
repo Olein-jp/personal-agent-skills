@@ -1,0 +1,117 @@
+{
+  "ARTICLE": {
+    "source": "https://olein-design.com/blog/wordpress-design-and-client-agreement",
+    "final_url": "https://olein-design.com/blog/wordpress-design-and-client-agreement",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:46+09:00",
+    "sha256": "28b82becaba5d3b9e11bd06ca1de93f4af7d372d33a0c2a8fb9c3d5c54183503",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/ARTICLE.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "WP-HIERARCHY": {
+    "source": "https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/",
+    "final_url": "https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:47+09:00",
+    "sha256": "c4c8dfce7271b9808d2111a8213edda5e65a4b367253799f4c124ebc7eb7c8d3",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/WP-HIERARCHY.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "WP-LOOP": {
+    "source": "https://developer.wordpress.org/themes/classic-themes/basics/the-loop/",
+    "final_url": "https://developer.wordpress.org/themes/classic-themes/basics/the-loop/",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:47+09:00",
+    "sha256": "90b74f5272e832be3dc422ff4dac14590879c9b84869a6cb7919b318edec262e",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/WP-LOOP.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "WP-PATTERN": {
+    "source": "https://wordpress.org/documentation/article/block-pattern/",
+    "final_url": "https://wordpress.org/documentation/article/block-pattern/",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:47+09:00",
+    "sha256": "de0c54c3f9f0c78643bb806ac88b5441367d0e64007de3fdb3fd96b8ef139a4a",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/WP-PATTERN.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "WP-LOCK": {
+    "source": "https://developer.wordpress.org/block-editor/how-to-guides/curating-the-editor-experience/block-locking/",
+    "final_url": "https://developer.wordpress.org/block-editor/how-to-guides/curating-the-editor-experience/block-locking/",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:47+09:00",
+    "sha256": "8403e6e5a7a97e8f0842c0119c276ffeedf16baf9155f534aed0c2b1294d40ff",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/WP-LOCK.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "WP-FIELDS": {
+    "source": "https://wordpress.org/documentation/article/assign-custom-fields/",
+    "final_url": "https://wordpress.org/documentation/article/assign-custom-fields/",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:47+09:00",
+    "sha256": "28a4ecf01c1b4eb61ec4d7d961c90d6f162e90c734fd1f1ed4f77ef5ccfd88e3",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/WP-FIELDS.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "WP-META": {
+    "source": "https://developer.wordpress.org/news/2023/03/creating-a-custom-block-that-stores-post-meta/",
+    "final_url": "https://developer.wordpress.org/news/2023/03/creating-a-custom-block-that-stores-post-meta/",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:48+09:00",
+    "sha256": "164f81cb70aaf71d8c43135e3ef7ebb590981e9e5d37a0e68078f3517ef1d91c",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/WP-META.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "SERVICE-PARTNER": {
+    "source": "https://olein-design.com/service/partnership",
+    "final_url": "https://olein-design.com/service/partnership",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:47+09:00",
+    "sha256": "4bef1522c21f9ab524661c47b9e1cf5f7c9817b2f8ec5549359081fd4983629f",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/SERVICE-PARTNER.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "SERVICE-MAINTENANCE": {
+    "source": "https://olein-design.com/service/maintenance",
+    "final_url": "https://olein-design.com/service/maintenance",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:47+09:00",
+    "sha256": "291e31aa3024229544b10ad5cb72b52d0891857e8d4b42b7bd31a1d414bf5388",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/SERVICE-MAINTENANCE.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "CONTACT": {
+    "source": "https://olein-design.com/contact",
+    "final_url": "https://olein-design.com/contact",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:47+09:00",
+    "sha256": "c021743f040d2ac3be035c639a39082b6b605ba7a603b2fd68fa1bb60a769080",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/CONTACT.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "GOOGLE-CONTENT": {
+    "source": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "final_url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:48+09:00",
+    "sha256": "abbeb24ff5e309cbb55a5a5f9b0a17cce45291e92b27b49d705cc0d69fc16423",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/GOOGLE-CONTENT.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "GOOGLE-LINKS": {
+    "source": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+    "final_url": "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+    "status": 200,
+    "checked_at": "2026-10-30T08:14:48+09:00",
+    "sha256": "29547f1e412d6d472742eb708246e5db47ee05aa5d6929ecdcecaec59e3ef249",
+    "local_snapshot": "/private/tmp/olein-conversion-live-test/GOOGLE-LINKS.html",
+    "snapshot_retention": "HTMLは/private/tmpの一時キャッシュのみ。Git管理しない。URL・取得時刻・ハッシュを記録し、同じ版の長期再現性は保証しない。"
+  },
+  "execution_notes": {
+    "initial_web_access": "web openでは記事URLを取得できず。検索結果の本文を確認後、直接HTTPS取得で200と本文・リンクを確認。",
+    "initial_shell_access": "通常権限では名前解決に失敗。読み取りの通信権限を得て取得。",
+    "operations": "公開GETのみ、送信なし",
+    "skill_sha256": "cd47c9819f40e416265de1a97061c99c6f1ed1620c4c59088be84e7d97ee4c31",
+    "rules_sha256": "84ba349bdfab5b357f5517537d3abebb7bfc6a9b634d5868d87ab7410a704b3d"
+  }
+}

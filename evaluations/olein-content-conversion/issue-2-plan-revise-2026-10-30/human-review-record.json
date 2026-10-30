@@ -1,0 +1,16 @@
+{
+  "issue": 2,
+  "status": "pending",
+  "review_items": [
+    "P1",
+    "P2",
+    "P3",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "reviewer": null,
+  "reviewed_at": null,
+  "response": null,
+  "limitation": "利用者レビュー待ち。以前のIssue #1への承認を転用しない。"
+}
