@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-30T09:12:54+09:00",
+  "fork_turns": "none",
+  "model_override": null,
+  "agents": [
+    {
+      "task_name": "/root/audit_case_a",
+      "cases": [
+        "a"
+      ],
+      "sources": [
+        "wp-php",
+        "service",
+        "contact"
+      ]
+    },
+    {
+      "task_name": "/root/audit_cases_b_d",
+      "cases": [
+        "b",
+        "d"
+      ],
+      "sources": [
+        "wp-meta",
+        "wp-loop",
+        "wp-lock"
+      ]
+    },
+    {
+      "task_name": "/root/audit_case_c",
+      "cases": [
+        "c"
+      ],
+      "sources": []
+    }
+  ],
+  "allowed_read": "各割当の原稿・request.txt、固定skillの必要資料、割当のsource-manifest項目・HTMLのみ。",
+  "excluded_read": [
+    "開発会話",
+    "既存レポート",
+    "期待結果",
+    "他ケース (BとDは同じ評価者が別々に実行)"
+  ],
+  "allowed_write": "/private/tmp/olein-issue1-blind-20261030/outputsの各割当フォルダのみ",
+  "network": "使用しない。固定HTMLを原資料として用いる。",
+  "evaluator_requirements": [
+    "AUDITでMarkdownと正式JSON",
+    "初回JSONを保存し、形式修正時は別の最終JSON",
+    "意味判断を形式合格のために変更しない",
+    "追加サブエージェントなし"
+  ],
+  "independence_limitations": [
+    "3つの新しい会話で4原稿を評価。同一モデル系列であり異なるモデルや人間の独立評価ではない。",
+    "BとDのケース間独立性はない。",
+    "共有ファイルシステムに対し指示で読取範囲を限定。OSによるアクセス分離や完全な情報漏洩検出はしていない。"
+  ]
+}

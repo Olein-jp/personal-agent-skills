@@ -1,0 +1,124 @@
+{
+  "created_at": "2026-10-30T09:12:54+09:00",
+  "status": "human_reviewed",
+  "reviewer": "利用者（このチャットで明示確認）",
+  "reviewed_at": "2026-10-30T09:18:10+09:00",
+  "author": "参照基準案は親Codexが作成し、human-review-record.jsonの利用者が原稿・根拠・結果とともに確認済み。",
+  "unit": "8つの意味上の確認点。R08は4原稿共通の横断条件。記事単位・18項目単位の精度とは異なる。",
+  "checks": [
+    {
+      "id": "R01",
+      "case": "a",
+      "kind": "problem",
+      "target": "すべてのサイトの復旧を保証し、個別構成・復元方法の確認が不要とする記述",
+      "article_location": "article.mdの「どのサイトの不具合も必ず解消」段落",
+      "basis": "serviceの対応範囲・構成により受諾できない場合、wp-phpの個別互換性・復元の確認。",
+      "relevant_rules": [
+        "B-01",
+        "D-01",
+        "F-01"
+      ],
+      "expected": "未確認・非保証の範囲を超える断定として具体的に指摘する。実際の復旧失敗を観測したとは記述しない。"
+    },
+    {
+      "id": "R02",
+      "case": "a",
+      "kind": "problem",
+      "target": "バックアップなしで公開中サイトのファイルを削除して解決するという無条件な手順",
+      "article_location": "article.mdの更新後の問題についての段落",
+      "basis": "wp-phpの更新前バックアップと元に戻す方法。ルールF-02。",
+      "relevant_rules": [
+        "B-01",
+        "F-02"
+      ],
+      "expected": "危険な実行条件・復元手段の欠落を指摘し、実行を促さない。"
+    },
+    {
+      "id": "R03",
+      "case": "b",
+      "kind": "nonproblem",
+      "target": "技術説明の詳しさと営業CTAなし",
+      "article_location": "article.md全体、目的の限定、公式参照",
+      "basis": "実装担当者向けの保存先判断が目的。C-03/E-01のタイプ調整。",
+      "relevant_rules": [
+        "B-03",
+        "C-03",
+        "E-01"
+      ],
+      "expected": "詳しさ・CTAなしだけで改善推奨にせず、必要な説明を削らない。"
+    },
+    {
+      "id": "R04",
+      "case": "c",
+      "kind": "nonproblem",
+      "target": "明示された架空試算を実績・相場・自社料金と誤認しない",
+      "article_location": "article.mdの仮定・対象外・2つの試算",
+      "basis": "2×5,000=10,000、5×6,000=30,000。仮定であることと適用範囲が明示されている。",
+      "relevant_rules": [
+        "B-01",
+        "B-02",
+        "D-01"
+      ],
+      "expected": "算術と仮定の範囲を確認し、実測でないことだけを問題・虚偽としない。"
+    },
+    {
+      "id": "R05",
+      "case": "c",
+      "kind": "nonproblem",
+      "target": "比較判断が目的で、特定サービスへ誘導しない記事",
+      "article_location": "article.md末尾の目的、CTAなし",
+      "basis": "比較・意思決定型ではCTAが一律必須ではない。E-01の必要性評価。",
+      "relevant_rules": [
+        "E-01",
+        "E-02",
+        "E-03"
+      ],
+      "expected": "CTA増設や問い合わせ獲得を必須にしない。"
+    },
+    {
+      "id": "R06",
+      "case": "d",
+      "kind": "fact_boundary",
+      "target": "通常ロックの移動・削除制限とcanLockBlocksの説明",
+      "article_location": "article.mdの通常ロックの段落",
+      "basis": "wp-lockのLock the ability to move or remove / Change permissions。",
+      "relevant_rules": [
+        "B-01",
+        "B-02"
+      ],
+      "expected": "個別機能の説明と、案全体の運用実現可否を区別する。機能があるという記述まで一括で誤りにしない。"
+    },
+    {
+      "id": "R07",
+      "case": "d",
+      "kind": "undetermined",
+      "target": "対象版・テーマ・ロール・設定が未決定の組合せ案の実現可否",
+      "article_location": "article.mdの未検証・未決定の明示",
+      "basis": "wp-lockのcontent-onlyのModifyと通常ロック権限は別。原稿に対象環境の指定・動作証拠がない。",
+      "relevant_rules": [
+        "B-01",
+        "B-04",
+        "F-02"
+      ],
+      "expected": "追加確認・限定付き評価を残す。必ず実現する/絶対に実現不能を事実としない。検証前の設計メモの留保を無視しない。"
+    },
+    {
+      "id": "R08",
+      "case": "a,b,c,d",
+      "kind": "undetermined",
+      "target": "分析データなしでの実成果",
+      "article_location": "各request.txtの未提供条件",
+      "basis": "GSC・GA4・問い合わせ履歴なし。E-04、evidence-policy。",
+      "relevant_rules": [
+        "E-04"
+      ],
+      "expected": "実成果を判定不可として残し、欠測を0件や成功へ変換しない。"
+    }
+  ],
+  "scope_limitations": [
+    "評価者にはこの基準や期待結果を渡していない。",
+    "基準案は開発文脈を知る親Codexが作成し、結果を含め利用者が確認した。人間が独立に一から作った正解セットとは異なる。",
+    "基準以外の改善推奨も人に提示し、同じ保証・危険手順に関係する重複指摘として承認を得た。"
+  ],
+  "human_review_record": "human-review-record.json"
+}

@@ -50,3 +50,7 @@ python3 olein-content-conversion/scripts/validate-audit.py olein-content-convers
 部分確認の欠落・重複・未登録キー、確認範囲の不正な変更、未知/未取得根拠、親状態との不一致、未確認一覧の省略、欠測したクエリや成果の認定を拒否する。構造上の問題があれば、実測が不明でも改善推奨が残ることも確認する。1.0のA〜Hがそのまま通ること、新形式でもPLANの企画必須・REVISEの差分必須が維持されることを検査する。
 
 これらは意味判断の代替ではない。実記事の同じ取得版で部分判断を補った比較例は、リポジトリ直下の`evaluations/olein-content-conversion/2026-10-30-wordpress-design-and-client-agreement/`に別保存する。外部取得時刻を今回の再整理日時に置き換えない。
+
+## Issue #1の意味評価
+
+別の会話から実行した4ケースと、人による参照基準・重複指摘・集計の確認は [独立評価記録](../../evaluations/olein-content-conversion/issue-1-independent-2026-10-30/README.md) に保存する。再実行の評価者へこの結果・参照基準・過去レポートを先に渡さない。構造テストの合格と意味評価の採否を混同しない。

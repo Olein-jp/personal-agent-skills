@@ -1,0 +1,130 @@
+{
+  "created_at": "2026-10-30T09:16:13+09:00",
+  "status": "human_reviewed",
+  "reviewer": "利用者（このチャットで明示確認）",
+  "reviewed_at": "2026-10-30T09:18:10+09:00",
+  "decisions": [
+    {
+      "reference_id": "R01",
+      "decision": "true_positive",
+      "case": "a",
+      "finding_ids": [
+        "B-01",
+        "D-01",
+        "F-01"
+      ],
+      "reason": "無条件の解消保証と確認不要の断定を、提供範囲・個別確認に反するものとして検出。"
+    },
+    {
+      "reference_id": "R02",
+      "decision": "true_positive",
+      "case": "a",
+      "finding_ids": [
+        "B-01",
+        "C-01",
+        "F-02"
+      ],
+      "reason": "バックアップなしの本番削除の危険を検出し、実行を止める提案をした。"
+    },
+    {
+      "reference_id": "R03",
+      "decision": "correct_nonproblem",
+      "case": "b",
+      "finding_ids": [
+        "B-03",
+        "C-03",
+        "E-01"
+      ],
+      "reason": "詳細な技術メモを尊重し、営業CTAを強制しなかった。"
+    },
+    {
+      "reference_id": "R04",
+      "decision": "correct_nonproblem",
+      "case": "c",
+      "finding_ids": [
+        "B-01",
+        "B-02",
+        "D-01"
+      ],
+      "reason": "計算と仮定の範囲を確認し、相場・実績・実サービスの料金に読み替えなかった。"
+    },
+    {
+      "reference_id": "R05",
+      "decision": "correct_nonproblem",
+      "case": "c",
+      "finding_ids": [
+        "E-01",
+        "E-02",
+        "E-03"
+      ],
+      "reason": "比較記事のCTAなしを目的に合うものとして扱った。"
+    },
+    {
+      "reference_id": "R06",
+      "decision": "correct_fact_boundary",
+      "case": "d",
+      "finding_ids": [
+        "B-01"
+      ],
+      "reason": "個別機能の説明は整合するとし、組合せ後の全経路の制限と区別した。"
+    },
+    {
+      "reference_id": "R07",
+      "decision": "valid_undetermined",
+      "case": "d",
+      "finding_ids": [
+        "B-01",
+        "B-04"
+      ],
+      "reason": "実現条件を要確認として残し、実績や実現不能を断定しなかった。"
+    },
+    {
+      "reference_id": "R08",
+      "decision": "valid_undetermined",
+      "case": "a,b,c,d",
+      "finding_ids": [
+        "E-04"
+      ],
+      "reason": "4原稿すべてでUNVERIFIED/判定不可。0件や実成果の成功を生成しなかった。"
+    }
+  ],
+  "provisional_counts": {
+    "known_problem_units": 2,
+    "true_positive": 2,
+    "false_negative": 0,
+    "nonproblem_control_units": 3,
+    "false_positive_on_controls": 0,
+    "valid_undetermined_units": 5,
+    "fact_boundary_units": 1,
+    "explanation": "R01/R02はユニークな問題2件。Aの9個の改善推奨は同じ保証・危険手順に関連し重複計上しない。R08は原稿ごとに4件、R07は1件。false_positive_on_controlsは3つの負例条件の範囲に限定し、全主張の精度と呼ばない。"
+  },
+  "human_confirmed_counts": {
+    "known_problem_units": 2,
+    "true_positive": 2,
+    "false_negative": 0,
+    "nonproblem_control_units": 3,
+    "false_positive_on_controls": 0,
+    "valid_undetermined_units": 5,
+    "fact_boundary_units": 1,
+    "explanation": "R01/R02はユニークな問題2件。Aの9個の改善推奨は同じ保証・危険手順に関連し重複計上しない。R08は原稿ごとに4件、R07は1件。false_positive_on_controlsは3つの負例条件の範囲に限定し、全主張の精度と呼ばない。"
+  },
+  "additional_improvements_a": {
+    "ids": [
+      "B-01",
+      "B-02",
+      "B-03",
+      "C-01",
+      "C-02",
+      "D-01",
+      "E-02",
+      "F-01",
+      "F-02"
+    ],
+    "provisional_treatment": "保証または危険手順への関連・重複指摘。各分類の必要性と、過剰な指摘がないかも人が確認する。"
+  },
+  "limitations": [
+    "集計は8つの参照基準に対する限定的な結果。人が原稿・根拠・重複指摘と集計を承認した。",
+    "未知の記事の精度や再現率、実際のSEO/CV改善効果を保証しない。"
+  ],
+  "human_review_record": "human-review-record.json"
+}

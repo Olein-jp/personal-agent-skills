@@ -1,0 +1,1073 @@
+{
+  "schema_version": "1.1",
+  "rules_version": "1.1",
+  "mode": "AUDIT",
+  "created_at": "2026-10-30T09:13:47+09:00",
+  "subject": {
+    "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-c/article.md",
+    "version": "sha256:ecf18ed609c581fa440704429253bfb10030b82634dd0de38298341d997ac740",
+    "audience": "サイトの調査や修正を依頼する一般の担当者",
+    "goal": "見積もりの金額だけでなく、範囲と完了条件をそろえて比較する方法を伝える。特定サービスへの誘導は目的外。",
+    "content_type": "比較・意思決定型",
+    "determination": "inferred",
+    "type_reason": "依頼文で比較方法を目的とし、本文7〜14行が選択肢と比較条件を扱うため、記事タイプを推定。読者・目的自体は明示。",
+    "scope": "提供Markdown全文と依頼文のみ。外部サイト・実サイト・フォーム・分析データは参照していない。"
+  },
+  "evidence": [
+    {
+      "id": "EV-ARTICLE",
+      "source_type": "article",
+      "title": "見積もりは金額と完了条件を一緒に比べる",
+      "publisher": "利用者提供資料",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-c/article.md",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:47+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "1〜14行（全文）",
+      "observation": "架空試算、除外費用、作業範囲、完了条件、追加料金等の比較方法を説明し、特定サービスへ誘導しない。",
+      "supports": [
+        "A-01",
+        "A-02",
+        "B-01",
+        "B-02",
+        "B-03",
+        "B-04",
+        "B-05",
+        "C-01",
+        "C-02",
+        "C-03",
+        "D-01",
+        "D-02",
+        "E-01",
+        "E-02",
+        "E-03",
+        "E-04",
+        "F-01",
+        "F-02"
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ]
+    },
+    {
+      "id": "EV-REQUEST",
+      "source_type": "business",
+      "title": "監査依頼",
+      "publisher": "利用者提供資料",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-c/request.txt",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:47+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "全文",
+      "observation": "一般の依頼者が見積もりの範囲と完了条件を比較する記事。分析・実サイト・フォーム記録は未提供。",
+      "supports": [
+        "A-01",
+        "E-04"
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ]
+    },
+    {
+      "id": "EV-RULES",
+      "source_type": "supplementary",
+      "title": "固定18項目・記事タイプ別の適用基準",
+      "publisher": "指定監査スキル",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/skill/references/audit-rules.json",
+      "availability": "available",
+      "checked_at": "2026-10-30T09:13:47+09:00",
+      "published_date": null,
+      "updated_date": null,
+      "location": "固定18ルール（関連手順：audit-rules.md、content-types.md）",
+      "observation": "比較記事は自社誘導を前提にせず、部分確認と構造・成果を分ける。",
+      "supports": [
+        "A-01",
+        "A-02",
+        "B-01",
+        "B-02",
+        "B-03",
+        "B-04",
+        "B-05",
+        "C-01",
+        "C-02",
+        "C-03",
+        "D-01",
+        "D-02",
+        "E-01",
+        "E-02",
+        "E-03",
+        "E-04",
+        "F-01",
+        "F-02"
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ]
+    },
+    {
+      "id": "EV-GSC",
+      "source_type": "analytics",
+      "title": "Search Console（未提供）",
+      "publisher": "利用者提供資料",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-c/request.txt",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "依頼文の分析データ未提供の記述",
+      "observation": "当該データは提供されていない。",
+      "supports": [
+        "A-01.observed_queries"
+      ],
+      "limitations": [
+        "未提供のため数値・定義・期間は不明。"
+      ]
+    },
+    {
+      "id": "EV-GA4",
+      "source_type": "analytics",
+      "title": "GA4（未提供）",
+      "publisher": "利用者提供資料",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-c/request.txt",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "依頼文の分析データ未提供の記述",
+      "observation": "当該データは提供されていない。",
+      "supports": [
+        "E-04"
+      ],
+      "limitations": [
+        "未提供のため数値・定義・期間は不明。"
+      ]
+    },
+    {
+      "id": "EV-INQ",
+      "source_type": "analytics",
+      "title": "問い合わせ集計（未提供）",
+      "publisher": "利用者提供資料",
+      "source": "/private/tmp/olein-issue1-blind-20261030/inputs/case-c/request.txt",
+      "availability": "not_provided",
+      "checked_at": null,
+      "published_date": null,
+      "updated_date": null,
+      "location": "依頼文の分析データ未提供の記述",
+      "observation": "当該データは提供されていない。",
+      "supports": [
+        "E-04"
+      ],
+      "limitations": [
+        "未提供のため数値・定義・期間は不明。"
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "kind": "search_console",
+      "status": "missing",
+      "evidence_id": "EV-GSC",
+      "acquired_at": null,
+      "period": null,
+      "scope": "対象記事の実測データは未提供。",
+      "timezone": null,
+      "definitions": "計測定義・対象範囲・期間は不明。",
+      "limitations": [
+        "欠測を0件として扱わない。"
+      ]
+    },
+    {
+      "kind": "ga4",
+      "status": "missing",
+      "evidence_id": "EV-GA4",
+      "acquired_at": null,
+      "period": null,
+      "scope": "対象記事の実測データは未提供。",
+      "timezone": null,
+      "definitions": "計測定義・対象範囲・期間は不明。",
+      "limitations": [
+        "欠測を0件として扱わない。"
+      ]
+    },
+    {
+      "kind": "inquiries",
+      "status": "missing",
+      "evidence_id": "EV-INQ",
+      "acquired_at": null,
+      "period": null,
+      "scope": "対象記事の実測データは未提供。",
+      "timezone": null,
+      "definitions": "計測定義・対象範囲・期間は不明。",
+      "limitations": [
+        "欠測を0件として扱わない。"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "A-01",
+      "category": "search_intent",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "読者・目的は整合するが、実クエリとの一致は判定不可。",
+      "rationale": "audience_goalは適切、observed_queriesは未取得のため判定不可。定義された部分状態を集約する。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "3、12〜14行",
+          "observation": "対象者と範囲・完了条件の比較を説明。"
+        },
+        {
+          "evidence_id": "EV-GSC",
+          "location": "未提供",
+          "observation": "実検索クエリを確認できない。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "本文の読者・目的を維持し、検索意図検証が必要な場合のみGSCを取得する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "本文と目的を照合し、将来GSCの対象ページ・クエリ・期間・フィルタを確認して想定意図と照合する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      },
+      "checks": [
+        {
+          "key": "audience_goal",
+          "classification": "EVALUATION",
+          "status": "適切",
+          "confidence": "high",
+          "finding": "一般の依頼者に見積もり範囲と完了条件の比較方法を伝える目的に合う。",
+          "rationale": "依頼文の目的と、本文の読者指定・具体的な確認事項が一致。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ARTICLE",
+              "location": "3、12〜14行",
+              "observation": "依頼担当者に範囲と条件をそろえた比較を促す。"
+            },
+            {
+              "evidence_id": "EV-REQUEST",
+              "location": "全文",
+              "observation": "一般の依頼者へ範囲・完了条件の比較方法を伝える。"
+            }
+          ],
+          "limitations": [
+            "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+          ]
+        },
+        {
+          "key": "observed_queries",
+          "classification": "UNVERIFIED",
+          "status": "判定不可",
+          "confidence": "unknown",
+          "finding": "実クエリ一致は未確認。",
+          "rationale": "検索データが未提供。想定される検索意図は仮説にとどまる。",
+          "evidence": [
+            {
+              "evidence_id": "EV-GSC",
+              "location": "未提供",
+              "observation": "対象ページのクエリ資料なし。"
+            }
+          ],
+          "limitations": [
+            "検索者全員の意図を本文だけで確定できない。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-02",
+      "category": "search_intent",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "タイトルの約束を本文で満たす。",
+      "rationale": "主要な約束と本文が対応する。検索結果の表示タイトルやCTRの評価とは別。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "1、7〜14行",
+          "observation": "金額と完了条件を比べる表題に対し、範囲と確認事項を提示。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "表題と比較項目の対応を維持する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "読者がタイトルから期待した比較方法を本文で示せるか照合する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "B-01",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "仮定値の計算と適用限界が明確。",
+      "rationale": "料金相場・実測・実在サービスの主張ではないため、それらの外部証拠を要求しない。金額差を優劣に直結させていない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "5、7〜10、14行",
+          "observation": "架空試算と明記。2×5,000=10,000、5×6,000=30,000は算術上正しい。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "架空・税等の除外・更新修正の対象外を維持する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "試算の乗算、条件、外部料金との混同がないことを再確認する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "B-02",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "創作例の来歴を明示し、実績や経験を装っていない。",
+      "rationale": "説明用の合成例は架空出典・虚偽実績と区別できる。外部の経験談や統計は引用していない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "3、5、7〜8行",
+          "observation": "評価用の合成原稿と架空試算であることを明示。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "実例へ差し替える場合に限り来歴と使用許可を確認する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "仮定の説明が消えず、実績へ表現変更されていないか確認する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "B-03",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "見積もり比較に必要な判断項目がそろう。",
+      "rationale": "具体的な自社費用の算出は目的外と明示し、比較条件をそろえる方法に答える。文章量や見出し数を基準にしない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "7〜14行",
+          "observation": "作業範囲、納品物、完了状態、追加料金、上限連絡、未解明時の報告を比較する。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "必須修正はない。比較項目を維持する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "対象読者が両案の範囲差と依頼先への確認事項を説明できるかレビューする。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "B-04",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "例の適用条件を限定している。",
+      "rationale": "現行料金やバージョン依存の仕様を提示していないため、相場や現行サービスの鮮度確認は不要。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "5、10、14行",
+          "observation": "仮定値、税・利用料除外、更新・修正除外、自社費用への転用不可を明示。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "具体的な現行料金やサービスを追記するときに再調査する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "試算を現行価格として読ませる変更がないか確認する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "B-05",
+      "category": "seo_quality",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "必要な内部リンクを特定する根拠がない。",
+      "rationale": "本文だけで中心疑問に答え、特定サービスへ案内しないため、リンク数の不足を問題にしない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文、14行",
+          "observation": "内部リンクはなく、比較判断だけで完結する。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "リンク追加を必須としない。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "修正効果は評価対象外。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "目的変更で参照先が必要になったときのみ実在と説明の一致を確認する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "C-01",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "読者自身ができる見積もりの確認を具体化している。",
+      "rationale": "実環境の変更を指示せず、契約前の確認と段階的な判断を示す。権限や復元手段が必要な操作は扱わない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "10〜14行",
+          "observation": "必要な範囲を確認し、調査結果後に次の作業を選ぶ方法を示す。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "自分で条件をそろえて比較する選択を保つ。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "読者が確認項目を挙げられ、実際の修正まで料金内と誤解しないか確かめる。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "C-02",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "専門家相談の必要性・価値の提示は記事目的外。",
+      "rationale": "比較のための依頼先への確認と、別サービスへの相談誘導は区別する。無理に相談条件を追加しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "12〜14行",
+          "observation": "依頼条件の確認を促すが、専門家への相談や特定相談先を推奨しない。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "比較方法の共有という目的を維持する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "修正効果は評価対象外。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "相談を主目的とする改稿がある場合に限り条件・提供範囲を再評価する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "C-03",
+      "category": "consultation_value",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "比較に必要な情報の出し惜しみは観測されない。",
+      "rationale": "具体費用を提示しないのは仮定例の限界による。問い合わせに誘導するための隠蔽とは扱わない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "10〜14行",
+          "observation": "比較事項と除外範囲を明示し、自社費用を決められない理由を伝える。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "確認事項を削らず、適用限界を保つ。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "修正時も範囲・完了・追加条件を読者が確認できるか比較する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "D-01",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "実在サービスの価格・提供範囲は記事で主張していない。",
+      "rationale": "名称に言及しても料金表ではないという否定であり、サービス説明・誘導はない。現行サービスの調査を本監査の前提にしない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "5、14行",
+          "observation": "オレインデザインの料金表ではなく、特定サービスへの案内を目的としないと明記。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "実在サービス情報を追加しない。追加時は現行公式資料を確認する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "修正効果は評価対象外。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "架空試算と実在サービスの料金が混同されないことを文書上で確認する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "D-02",
+      "category": "service_fit",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "サービスとの適合評価は適用しない。",
+      "rationale": "対応サービスを選ぶ必要がない記事であり、未確認サービスへの誘導もない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "14行",
+          "observation": "サービス誘導なしの比較判断記事と明記。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "自社サービスとの関連付けを強制しない。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "修正効果は評価対象外。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "誘導方針が変わるときに課題・対象者・確認済みサービスの一致を再評価する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "E-01",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "medium",
+      "finding": "相談CTAなしが記事目的に合う。",
+      "rationale": "相談獲得を主要目的としておらず、読者が比較する行動は示されている。CTA不存在をCV低下の原因とはしない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "12〜14行",
+          "observation": "本文に営業CTAはなく、条件をそろえて比較する次の行動を示す。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "営業CTAの追加は不要。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "読者が記事読後の比較行動を説明できるか確認する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "E-02",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "CTA文脈・対象者・配置の評価対象がない。",
+      "rationale": "E-01でCTA不要と評価したため、CTAの具体化も要求しない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "全文、14行",
+          "observation": "本文に相談・サービスCTAがない。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "CTAの追加・書き換えは行わない。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "修正効果は評価対象外。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "目的変更でCTAを設ける場合のみ前後文とリンク先を照合する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "E-03",
+      "category": "conversion_path",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "問い合わせ経路を設ける目的がない。",
+      "rationale": "サービス誘導のない比較記事であり、static_path・submissionとも対象外。実サイトの送信成功を保証する判断ではない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "14行",
+          "observation": "特定サービスへの案内を目的としない。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "本記事のために問い合わせ経路の追加やフォーム送信を要求しない。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "修正効果は評価対象外。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "目的変更で導線が必要になった場合に静的到達と送信動作を分けて再評価する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      },
+      "checks": [
+        {
+          "key": "static_path",
+          "classification": "EVALUATION",
+          "status": "評価対象外",
+          "confidence": "high",
+          "finding": "本記事に必要な問い合わせへの静的経路は評価対象外。",
+          "rationale": "特定サービスへの案内を目的としないため、記事目的から問い合わせ導線を要求しない。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ARTICLE",
+              "location": "14行",
+              "observation": "特定サービスへの案内を目的としない。"
+            }
+          ],
+          "limitations": [
+            "サイト全体の経路・フォームの存在や正常性を確認したものではない。"
+          ]
+        },
+        {
+          "key": "submission",
+          "classification": "EVALUATION",
+          "status": "評価対象外",
+          "confidence": "high",
+          "finding": "本記事の目的にフォーム送信は含まれず、送信動作は評価対象外。",
+          "rationale": "特定サービスへの案内を目的としないため、記事目的から問い合わせ導線を要求しない。",
+          "evidence": [
+            {
+              "evidence_id": "EV-ARTICLE",
+              "location": "14行",
+              "observation": "特定サービスへの案内を目的としない。"
+            }
+          ],
+          "limitations": [
+            "サイト全体の経路・フォームの存在や正常性を確認したものではない。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E-04",
+      "category": "conversion_path",
+      "classification": "UNVERIFIED",
+      "status": "判定不可",
+      "severity": "info",
+      "confidence": "unknown",
+      "finding": "観測成果と改善効果は判定できない。",
+      "rationale": "GSC・GA4・問い合わせの全データが未提供で、件数・母数・期間・計測定義がない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-REQUEST",
+          "location": "依頼文全文",
+          "observation": "分析データは未提供。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "成果検証が必要な場合に限り、目的に合う指標と計測条件を先に定義する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "公開後の理解度を先に確認し、検索成果を調べる場合はGSCの対象ページ・期間・クエリ構成をそろえ記述的に比較する。問い合わせ獲得を成功条件にしない。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "F-01",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "適切",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "恐怖や保証による依頼強制はない。",
+      "rationale": "比較条件を限定し、特定事業者や高額案への誘導をしていない。架空例を実績として権威化していない。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "5、10、12〜14行",
+          "observation": "高額・低額のどちらも優劣に直結させず、調査後に次の作業を選べると説明。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "中立な比較と依頼を段階的に判断する余地を維持する。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "unverified",
+        "description": "読者理解・SEO・問い合わせへの実効果は未測定であり保証しない。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "表現修正時も恐怖・保証・金額だけの優劣断定が加わっていないか確認する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    },
+    {
+      "id": "F-02",
+      "category": "reader_trust",
+      "classification": "EVALUATION",
+      "status": "評価対象外",
+      "severity": "none",
+      "confidence": "high",
+      "finding": "環境を変更する操作・実行手順は扱わない。",
+      "rationale": "操作の復元・権限・動作テストを要求する記事ではない。中心疑問の解消はB-03で評価した。",
+      "evidence": [
+        {
+          "evidence_id": "EV-ARTICLE",
+          "location": "10、12〜14行",
+          "observation": "更新や不具合修正は試算に含めず、比較事項のみ説明。"
+        }
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+      ],
+      "recommendation": "本番操作の手順を付け加えない。",
+      "priority": "none",
+      "priority_reason": "具体的な修正問題を確認していないため、修正優先度は付けない。情報不足を欠陥や減点にしない。",
+      "expected_effect": {
+        "status": "not_applicable",
+        "description": "修正効果は評価対象外。",
+        "evidence_ids": []
+      },
+      "validation": {
+        "metric": "文書と目的・条件の整合／必要時は対象読者の理解確認",
+        "method": "操作手順へ範囲が変わった際に前提・権限・復元方法を確認する。",
+        "success_condition": "架空試算と実費・相場を区別し、範囲と完了条件を比較できる。対象外の項目は目的変更時のみ再評価。",
+        "confounders": [
+          "読者の発注経験・依頼の種類",
+          "公開画面の共通導線や表示条件は未確認"
+        ]
+      }
+    }
+  ],
+  "summaries": [
+    {
+      "domain": "seo_content",
+      "structure": {
+        "status": "適切",
+        "check_ids": [
+          "A-01.audience_goal",
+          "A-02",
+          "B-01",
+          "B-02",
+          "B-03",
+          "B-04",
+          "B-05"
+        ],
+        "reason": "架空試算の条件と比較判断材料は目的に合い、具体的な欠陥を確認していない。",
+        "limitations": [
+          "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "判定不可",
+        "check_ids": [
+          "A-01.observed_queries"
+        ],
+        "reason": "必要な実測資料が未提供のため成果は判定不可。",
+        "limitations": [
+          "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+        ]
+      },
+      "unverified_checks": [
+        "A-01.observed_queries"
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。",
+        "問い合わせの実際の動作や成果は確認していない。"
+      ]
+    },
+    {
+      "domain": "conversion",
+      "structure": {
+        "status": "適切",
+        "check_ids": [
+          "C-01",
+          "C-02",
+          "C-03",
+          "D-01",
+          "D-02",
+          "E-01",
+          "E-02",
+          "E-03.static_path"
+        ],
+        "reason": "架空試算の条件と比較判断材料は目的に合い、具体的な欠陥を確認していない。",
+        "limitations": [
+          "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "判定不可",
+        "check_ids": [
+          "E-04"
+        ],
+        "reason": "必要な実測資料が未提供のため成果は判定不可。",
+        "limitations": [
+          "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+        ]
+      },
+      "unverified_checks": [
+        "E-04"
+      ],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。",
+        "問い合わせの実際の動作や成果は確認していない。"
+      ]
+    },
+    {
+      "domain": "reader_trust",
+      "structure": {
+        "status": "適切",
+        "check_ids": [
+          "F-01",
+          "F-02"
+        ],
+        "reason": "架空試算の条件と比較判断材料は目的に合い、具体的な欠陥を確認していない。",
+        "limitations": [
+          "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+        ]
+      },
+      "outcomes": {
+        "status": "評価対象外",
+        "check_ids": [],
+        "reason": "固定ルールにこの領域の成果項目はない。実効果が確認された意味ではない。",
+        "limitations": [
+          "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。"
+        ]
+      },
+      "unverified_checks": [],
+      "limitations": [
+        "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。",
+        "問い合わせの実際の動作や成果は確認していない。"
+      ]
+    }
+  ],
+  "plan": null,
+  "revisions": [],
+  "limitations": [
+    "提供Markdown全文のみの評価であり、公開画面・読者の実際の理解や成果は保証しない。",
+    "原稿中の試算は合成例であり、実際の相場・料金・工数・サービスの証拠ではない。",
+    "実クエリ・SEO/CV成果・公開画面・サイト共通CTA・フォーム動作は未確認。",
+    "サービス対応表は現行のサービス証拠に用いていない。外部調査は行っていない。",
+    "総合点・順位予測・問い合わせ増加の保証は行わない。"
+  ]
+}
