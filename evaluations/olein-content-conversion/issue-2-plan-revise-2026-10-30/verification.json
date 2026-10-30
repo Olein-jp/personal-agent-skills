@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30T09:28:09+09:00",
+  "checked_at": "2026-10-30T09:28:56+09:00",
   "passed": true,
   "checks": {
     "input:inputs/audit-result-v1.1.json": true,

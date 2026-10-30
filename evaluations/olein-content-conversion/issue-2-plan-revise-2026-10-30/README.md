@@ -5,7 +5,7 @@
 - 入力: inputs/article.html (元監査と同じHTML)、article.txt (本文抽出)、audit-result-v1.1.json (元監査の無変更コピー)、plan-brief.md (実テーマの再企画)。
 - PLAN: [人用](plan-report.md) / [JSON正本](plan-result.json)。現在の記事の不足判定とは別の再企画。
 - REVISE: [人用](revise-report.md) / [JSON正本](revise-result.json) / [別ファイルの本文案](revised-article.txt)。B-01に対応する1箇所だけ。18項目の判断は変更前原稿を対象とする。
-- 意味・実用性・文体: [人レビュー表](human-review.md)。利用者レビュー待ち。
+- 意味・実用性・文体: [人レビュー表](human-review.md)。利用者承認済み (human-review-record.json)。
 - 形式・改変範囲・入力保存: verification.json。verify.pyで再実行可能。
 
 ## 実行条件と限界
@@ -25,3 +25,7 @@ python3 evaluations/olein-content-conversion/issue-2-plan-revise-2026-10-30/veri
 ```
 
 人レビューを承認前に自動で合格にしない。verify.pyは人による判断を生成しない。
+
+## 最終結果
+
+PLAN / REVISE 各1件を実行し、両JSONの形式・参照検証、同一版・1箇所差分・原稿ハッシュ不変を確認。本文は7,628文字から7,676文字 (48文字増)。利用者がP1〜P3とR1〜R3を承認。Issue #2の未解決事項はなし。実環境の操作検証とSEO/CV効果は対象外として保留する。元HTMLに存在する末尾空白・改行コードは原本のハッシュ保持のため修正せず、空白検査からこの原本だけを除外した。

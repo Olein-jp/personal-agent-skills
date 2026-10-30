@@ -70,5 +70,5 @@
   },
   "extraction": "元HTMLのwp-block-post-contentをHTMLParserで抽出。p/h2/h3/li/trの境界を改行にし、空行連続を正規化。HTMLハッシュと抽出本文ハッシュを別保存。",
   "revision_scope": "変更前の18項目を維持。修正後の再監査・実環境検証ではない。",
-  "human_review": "pending"
+  "human_review": "approved: human-review-record.json"
 }

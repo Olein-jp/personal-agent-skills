@@ -1,6 +1,6 @@
 # Issue #2 人によるレビュー
 
-状態: レビュー待ち。形式検証の合格は、実用性・文体・修正範囲の承認ではありません。
+状態: 利用者承認済み。P1〜P3・R1〜R3を確認し「内容を確認し、PLANとREVISEを承認します」と回答。原文と記録時刻は human-review-record.json。形式検証とは別の人レビュー結果です。
 
 Issue: https://github.com/Olein-jp/personal-agent-skills/issues/2
 
